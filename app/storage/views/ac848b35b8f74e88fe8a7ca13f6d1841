@@ -1,0 +1,23 @@
+<div class="col-md-12 footer-contact">
+    <div style="margin-top: 20px; margin-bottom: 20px">
+        <?php $i = 0; ?>
+        <?php foreach ($allContacts as $ct): ?>
+        <?php if ($ct != null): ?>
+        <?php $i++; ?>
+
+        <div class="col-md-4 contact">
+            <?php if ($i > 3): ?>
+            <br>
+            <?php endif; ?>
+            <div class="name-contact">
+                <?php echo $ct->address; ?>
+            </div><br>
+            <div>Tel: +<?php echo $ct->tel; ?></div>
+            <div>Fax: +<?php echo $ct->fax; ?></div>
+            <div>Facebook: <a href="https://www.facebook.com/syluong282" style="color: #0000FF"><?php echo $ct->facebook; ?></a></div>
+            <div>Email:<a href="mailto:forextrader@gmail.com" style="color: #FF0000 "> <?php echo $ct->email; ?></a></div>
+        </div>  
+        <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+</div>

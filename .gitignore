@@ -1,0 +1,7 @@
+/bootstrap/compiled.php
+/nbproject/private/
+/app/config/database.php
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db

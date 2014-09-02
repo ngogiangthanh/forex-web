@@ -1,0 +1,151 @@
+[2014-09-01 22:48:48] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forextrader_1.0.congty' doesn't exist' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select * from `...')
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(990): Illuminate\Database\Query\Builder->get(Array)
+#7 C:\xampp\htdocs\Forex\app\models\Hethong.php(10): Illuminate\Database\Query\Builder->first()
+#8 C:\xampp\htdocs\Forex\app\storage\views\cf3e854bc76a76c34be469641b13e1e6(62): Hethong::getTencty()
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#14 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#19 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#20 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#21 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forextrader_1.0.congty' doesn't exist (SQL: select * from `congty` limit 1) (Bindings: array (
+))' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(990): Illuminate\Database\Query\Builder->get(Array)
+#6 C:\xampp\htdocs\Forex\app\models\Hethong.php(10): Illuminate\Database\Query\Builder->first()
+#7 C:\xampp\htdocs\Forex\app\storage\views\cf3e854bc76a76c34be469641b13e1e6(62): Hethong::getTencty()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#13 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main} [] []
+[2014-09-01 22:51:15] log.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in C:\xampp\htdocs\Forex\app\models\Hethong.php:10
+Stack trace:
+#0 C:\xampp\htdocs\Forex\app\models\Hethong.php(10): Illuminate\Exception\Handler->handleError(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\Forex\app\storage\views\cf3e854bc76a76c34be469641b13e1e6(62): Hethong::getTencty()
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#7 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-09-01 22:51:39] log.ERROR: exception 'ErrorException' with message 'Undefined property: stdClass::$ten_cty' in C:\xampp\htdocs\Forex\app\models\Hethong.php:10
+Stack trace:
+#0 C:\xampp\htdocs\Forex\app\models\Hethong.php(10): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\Forex\app\storage\views\cf3e854bc76a76c34be469641b13e1e6(62): Hethong::getTencty()
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#7 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []
+[2014-09-01 22:52:19] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forextrader_1.0.hethong' doesn't exist' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select * from `...')
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(990): Illuminate\Database\Query\Builder->get(Array)
+#7 C:\xampp\htdocs\Forex\app\models\Hethong.php(6): Illuminate\Database\Query\Builder->first()
+#8 C:\xampp\htdocs\Forex\app\storage\views\54a283e683416c2a9c8a8b14a82442ae(69): Hethong::getValue('text_product')
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#13 C:\xampp\htdocs\Forex\app\storage\views\cf3e854bc76a76c34be469641b13e1e6(166): Illuminate\View\View->render()
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#17 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#18 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#19 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#20 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#21 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#25 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#26 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forextrader_1.0.hethong' doesn't exist (SQL: select * from `hethong` where `tentc` = ? limit 1) (Bindings: array (
+  0 => 'text_product',
+))' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(990): Illuminate\Database\Query\Builder->get(Array)
+#6 C:\xampp\htdocs\Forex\app\models\Hethong.php(6): Illuminate\Database\Query\Builder->first()
+#7 C:\xampp\htdocs\Forex\app\storage\views\54a283e683416c2a9c8a8b14a82442ae(69): Hethong::getValue('text_product')
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#12 C:\xampp\htdocs\Forex\app\storage\views\cf3e854bc76a76c34be469641b13e1e6(166): Illuminate\View\View->render()
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#17 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#18 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#19 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#20 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main} [] []
+[2014-09-01 22:52:55] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\Forex\app\storage\views\54a283e683416c2a9c8a8b14a82442ae:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-01 22:53:46] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\Forex\app\storage\views\54a283e683416c2a9c8a8b14a82442ae:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

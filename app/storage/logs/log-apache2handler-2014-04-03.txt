@@ -1,0 +1,796 @@
+[2014-04-03 01:44:36] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'thoigian_nop' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(270): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'thoigian_nop' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `thoigian_nop` >= ? and `thoigian_nop` <= ? and `xeploai` = ? and `xeploai` <> ?) (Bindings: array (
+  0 => '2014-03-02 00:00:00',
+  1 => '2014-04-02 23:59:59',
+  2 => 'Yếu',
+  3 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(270): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 01:44:37] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'thoigian_nop' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(193): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postStat()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postStat', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postStat', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'thoigian_nop' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `thoigian_nop` >= ? and `thoigian_nop` <= ?) (Bindings: array (
+  0 => '2014-03-02 00:00:00',
+  1 => '2014-04-02 23:59:59',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(193): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postStat()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postStat', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postStat', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 01:44:37] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'thoigian_nop' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(193): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postStat()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postStat', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postStat', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'thoigian_nop' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `thoigian_nop` >= ? and `thoigian_nop` <= ?) (Bindings: array (
+  0 => '2014-03-02 00:00:00',
+  1 => '2014-04-02 23:59:59',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(193): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postStat()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postStat', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postStat', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:37:34] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(174): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChartdrl()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChartdrl', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChartdrl', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(174): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChartdrl()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChartdrl', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChartdrl', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:39:47] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(174): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChartdrl()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChartdrl', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChartdrl', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(174): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChartdrl()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChartdrl', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChartdrl', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:42:51] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(174): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChartdrl()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChartdrl', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChartdrl', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(174): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChartdrl()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChartdrl', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChartdrl', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:45:58] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(91): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(91): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:52:41] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(114): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(114): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:54:04] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(114): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(114): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:54:41] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(110): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(110): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:54:46] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(110): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(110): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:56:44] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(109): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeloai` <> ?) (Bindings: array (
+  0 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(109): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:57:28] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(155): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeploai` = ? and `xeloai` <> ?) (Bindings: array (
+  0 => 'Yếu',
+  1 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(155): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 04:57:39] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select count(*)...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select count(*)...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(155): Illuminate\Database\Query\Builder->count()
+#9 [internal function]: StatController->postChart()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#13 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xeloai' in 'where clause' (SQL: select count(*) as aggregate from `vchitiet_chamdiem2` where `xeploai` = ? and `xeloai` = ?) (Bindings: array (
+  0 => 'Yếu',
+  1 => '0',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select count(*)...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select count(*)...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select count(*)...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1369): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1311): Illuminate\Database\Query\Builder->aggregate('count', Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(155): Illuminate\Database\Query\Builder->count()
+#8 [internal function]: StatController->postChart()
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#12 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#18 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#19 {main} [] []
+[2014-04-03 05:00:44] log.ERROR: exception 'ErrorException' with message 'Object of class Illuminate\Database\Query\Builder could not be converted to int' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:186
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(186): Illuminate\Exception\Handler->handleError(8, 'Object of class...', 'D:\All Program\...', 186, Array)
+#1 [internal function]: StatController->postChartdrl()
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChartdrl', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChartdrl', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-04-03 05:02:12] log.ERROR: exception 'ErrorException' with message 'Object of class Illuminate\Database\Query\Builder could not be converted to int' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:159
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(159): Illuminate\Exception\Handler->handleError(8, 'Object of class...', 'D:\All Program\...', 159, Array)
+#1 [internal function]: StatController->postChart()
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-04-03 05:02:47] log.ERROR: exception 'ErrorException' with message 'Undefined variable: total' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:159
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(159): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'D:\All Program\...', 159, Array)
+#1 [internal function]: StatController->postChart()
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-04-03 05:03:11] log.ERROR: exception 'ErrorException' with message 'Undefined variable: total' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:159
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(159): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'D:\All Program\...', 159, Array)
+#1 [internal function]: StatController->postChart()
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-04-03 05:04:09] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:159
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-04-03 05:04:47] log.ERROR: exception 'ErrorException' with message 'Object of class Illuminate\Database\Query\Builder could not be converted to int' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:159
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(159): Illuminate\Exception\Handler->handleError(8, 'Object of class...', 'D:\All Program\...', 159, Array)
+#1 [internal function]: StatController->postChart()
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-04-03 05:05:06] log.ERROR: exception 'ErrorException' with message 'Object of class Illuminate\Database\Query\Builder could not be converted to int' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:159
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(159): Illuminate\Exception\Handler->handleError(8, 'Object of class...', 'D:\All Program\...', 159, Array)
+#1 [internal function]: StatController->postChart()
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-04-03 05:31:33] log.ERROR: exception 'ErrorException' with message 'Undefined property: stdClass::$xeploai' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:156
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(156): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', 'D:\All Program\...', 156, Array)
+#1 [internal function]: StatController->postChart()
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-04-03 05:36:00] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ','' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:160
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-04-03 07:40:22] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ')'' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:156
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

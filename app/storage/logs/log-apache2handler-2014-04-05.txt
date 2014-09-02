@@ -1,0 +1,526 @@
+[2014-04-05 01:53:09] log.ERROR: exception 'ErrorException' with message 'Object of class Illuminate\Database\Query\Builder could not be converted to int' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php:181
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\StatController.php(181): Illuminate\Exception\Handler->handleError(8, 'Object of class...', 'D:\All Program\...', 181, Array)
+#1 [internal function]: StatController->postChart2()
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postChart2', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postChart2', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-04-05 04:55:06] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'malop' in 'order clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select * from `...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(109): Illuminate\Database\Query\Builder->get()
+#7 [internal function]: GridController->postGrid()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postGrid', Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postGrid', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'malop' in 'order clause' (SQL: select * from `thoigian_chamdrl` where `id` <> ? order by `malop` asc) (Bindings: array (
+  0 => 0,
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(109): Illuminate\Database\Query\Builder->get()
+#6 [internal function]: GridController->postGrid()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postGrid', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postGrid', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main} [] []
+[2014-04-05 04:55:23] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'malop' in 'order clause'' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select * from `...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(109): Illuminate\Database\Query\Builder->get()
+#7 [internal function]: GridController->postGrid()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postGrid', Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postGrid', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'malop' in 'order clause' (SQL: select * from `thoigian_chamdrl` where `id` <> ? order by `malop` asc) (Bindings: array (
+  0 => 0,
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(109): Illuminate\Database\Query\Builder->get()
+#6 [internal function]: GridController->postGrid()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postGrid', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postGrid', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main} [] []
+[2014-04-05 06:14:07] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Can't use function return value in write context' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php:188
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-04-05 06:14:42] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Can't use function return value in write context' in D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php:188
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-04-05 06:55:35] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `th...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#6 [internal function]: GridController->postCapnhat()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null (SQL: insert into `thoigian_chamdrl` (`mahk`, `tgbatdau_sv`, `tgketthuc_sv`, `tgbatdau_cb`, `tgketthuc_cb`, `chopheptre`, `mota`) values (?, ?, ?, ?, ?, ?, ?)) (Bindings: array (
+  0 => NULL,
+  1 => '2014-04-05 00:00:00',
+  2 => '2014-04-05 23:59:59',
+  3 => '2014-04-05 00:00:00',
+  4 => '2014-04-05 23:59:59',
+  5 => NULL,
+  6 => '',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `th...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#5 [internal function]: GridController->postCapnhat()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#16 {main} [] []
+[2014-04-05 06:55:58] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `th...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#6 [internal function]: GridController->postCapnhat()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null (SQL: insert into `thoigian_chamdrl` (`mahk`, `tgbatdau_sv`, `tgketthuc_sv`, `tgbatdau_cb`, `tgketthuc_cb`, `chopheptre`, `mota`) values (?, ?, ?, ?, ?, ?, ?)) (Bindings: array (
+  0 => NULL,
+  1 => '2014-04-05 00:00:00',
+  2 => '2014-04-05 23:59:59',
+  3 => '2014-04-05 00:00:00',
+  4 => '2014-04-05 23:59:59',
+  5 => NULL,
+  6 => '',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `th...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#5 [internal function]: GridController->postCapnhat()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#16 {main} [] []
+[2014-04-05 06:56:23] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `th...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#6 [internal function]: GridController->postCapnhat()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null (SQL: insert into `thoigian_chamdrl` (`mahk`, `tgbatdau_sv`, `tgketthuc_sv`, `tgbatdau_cb`, `tgketthuc_cb`, `chopheptre`, `mota`) values (?, ?, ?, ?, ?, ?, ?)) (Bindings: array (
+  0 => NULL,
+  1 => '2014-04-05 00:00:00',
+  2 => '2014-04-05 23:59:59',
+  3 => '2014-04-05 00:00:00',
+  4 => '2014-04-05 23:59:59',
+  5 => NULL,
+  6 => '',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `th...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#5 [internal function]: GridController->postCapnhat()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#16 {main} [] []
+[2014-04-05 06:56:45] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `th...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#6 [internal function]: GridController->postCapnhat()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null (SQL: insert into `thoigian_chamdrl` (`mahk`, `tgbatdau_sv`, `tgketthuc_sv`, `tgbatdau_cb`, `tgketthuc_cb`, `chopheptre`, `mota`) values (?, ?, ?, ?, ?, ?, ?)) (Bindings: array (
+  0 => NULL,
+  1 => '2014-04-05 00:00:00',
+  2 => '2014-04-05 23:59:59',
+  3 => '2014-04-05 00:00:00',
+  4 => '2014-04-05 23:59:59',
+  5 => NULL,
+  6 => '',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `th...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#5 [internal function]: GridController->postCapnhat()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#16 {main} [] []
+[2014-04-05 06:57:04] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `th...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#6 [internal function]: GridController->postCapnhat()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null (SQL: insert into `thoigian_chamdrl` (`mahk`, `tgbatdau_sv`, `tgketthuc_sv`, `tgbatdau_cb`, `tgketthuc_cb`, `chopheptre`, `mota`) values (?, ?, ?, ?, ?, ?, ?)) (Bindings: array (
+  0 => NULL,
+  1 => '2014-04-05 00:00:00',
+  2 => '2014-04-05 23:59:59',
+  3 => '2014-04-05 00:00:00',
+  4 => '2014-04-05 23:59:59',
+  5 => NULL,
+  6 => '',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `th...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#5 [internal function]: GridController->postCapnhat()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#16 {main} [] []
+[2014-04-05 06:58:05] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `th...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#6 [internal function]: GridController->postCapnhat()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null (SQL: insert into `thoigian_chamdrl` (`mahk`, `tgbatdau_sv`, `tgketthuc_sv`, `tgbatdau_cb`, `tgketthuc_cb`, `chopheptre`, `mota`) values (?, ?, ?, ?, ?, ?, ?)) (Bindings: array (
+  0 => NULL,
+  1 => '2014-04-05 00:00:00',
+  2 => '2014-04-05 23:59:59',
+  3 => '2014-04-05 00:00:00',
+  4 => '2014-04-05 23:59:59',
+  5 => NULL,
+  6 => '',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `th...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(212): Illuminate\Database\Query\Builder->insert(Array)
+#5 [internal function]: GridController->postCapnhat()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#16 {main} [] []
+[2014-04-05 07:02:39] log.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:331
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(331): PDOStatement->execute(Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `th...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(205): Illuminate\Database\Query\Builder->insert(Array)
+#6 [internal function]: GridController->postCapnhat()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'mahk' cannot be null (SQL: insert into `thoigian_chamdrl` (`mahk`, `tgbatdau_sv`, `tgketthuc_sv`, `tgbatdau_cb`, `tgketthuc_cb`, `chopheptre`, `mota`) values (?, ?, ?, ?, ?, ?, ?)) (Bindings: array (
+  0 => NULL,
+  1 => '2014-04-05 00:00:00',
+  2 => '2014-04-05 23:59:59',
+  3 => '2014-04-05 00:00:00',
+  4 => '2014-04-05 23:59:59',
+  5 => NULL,
+  6 => '',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'insert into `th...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(332): Illuminate\Database\Connection->run('insert into `th...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(289): Illuminate\Database\Connection->statement('insert into `th...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1428): Illuminate\Database\Connection->insert('insert into `th...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\app\controllers\GridController.php(205): Illuminate\Database\Query\Builder->insert(Array)
+#5 [internal function]: GridController->postCapnhat()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postCapnhat', Array)
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postCapnhat', Array)
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#16 {main} [] []
+[2014-04-05 22:35:56] log.ERROR: exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vpk.vtgcham_diemrl' doesn't exist' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:272
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(272): PDO->prepare('select * from `...')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(521): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'select * from `...', Array)
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(990): Illuminate\Database\Query\Builder->get(Array)
+#7 D:\All Program\xampp\htdocs\vpk_Demo\app\storage\views\e204cb922d430fae9522fb6371ee8906(39): Illuminate\Database\Query\Builder->first()
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('D:\All Program\...')
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\All Program\...', Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('D:\All Program\...', Array)
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'getXetdiem', Object(Illuminate\View\View))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getXetdiem', Array)
+#18 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#19 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#20 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#21 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#24 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#25 {main}
+
+Next exception 'Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vpk.vtgcham_diemrl' doesn't exist (SQL: select * from `vtgcham_diemrl` where `mahk` = ? limit 1) (Bindings: array (
+  0 => '116',
+))' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php:556
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(529): Illuminate\Database\Connection->handleQueryException(Object(PDOException), 'select * from `...', Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Connection.php(277): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1028): Illuminate\Database\Connection->select('select * from `...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1018): Illuminate\Database\Query\Builder->runSelect()
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1005): Illuminate\Database\Query\Builder->getFresh(Array)
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(990): Illuminate\Database\Query\Builder->get(Array)
+#6 D:\All Program\xampp\htdocs\vpk_Demo\app\storage\views\e204cb922d430fae9522fb6371ee8906(39): Illuminate\Database\Query\Builder->first()
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('D:\All Program\...')
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\All Program\...', Array)
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('D:\All Program\...', Array)
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#11 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'getXetdiem', Object(Illuminate\View\View))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getXetdiem', Array)
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#19 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#20 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#21 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#24 {main} [] []
+[2014-04-05 23:23:17] log.ERROR: exception 'ErrorException' with message 'Undefined property: stdClass::$tgketthuc' in D:\All Program\xampp\htdocs\vpk_Demo\app\storage\views\e204cb922d430fae9522fb6371ee8906:114
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\app\storage\views\e204cb922d430fae9522fb6371ee8906(114): Illuminate\Exception\Handler->handleError(8, 'Undefined prope...', 'D:\All Program\...', 114, Array)
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('D:\All Program\...')
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\All Program\...', Array)
+#3 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('D:\All Program\...', Array)
+#4 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#6 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'getXetdiem', Object(Illuminate\View\View))
+#10 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'getXetdiem', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#12 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\vpk_Demo\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 D:\All Program\xampp\htdocs\vpk_Demo\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []

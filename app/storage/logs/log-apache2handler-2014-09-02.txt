@@ -1,0 +1,493 @@
+[2014-09-02 02:47:05] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot use isset() on the result of an expression (you can use "null !== expression" instead)' in D:\All Program\xampp\htdocs\Forex\app\storage\views\d99b2f444de48d3d2056cfbece6e473a:30
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-02 02:48:04] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot use isset() on the result of an expression (you can use "null !== expression" instead)' in D:\All Program\xampp\htdocs\Forex\app\storage\views\d99b2f444de48d3d2056cfbece6e473a:34
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-02 05:16:37] log.ERROR: exception 'InvalidArgumentException' with message 'View [nomal_user.init] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('nomal_user.init', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('nomal_user.init')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('nomal_user.init')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('nomal_user.init')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-09-02 05:54:30] log.ERROR: exception 'InvalidArgumentException' with message 'View [nomal_user.init] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('nomal_user.init', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('nomal_user.init')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('nomal_user.init')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('nomal_user.init')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-09-02 20:34:23] log.ERROR: exception 'InvalidArgumentException' with message 'View [nomal_user.menu] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('nomal_user.menu', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('nomal_user.menu')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('nomal_user.menu')
+#3 C:\xampp\htdocs\Forex\app\storage\views\54a283e683416c2a9c8a8b14a82442ae(72): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 C:\xampp\htdocs\Forex\app\storage\views\54a283e683416c2a9c8a8b14a82442ae(72): Illuminate\Support\Facades\View::make('nomal_user.menu')
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#9 C:\xampp\htdocs\Forex\app\storage\views\f8a2423cdf5d6b2a0a907b3e859516b7(166): Illuminate\View\View->render()
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#15 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#17 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#19 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#20 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#21 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#22 {main} [] []
+[2014-09-02 20:35:53] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\Forex\app\storage\views\54a283e683416c2a9c8a8b14a82442ae:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-02 20:37:33] log.ERROR: exception 'InvalidArgumentException' with message 'View [tintuc] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('tintuc', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('tintuc')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('tintuc')
+#3 C:\xampp\htdocs\Forex\app\routes.php(27): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 C:\xampp\htdocs\Forex\app\routes.php(27): Illuminate\Support\Facades\View::make('tintuc')
+#5 [internal function]: {closure}()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-09-02 20:37:44] log.ERROR: exception 'InvalidArgumentException' with message 'View [sangiaodich] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('sangiaodich', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('sangiaodich')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('sangiaodich')
+#3 C:\xampp\htdocs\Forex\app\routes.php(35): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 C:\xampp\htdocs\Forex\app\routes.php(35): Illuminate\Support\Facades\View::make('sangiaodich')
+#5 [internal function]: {closure}()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-09-02 20:37:48] log.ERROR: exception 'InvalidArgumentException' with message 'View [tintuc] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('tintuc', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('tintuc')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('tintuc')
+#3 C:\xampp\htdocs\Forex\app\routes.php(27): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 C:\xampp\htdocs\Forex\app\routes.php(27): Illuminate\Support\Facades\View::make('tintuc')
+#5 [internal function]: {closure}()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-09-02 20:38:36] log.ERROR: exception 'InvalidArgumentException' with message 'View [lienhe] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('lienhe', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('lienhe')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('lienhe')
+#3 C:\xampp\htdocs\Forex\app\routes.php(23): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 C:\xampp\htdocs\Forex\app\routes.php(23): Illuminate\Support\Facades\View::make('lienhe')
+#5 [internal function]: {closure}()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-09-02 20:42:05] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in C:\xampp\htdocs\Forex\app\routes.php:54
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-02 20:50:18] log.ERROR: exception 'InvalidArgumentException' with message 'View [header.index] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('header.index', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('header.index')
+#2 C:\xampp\htdocs\Forex\app\storage\views\f60d448b9f0ce2cb641b4906a6c9e91a(5): Illuminate\View\Environment->make('header.index', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#8 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-09-02 20:51:17] log.ERROR: exception 'InvalidArgumentException' with message 'View [header.index.blade] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('header.index.bl...', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('header.index.bl...')
+#2 C:\xampp\htdocs\Forex\app\storage\views\f60d448b9f0ce2cb641b4906a6c9e91a(5): Illuminate\View\Environment->make('header.index.bl...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#8 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-09-02 20:51:18] log.ERROR: exception 'InvalidArgumentException' with message 'View [header.index.blade] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('header.index.bl...', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('header.index.bl...')
+#2 C:\xampp\htdocs\Forex\app\storage\views\f60d448b9f0ce2cb641b4906a6c9e91a(5): Illuminate\View\Environment->make('header.index.bl...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#8 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-09-02 20:52:41] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:52:41] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:52:44] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:52:44] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:52:49] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:52:49] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:54:41] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:54:42] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:54:43] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:54:43] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:54:44] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:54:44] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 20:59:49] log.ERROR: exception 'ErrorException' with message 'Undefined variable: allContacts' in C:\xampp\htdocs\Forex\app\storage\views\ac848b35b8f74e88fe8a7ca13f6d1841:4
+Stack trace:
+#0 C:\xampp\htdocs\Forex\app\storage\views\ac848b35b8f74e88fe8a7ca13f6d1841(4): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 4, Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\Forex\app\storage\views\f60d448b9f0ce2cb641b4906a6c9e91a(32): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#11 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-09-02 21:02:31] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:02:35] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:02:38] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:06:45] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:07:08] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:07:19] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:14:16] log.ERROR: exception 'ErrorException' with message 'Undefined variable: allContacts' in C:\xampp\htdocs\Forex\app\storage\views\ac848b35b8f74e88fe8a7ca13f6d1841:4
+Stack trace:
+#0 C:\xampp\htdocs\Forex\app\storage\views\ac848b35b8f74e88fe8a7ca13f6d1841(4): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 4, Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\Forex\app\storage\views\cc37ef585cfe88f332f6b4d9e2096176(101): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#11 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-09-02 21:14:42] log.ERROR: exception 'ErrorException' with message 'Undefined variable: allContacts' in C:\xampp\htdocs\Forex\app\storage\views\ac848b35b8f74e88fe8a7ca13f6d1841:4
+Stack trace:
+#0 C:\xampp\htdocs\Forex\app\storage\views\ac848b35b8f74e88fe8a7ca13f6d1841(4): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 4, Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\Forex\app\storage\views\cc37ef585cfe88f332f6b4d9e2096176(101): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#11 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-09-02 21:16:33] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:18:35] log.ERROR: exception 'InvalidArgumentException' with message 'View [guest.traders.index.sanpham] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('guest.traders.i...', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('guest.traders.i...')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('guest.traders.i...')
+#3 C:\xampp\htdocs\Forex\app\routes.php(35): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 C:\xampp\htdocs\Forex\app\routes.php(35): Illuminate\Support\Facades\View::make('guest.traders.i...')
+#5 [internal function]: {closure}()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-09-02 21:18:44] log.ERROR: exception 'InvalidArgumentException' with message 'View [guest.traders.index.chienluoc] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('guest.traders.i...', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('guest.traders.i...')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('guest.traders.i...')
+#3 C:\xampp\htdocs\Forex\app\routes.php(45): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 C:\xampp\htdocs\Forex\app\routes.php(45): Illuminate\Support\Facades\View::make('guest.traders.i...')
+#5 [internal function]: {closure}()
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-09-02 21:38:54] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:39:52] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:49:42] log.ERROR: exception 'InvalidArgumentException' with message 'View [admin.menu.navbar] not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('admin.menu.navb...', Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('admin.menu.navb...')
+#2 C:\xampp\htdocs\Forex\app\storage\views\c8212f708807e81b314258236f49bafd(20): Illuminate\View\Environment->make('admin.menu.navb...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#7 C:\xampp\htdocs\Forex\app\storage\views\22b717905702770c5e94f71554e7fc81(20): Illuminate\View\View->render()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#13 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#19 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#20 {main} [] []
+[2014-09-02 21:58:44] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:58:47] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
+[2014-09-02 21:58:54] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php:1429
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1050): Illuminate\Routing\Router->handleRoutingException(Object(Symfony\Component\Routing\Exception\ResourceNotFoundException))
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1014): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#5 {main} [] []
