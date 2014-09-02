@@ -11,7 +11,6 @@ class HomeController extends BaseController {
     }
 
     public function getLogout() {
-        Session::forget('qldiem');
         Auth::logout();
         return Redirect::to('login')
                         ->with('flash_notice', 'Bạn đã đăng xuất thành công.');
