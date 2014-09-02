@@ -14,6 +14,4 @@ class Hethong extends Eloquent {
     public static function getInfocty() {
         return DB::table('tintuc')->first()->noidung;
     }
-    
-    
 }
