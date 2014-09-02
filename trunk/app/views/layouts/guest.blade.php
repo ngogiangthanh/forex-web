@@ -30,7 +30,15 @@
             </div>
         </div>
         <div id="main" class="container">
-            @yield('main')
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12 content-middle" style="background: #F0F0F0 ">
+                        @yield('main')
+                        <!-- all contact -->
+                        @include('guest.footer.index')
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <div style="border-top: 1px #fff solid;text-align: center;">&copy; Bản quyền thuộc về Forexker Market 2014.</div>

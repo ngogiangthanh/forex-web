@@ -1,33 +1,32 @@
 <?php $__env->startSection('main'); ?>
-<div class="row">
-    <div class="col-md-12">
-        <div class="col-md-1 content-left"></div>
-        <div class="col-md-10 content-middle" style="background: #F0F0F0;">    
-            <!-- news -->
-            <div class="col-md-12 news" style="margin-top: 20px">
-                <!-- tin trong nước -->
-                <div class="col-md-5 tintn">
-                    <div class="col-md-10">
-                        <p style="font-size: 18px; font-weight: bold; font-family: Georgia">Tin Trong Nước</p>
-                    </div>
-                    <div class="col-md-12">
-                        (Chưa có tin).
-                    </div>
-                </div>
-                <!-- tin ngoài nước -->
-                <div class="col-md-5 tinqt">
-                    <div class="col-md-10">
-                        <p style="font-size: 18px; font-weight: bold; font-family: Georgia">Tin Quốc Tế</p>
-                    </div>
-                    <div class="col-md-12">
-                        (Chưa có tin).
-                    </div>
-                </div>
+<div class="col-md-12 news" style="margin-top: 15px">
+    <!-- tin trong nước -->
+    <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">Tin trong nước</div>
+            <div class="panel-body">
+                Tên bài viết ------------------ số lượt xem ---------- ngày đăng --- xem<br/>
+                Tin trong nước 1---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Tin trong nước 2--------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Tin trong nước 3---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Tin trong nước 4---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Phân trang: << 1 2 3 >>
             </div>
-            <!-- all contact -->
-            <?php echo $__env->make('guest.footer.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
-        <div class="col-md-1 content-right"></div>  
+    </div>
+    <!-- tin ngoài nước -->
+    <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">Tin ngoài nước</div>
+            <div class="panel-body">
+                Tên bài viết ------------------ số lượt xem ---------- ngày đăng --- xem<br/>
+                Tin trong nước 1---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Tin trong nước 2--------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Tin trong nước 3---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Tin trong nước 4---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Phân trang: << 1 2 3 >>
+            </div>
+        </div>
     </div>
 </div>
 <?php $__env->stopSection(); ?>
