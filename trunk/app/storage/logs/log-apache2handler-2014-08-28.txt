@@ -1,0 +1,209 @@
+[2014-08-28 06:25:52] log.ERROR: exception 'InvalidArgumentException' with message 'View [500] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('500', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('500')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('500')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('500')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:25:55] log.ERROR: exception 'InvalidArgumentException' with message 'View [500] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('500', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('500')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('500')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('500')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:26:41] log.ERROR: exception 'InvalidArgumentException' with message 'View [500] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('500', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('500')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('500')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('500')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:27:47] log.ERROR: exception 'InvalidArgumentException' with message 'View [nouser] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('nouser', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('nouser')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('nouser')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('nouser')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:28:21] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getRole() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\3365cd8f57f328f8d2ab566ea3a24f56:72
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-28 06:30:11] log.ERROR: exception 'InvalidArgumentException' with message 'View [home] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('home', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('home')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('home')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('home')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:30:49] log.ERROR: exception 'InvalidArgumentException' with message 'View [home] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('home', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('home')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('home')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('home')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:38:13] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getRole() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\3365cd8f57f328f8d2ab566ea3a24f56:72
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-28 06:41:13] log.ERROR: exception 'InvalidArgumentException' with message 'View [home_page] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('home_page', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('home_page')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('home_page')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('home_page')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:41:41] log.ERROR: exception 'InvalidArgumentException' with message 'View [home_page] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('home_page', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('home_page')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('home_page')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('home_page')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:42:17] log.ERROR: exception 'InvalidArgumentException' with message 'View [layouts.init] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('layouts.init', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('layouts.init')
+#2 D:\All Program\xampp\htdocs\Forex\app\storage\views\c3e47c71fb761ba9e0cb6d0b8c1041d1(193): Illuminate\View\Environment->make('layouts.init', Array)
+#3 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('D:\All Program\...')
+#4 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\All Program\...', Array)
+#5 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('D:\All Program\...', Array)
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#15 {main} [] []
+[2014-08-28 06:45:49] log.ERROR: exception 'InvalidArgumentException' with message 'View [nomal_user.menu] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('nomal_user.menu', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('nomal_user.menu')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('nomal_user.menu')
+#3 D:\All Program\xampp\htdocs\Forex\app\storage\views\c3e47c71fb761ba9e0cb6d0b8c1041d1(72): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\storage\views\c3e47c71fb761ba9e0cb6d0b8c1041d1(72): Illuminate\Support\Facades\View::make('nomal_user.menu')
+#5 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('D:\All Program\...')
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\All Program\...', Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('D:\All Program\...', Array)
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#10 D:\All Program\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#11 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#12 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(58): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#13 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#15 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#16 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#17 {main} [] []
+[2014-08-28 06:46:21] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getInfo() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\2ed2e8f03696b011bd899663cb3e76cd:79
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-28 06:46:54] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getInfo() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\2ed2e8f03696b011bd899663cb3e76cd:79
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-28 06:49:35] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getRole() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\3365cd8f57f328f8d2ab566ea3a24f56:72
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-28 06:52:11] log.ERROR: exception 'InvalidArgumentException' with message 'View [nomal_user.home] not found.' in D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:135
+Stack trace:
+#0 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(76): Illuminate\View\FileViewFinder->findInPaths('nomal_user.home', Array)
+#1 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Environment.php(115): Illuminate\View\FileViewFinder->find('nomal_user.home')
+#2 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php(206): Illuminate\View\Environment->make('nomal_user.home')
+#3 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\Facade::__callStatic('make', Array)
+#4 D:\All Program\xampp\htdocs\Forex\app\routes.php(15): Illuminate\Support\Facades\View::make('nomal_user.home')
+#5 [internal function]: {closure}()
+#6 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 D:\All Program\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 D:\All Program\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []
+[2014-08-28 06:52:37] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getRole() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\3365cd8f57f328f8d2ab566ea3a24f56:72
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-28 06:52:56] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getRole() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\3365cd8f57f328f8d2ab566ea3a24f56:72
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-28 06:53:11] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getRole() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\3365cd8f57f328f8d2ab566ea3a24f56:72
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-28 06:54:17] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function getRole() on a non-object' in D:\All Program\xampp\htdocs\Forex\app\storage\views\3365cd8f57f328f8d2ab566ea3a24f56:72
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

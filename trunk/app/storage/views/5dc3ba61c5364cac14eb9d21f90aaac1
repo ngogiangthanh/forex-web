@@ -1,0 +1,33 @@
+<div class="row">
+    <!-- header content -->
+    <div class="col-md-12">
+        <div class="col-md-1" style="margin-top: 15px">
+            <a href="<?php echo url('/'); ?>"><img src="<?php echo asset('img/face_icon.jpg'); ?>" alt="image logo"></a>
+        </div>
+        <div class="col-md-8">
+            <a href="<?php echo url('/'); ?>"><img src="<?php echo asset('img/banner_page.png'); ?>" alt="image logo"></a>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group" style="margin-top: 30px">
+                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                <span class="input-group-btn" style="margin-top:125px">
+                  <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div><!-- /input-group -->
+        </div>
+    </div>
+</div>
+<!-- all contact running -->
+<div class="col-md-12" style="width: 1210px; height: 30px; background: #000000; margin-left: -35px;">
+    <div style="margin-top: 7px">
+        <marquee behavior="scroll" direction="left" scrollamount="3">
+            <?php foreach ($allContacts as $ct): ?>
+                <?php if ($ct != null): ?>
+                &nbsp;<span class="name-contact" style="color: #FFFFFF  "><?php echo $ct->address; ?></span>
+                &nbsp;<span class="sdt-contact" style="color: #6600FF;">+<?php echo $ct->tel; ?></span>
+                &nbsp;<span style="border-right: 2px solid red;"></span>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </marquee>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+n] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CSyndication_CISyndicationText *value);
+        
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Subtitle )( 
+            __RPC__in __x_ABI_CWindows_CWeb_CSyndication_CISyndicationFeed * This,
+            /* [out][retval] */ __RPC__deref_out_opt __x_ABI_CWindows_CWeb_CSyndication_CISyndicationText **value);
+        
+        /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Subtitle )( 
+            __RPC__in __x_ABI_CWindows_CWeb_CSyndication_CISyndicationFeed * This,
+            /* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CSyndication_CISyndicationText *value);
+        
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Title )( 
+            __RPC__in __x_ABI_CWindows_CWeb_CSyndication_CISyndicationFeed * This,
+            /* [out][retval] */ __RPC__deref_out_opt __x_ABI_CWindows_CWeb_CSyndication_CISyndicationText **value);
+        
+        /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Title )( 
+            __RPC__in __x_ABI_CWindows_CWeb_CSyndication_CISyndicationFeed * This,
+            /* [in] */ __RPC__in_opt __x_ABI_CWindows_CWeb_CSyndication_CISyndicationText *value);
+        
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_FirstUri )( 
+            __RPC__in __x_ABI_CWindows_CWeb_CSyndication_CISyndicationFeed * This,
+            /* [out][retval] */ __RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass **value);
+        
+        

@@ -1,0 +1,21 @@
+[2014-04-01 09:12:19] log.ERROR: exception 'InvalidArgumentException' with message 'There are no commands defined in the "generate" namespace.' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php:523
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(561): Symfony\Component\Console\Application->findNamespace('generate')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(188): Symfony\Component\Console\Application->find('generate:resour...')
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\artisan(59): Symfony\Component\Console\Application->run()
+#4 {main} [] []
+[2014-04-01 09:15:59] log.ERROR: exception 'InvalidArgumentException' with message 'There are no commands defined in the "generate" namespace.' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php:523
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(561): Symfony\Component\Console\Application->findNamespace('generate')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(188): Symfony\Component\Console\Application->find('generate:resour...')
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\artisan(59): Symfony\Component\Console\Application->run()
+#4 {main} [] []
+[2014-04-01 09:17:49] log.ERROR: exception 'InvalidArgumentException' with message 'There are no commands defined in the "generate" namespace.' in D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php:523
+Stack trace:
+#0 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(561): Symfony\Component\Console\Application->findNamespace('generate')
+#1 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(188): Symfony\Component\Console\Application->find('generate:contro...')
+#2 D:\All Program\xampp\htdocs\vpk_Demo\vendor\symfony\console\Symfony\Component\Console\Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\All Program\xampp\htdocs\vpk_Demo\artisan(59): Symfony\Component\Console\Application->run()
+#4 {main} [] []

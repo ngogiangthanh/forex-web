@@ -1,0 +1,15 @@
+[2014-02-28 13:34:34] log.ERROR: exception 'ErrorException' with message 'Undefined offset: 1' in C:\xampp\htdocs\vpk_mau\app\controllers\DuyetinController.php:53
+Stack trace:
+#0 C:\xampp\htdocs\vpk_mau\app\controllers\DuyetinController.php(53): Illuminate\Exception\Handler->handleError(8, 'Undefined offse...', 'C:\xampp\htdocs...', 53, Array)
+#1 [internal function]: DuyetinController->postQlogin()
+#2 C:\xampp\htdocs\vpk_mau\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\vpk_mau\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('postQlogin', Array)
+#4 C:\xampp\htdocs\vpk_mau\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'postQlogin', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#6 C:\xampp\htdocs\vpk_mau\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\vpk_mau\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\vpk_mau\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\vpk_mau\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\vpk_mau\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\vpk_mau\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []

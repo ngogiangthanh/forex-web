@@ -1,0 +1,21 @@
+
+                  <image id="DisplayImage" imagefile="..\images\DefaultFriendIcon.png" height="96" width="96" />
+                  <image id="BrandIcon" xpos="68" ypos="68" />
+                  <dockpanel id="AvatarSection" show="hidden" >
+                    <dockpanel width="5" />
+                    <customcontrol id="Avatar" height="128" width="86" />
+                  </dockpanel>
+                </canvas>
+              </dockpanel>
+              <!-- The buttons for top 3 actions -->
+              <dockpanel id="Actions.MainActionsPanel" dock="top" width="100%" margin="4,0,0,2">
+                <textbutton id="Actions.Video" iconfile="card-VideoButton.png" style="style.CC.actionbutton" />
+                <textbutton id="Actions.Call" iconfile="card-CallButton.png" style="style.CC.actionbutton" />
+                <textbutton id="Actions.SMS" iconfile="card-SmsButton.png" style="style.CC.actionbutton" />
+              </dockpanel>
+              <dockpanel id="DisplayImageAreaSpacer" dock="right" width="7" />
+              <dockpanel id="Actions.ActionsPanel" dock="fill" margin="0,0,0,0" clipedge="right">
+                <customattr name="MaxNumOfBtnToShow" value="4" />
+                <textbutton id="Actions.CallMobile" text="Call" style="style.CC.actionbuttontext" width="100%"/>
+                <textbutton id="Actions.CallHome" text="Call" style="style.CC.actionbuttontext" width="100%"/>
+                <textbutton i

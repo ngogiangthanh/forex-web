@@ -1,0 +1,52 @@
+[2014-08-27 21:44:37] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\sangiaodich\app\storage\views\14d2f5872af768c127bd177a2863fa4b:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:45:46] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\sangiaodich\app\storage\views\14d2f5872af768c127bd177a2863fa4b:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:45:48] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\sangiaodich\app\storage\views\14d2f5872af768c127bd177a2863fa4b:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:46:46] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\foxforex\app\storage\views\173a3f94645f8da982a41882ed84ed4e:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:47:17] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\foxforex\app\storage\views\173a3f94645f8da982a41882ed84ed4e:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:47:21] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\foxforex\app\storage\views\173a3f94645f8da982a41882ed84ed4e:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:47:23] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\foxforex\app\storage\views\173a3f94645f8da982a41882ed84ed4e:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:47:26] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\foxforex\app\storage\views\173a3f94645f8da982a41882ed84ed4e:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:47:54] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\foxforex\app\storage\views\173a3f94645f8da982a41882ed84ed4e:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:47:58] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\foxforex\app\storage\views\173a3f94645f8da982a41882ed84ed4e:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:49:45] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\Forex\app\storage\views\c3303f892d54c315eaa9711e3008c382:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:50:10] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\Forex\app\storage\views\c3303f892d54c315eaa9711e3008c382:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-08-27 21:50:11] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in C:\xampp\htdocs\Forex\app\storage\views\c3303f892d54c315eaa9711e3008c382:0
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []

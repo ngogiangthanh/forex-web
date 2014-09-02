@@ -1,0 +1,44 @@
+e/dir is ignored. However an
+  error text is send to PEAR error. 
+  If a file/dir is not readable the file/dir is ignored. However an
+  error text is send to PEAR error. 
+  If the resulting filename/dirname (after the add/remove option or
+  not) string is greater than 99 char, the file/dir is
+  ignored. However an error text is send to PEAR error. 
+Arguments :
+  $p_filelist : An array of filenames and directory names, or a single
+                string with names separated by a single blank space. 
+  $p_add_dir : A string which contains a path to be added to the
+               memorized path of each element in the list. 
+  $p_remove_dir : A string which contains a path to be removed from
+                  the memorized path of each element in the list, when
+		  relevant.
+Return value :
+  true on success, false on error.
+Sample 1 :
+  $tar_object = new Archive_Tar("tarname.tar");
+  [...]
+  $v_list[0]="dev/file.txt";
+  $v_list[1]="dev/data/"; (Optional '/' at the end)
+  $v_list[2]="log/file.log";
+  $tar_object->addModify($v_list, "install");
+  // files are stored in the archive as :
+  //   install/file.txt
+  //   install/data
+  //   install/data/file1.txt
+  //   install/data/... all the files and sub-dirs of data/
+  //   install/file.log
+Sample 2 :
+  $tar_object = new Archive_Tar("tarname.tar");
+  [...]
+  $v_list[0]="dev/file.txt";
+  $v_list[1]="dev/data/"; (Optional '/' at the end)
+  $v_list[2]="log/file.log";
+  $tar_object->addModify($v_list, "install", "dev");
+  // files are stored in the archive as :
+  //   install/file.txt
+  //   install/data
+  //   install/data/file1.txt
+  //   install/data/... all the files and sub-dirs of data/
+  //   install/log/file.log
+How it works 
