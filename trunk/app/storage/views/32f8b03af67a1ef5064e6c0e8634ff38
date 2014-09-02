@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <a href="<?php echo url('admin'); ?>"><i class="glyphicon glyphicon-th-large"></i>&nbsp;Quản lý</a>
+            <b class="glyphicon glyphicon-plus-sign visible-xs pull-right"></b>
+        </h3>
+    </div>
+    <div class="list-group hidden-xs">
+        <a href="<?php echo url(''); ?>" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i>&nbsp;Trang chủ</a>
+        <a href="<?php echo url('qltintuc'); ?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i>&nbsp;Quản lý tin tức</a>
+        <a href="<?php echo url('qlgiaodich'); ?>" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;Quản lý giao dịch</a>
+        <a href="<?php echo url('qlsangiaodich'); ?>" class="list-group-item"><i class="glyphicon glyphicon-gift"></i>&nbsp;Quản lý sàn giao dịch</a>
+        <a href="<?php echo url('qllienhe'); ?>" class="list-group-item"><i class="glyphicon glyphicon-gift"></i>&nbsp;Quản lý liên hệ</a>
+    </div>
+</div>

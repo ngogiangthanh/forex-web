@@ -121,7 +121,7 @@ hr, h1, h2, h3 {
 .footer {
     width: 100%;
     position: fixed;
-    font-size: 12px;
+    font-size: 15px;
     bottom: 0;
     background-color: #f5f5f5;
     color: #777;
@@ -289,15 +289,18 @@ hr, h1, h2, h3 {
     background: url(../img/face.png) center; width: 32px; height: 32px;
 }
 .footer-contact {
-    margin-top: 100px;
+    margin-top: 15px;
     border-top: 2px ridge #330000;
     margin-bottom: 50px;
 }
 .contact{
-    font-family: "Times New Roman", Times, serif;
+    //font-family: "Times New Roman", Times, serif;
+    font-family: sans-serif;
+    font-size: 15px;
 }
 .contact-email {
-    font-family: "Times New Roman", Times, serif;
+  //  font-family: "Times New Roman", Times, serif;
+    font-family: sans-serif;
     margin-top: 30px;
     background: #F0F0F0;
     width: 600px;

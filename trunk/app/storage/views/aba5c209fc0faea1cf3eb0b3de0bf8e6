@@ -1,0 +1,17 @@
+<?php $__env->startSection('main'); ?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-1 content-left"></div>
+        <div class="col-md-10 content-middle" style="background: #F0F0F0;">    
+            <!-- san giao dich -->
+            <div class="col-md-12 news" style="margin-top: 20px">
+                Giới thiệu sàn giao dịch
+            </div>
+            <!-- all contact -->
+            <?php echo $__env->make('guest.footer.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+        <div class="col-md-1 content-right"></div>  
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.guest', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
