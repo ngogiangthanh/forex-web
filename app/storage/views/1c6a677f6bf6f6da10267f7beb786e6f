@@ -1,16 +1,17 @@
 <?php $__env->startSection('main'); ?>
-<div class="row">
-    <div class="col-md-12">
-        <div class="col-md-1 content-left"></div>
-        <div class="col-md-10 content-middle" style="background: #F0F0F0;">    
-            <!-- news -->
-            <div class="col-md-12 news" style="margin-top: 20px">
-               Kinh nghiem giao dich
+<div class="col-md-12 news" style="margin-top: 20px">
+  <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">Kinh nghiệm giao dịch</div>
+            <div class="panel-body">
+                Tên chiến lược giao dịch ------------------ số lượt xem ---------- ngày đăng --- xem<br/>
+                < ảnh > Kinh nghiệm giao dịch 1---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                < ảnh > Kinh nghiệm giao dịch 2--------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                < ảnh > Kinh nghiệm giao dịch 3---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                < ảnh > Kinh nghiệm giao dịch 4---------------- 123 ----------------- 22/12/2014 --- xem<br/>
+                Phân trang: << 1 2 3 >>
             </div>
-            <!-- all contact -->
-            <?php echo $__env->make('guest.footer.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
-        <div class="col-md-1 content-right"></div>  
     </div>
 </div>
 <?php $__env->stopSection(); ?>
