@@ -1,6 +1,6 @@
 <?php
 
-class KhachhangController extends BaseController {
+class GuestController extends BaseController {
 
     
 }
