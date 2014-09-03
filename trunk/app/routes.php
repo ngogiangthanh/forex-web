@@ -16,9 +16,8 @@ Route::get('',array('as' => '', 'uses' => 'GuestController@index'));
 //
 Route::get('{type}','GuestController@index')->where(array('type' => '[A-Za-z0-9]+'));
 //
-Route::get('test', function() {
-    return HomeController::getDetails();
-}); 
+Route::post('sendcontact','GuestController@store'); 
+
 /**
  * Trang quản lý
  */
