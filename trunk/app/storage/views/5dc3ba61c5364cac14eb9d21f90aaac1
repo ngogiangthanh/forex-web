@@ -21,7 +21,7 @@
 <div class="col-md-12" style="background: #000000;margin-top: 20px">
     <div style="vertical-align: middle">
         <marquee behavior="scroll" direction="left" scrollamount="3">
-            <?php foreach ($allContacts as $ct): ?>
+            <?php foreach ($contacts as $ct): ?>
             <?php if ($ct != null): ?>
             &nbsp;<span class="name-contact" style="color: #FFFFFF  "><?php echo $ct->address; ?></span>
             &nbsp;<span class="sdt-contact" style="color: #6600FF;">+<?php echo $ct->tel; ?></span>

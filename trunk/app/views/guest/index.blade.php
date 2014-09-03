@@ -1,5 +1,5 @@
 @extends('layouts.guest')
-@section('main')
+@section('main')       
 <div class="col-md-12">
     <div class="col-md-9">
         <!--Table economic-->
@@ -7,22 +7,24 @@
             <iframe src="http://ec.forexprostools.com?ecoDayBackground=%23ccffff&defaultFont=%232c2640&borderColor=%23660000&ecoDayFontColor=%23000099&columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_employment,_economicActivity,_inflation,_credit,_centralBanks,_confidenceIndex,_balance,_Bonds&importance=1,2,3&features=datepicker,timezone&countries=25,32,6,37,72,22,17,39,14,48,10,35,7,43,60,36,110,11,26,12,4,5&calType=day&timeZone=8&lang=1" 
                     width="100%" height="400" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0">
             </iframe>
-            <!--                        <div class="poweredBy">
-                                        <span style="font-size: 11px;color: #333333;text-decoration: none;">
-                                            Real Time Economic Calendar provided by 
-                                            <a href="http://www.Investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">
-                                                Investing.com
-                                            </a>.
-                                        </span>
-                                    </div>-->
+            <!--                        
+            <div class="poweredBy">
+                                    <span style="font-size: 11px;color: #333333;text-decoration: none;">
+                                        Real Time Economic Calendar provided by 
+                                        <a href="http://www.Investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">
+                                            Investing.com
+                                        </a>.
+                                    </span>
+                                </div>
+            -->
         </div>
         <!--Tầm nhìn thế giới-->
         <div class="col-md-12" style="margin-top: 15px;">
             <!--  -->
             <div class="row">
                 <div class="col-md-12 panel panel-primary">
-                    <h3>{{Hethong::getTencty()}}</h3>
-                    <p>{{Hethong::getInfocty()}}</p>
+                    <h3>{{$chienLuoc->tieude}}</h3>
+                    <p>{{$chienLuoc->noidung}}</p>
                 </div>
             </div>
         </div>
@@ -31,12 +33,9 @@
             <!--  -->
             <div class="row">
                 <div class="panel panel-success">
-                    <div class="panel-heading">CHIẾN LƯỢC VÀNG</div>
-                    <div class="panel-body">
-                        (ảnh)Chiến lược vàng 1 << xem >>        |    (ảnh)Chiến lược vàng 2 << xem >><br/>
-                        <br/>
-                        (ảnh)Chiến lược vàng 3 << xem >>        |    (ảnh)Chiến lược vàng 4 << xem >><br/>
-                        <br/>Phân trang <<1 2 3>>
+                    <div class="panel-heading">CHIẾN LƯỢC FOREX</div>
+                    <div class="panel-body" id="forex_index">
+                        @include ('guest.forex.index')
                     </div>
                 </div>
             </div>
@@ -46,7 +45,7 @@
             <!-- show news -->
             <div class="row">
                 <div class="panel panel-success">
-                    <div class="panel-heading">CHIẾN LƯỢC FOREX</div>
+                    <div class="panel-heading">CHIẾN LƯỢC VÀNG</div>
                     <div class="panel-body">
                         <div class="col-md-12">
                             <!--  -->
@@ -60,22 +59,19 @@
                                 <!-- Tab panes -->
                                 <div class="tab-content" style="padding: 5px">
                                     <div class="tab-pane active" id="kinhnghiemgd">
-                                        (ảnh) Các bài về kinh nghiệm giao dịch  1 << xem >>        |    (ảnh) Các bài về kinh nghiệm giao dịch 2 << xem >><br/>
-                                        <br/>
-                                        (ảnh) Các bài về kinh nghiệm giao dịch 3  << xem >>        |    (ảnh) Các bài về kinh nghiệm giao dịch 4 << xem >><br/>
-                                        <br/>Phân trang <<1 2 3>>
+                                        <div id="kinhnghiemgd_content">
+                                            @include ('guest.chienluocvang.index_kn')
+                                        </div>
                                     </div>
                                     <div class="tab-pane" id="phantichfa">
-                                         (ảnh)  Các bài về phân tích cơ bản FA  1 << xem >>        |    (ảnh)  Các bài về phân tích cơ bản FA 2 << xem >><br/>
-                                        <br/>
-                                        (ảnh)  Các bài về phân tích cơ bản FA 3  << xem >>        |    (ảnh)  Các bài về phân tích cơ bản FA 4 << xem >><br/>
-                                        <br/>Phân trang <<1 2 3>>
+                                        <div id="phantichfa_content">
+                                            @include ('guest.chienluocvang.index_fa')
+                                        </div>
                                     </div>
                                     <div class="tab-pane" id="phantichta">
-                                         (ảnh) Các bài về phân tích kỹ thuật TA  1 << xem >>        |    (ảnh)  Các bài về phân tích kỹ thuật TA 2 << xem >><br/>
-                                        <br/>
-                                        (ảnh)  Các bài về phân tích kỹ thuật TA 3  << xem >>        |    (ảnh)  Các bài về phân tích kỹ thuật TA 4 << xem >><br/>
-                                        <br/>Phân trang <<1 2 3>>
+                                        <div id="phantichta_content">
+                                            @include ('guest.chienluocvang.index_ta')
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +100,8 @@
                 <div class="fb-like-box" data-href="https://www.facebook.com/ngogiangthanhblog" data-width="200px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
             </div>
             <div id="fb-root"></div>
-            <script>(function(d, s, id) {
+            <script type="text/javascript">
+                (function(d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
                     if (d.getElementById(id))
                         return;
@@ -112,7 +109,9 @@
                     js.id = id;
                     js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=406997906044195&version=v2.0";
                     fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
+                }(document, 'script', 'facebook-jssdk'));
+
+            </script>
         </div>
     </div>
 </div>    
