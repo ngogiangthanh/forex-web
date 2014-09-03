@@ -54,6 +54,7 @@
         {{ HTML::script('js/bootstrap.notify.min.js') }}
         {{ HTML::script('js/nprogress.js') }}
         {{ HTML::script('js/jquery-ajax-pagination-1.0.js') }}
+        {{ HTML::script('js/jquery-ajax-contact-1.0.js') }}
         <!--jqWidget-->
         <!--        {{ HTML::style('js/jqwidgets/styles/jqx.base.css') }}
                 {{ HTML::style('js/jqwidgets/styles/jqx.bootstrap.css') }}

@@ -63,10 +63,9 @@ class GuestController extends BaseController {
                 break;
             case "contact":
                 $supportContact = Contact::Select("CUSTOMER SUPPORT");
-                    
                 return View::make('guest.contacts.index')
                                 ->with('contacts', $contacts)
-                                ->with("supportContact",$supportContact)
+                                ->with("supportContact", $supportContact)
                                 ->with("title", "Gửi liên hệ");
                 break;
             case "admin":
@@ -121,6 +120,21 @@ class GuestController extends BaseController {
                                 ->with('FAs', $FAs)
                                 ->with('TAs', $TAs)
                                 ->with("title", "Trang chủ Forex");
+        }
+    }
+
+    public function store() {
+        if (Request::ajax()) {
+            //Thêm vào csdl
+            $hoten = Input::get("hoten");
+            $email = Input::get("email");
+            $tieude = Input::get("tieude");
+            $noidung = Input::get("noidung");
+            $lh = new LienHe();
+            $result = $lh->Insert($hoten, $email, $tieude, $noidung);
+            //Lấy nội dung trang thông báo thành công
+            $html = View::make("guest.contacts.complete", array("result" => $result))->render();
+            return Response::json(array('html' => $html));
         }
     }
 

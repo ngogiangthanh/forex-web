@@ -1,0 +1,17 @@
+[2014-09-04 00:00:33] log.ERROR: exception 'ErrorException' with message 'mysql_real_escape_string(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead' in C:\xampp\htdocs\Forex\app\models\LienHe.php:20
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(8192, 'mysql_real_esca...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\Forex\app\models\LienHe.php(20): mysql_real_escape_string('thanh')
+#2 C:\xampp\htdocs\Forex\app\controllers\GuestController.php(134): LienHe->Insert('thanh', 'thanhthanh1516@...', '3443', '4334')
+#3 [internal function]: GuestController->store()
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('store', Array)
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'store', Array)
+#7 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#13 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#14 {main} [] []

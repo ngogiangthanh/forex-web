@@ -54,6 +54,7 @@
         <?php echo HTML::script('js/bootstrap.notify.min.js'); ?>
         <?php echo HTML::script('js/nprogress.js'); ?>
         <?php echo HTML::script('js/jquery-ajax-pagination-1.0.js'); ?>
+        <?php echo HTML::script('js/jquery-ajax-contact-1.0.js'); ?>
         <!--jqWidget-->
         <!--        <?php echo HTML::style('js/jqwidgets/styles/jqx.base.css'); ?>
                 <?php echo HTML::style('js/jqwidgets/styles/jqx.bootstrap.css'); ?>
