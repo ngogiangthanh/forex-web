@@ -167,5 +167,19 @@ class GuestController extends BaseController {
             return Response::json(array('html' => $html));
         }
     }
+    
+    public function show($type,$id)
+    {
+        $contacts = Contact::Select();
+        switch ($type)
+        {
+            case 'forex':
+                     return View::make('guest.forex.view')
+                                ->with('contacts', $contacts)
+                                ->with("title", "Các tin tức trong nước và ngoài nước");
+            default:
+                    return $this->index();
+        }
+    }
 
 }
