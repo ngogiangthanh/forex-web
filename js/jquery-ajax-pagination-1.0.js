@@ -112,4 +112,36 @@ $(document).ready(function()
         });
         return false;
     });
+    $("#gd_chien_luoc_paging a").click(function()
+    {
+        var myurl = $(this).attr('href');
+        $.ajax(
+                {
+                    url: myurl + '&type=gd_chien_luoc',
+                    type: "get",
+                    datatype: "html"
+                }).done(function(data) {
+            $("#gd_chien_luoc_index").hide().fadeIn("slow").html(data.html);
+        }).fail(function(jqXHR, ajaxOptions, thrownError)
+        {
+            alert('No response from server!');
+        });
+        return false;
+    });
+    $("#sp_gd_paging a").click(function()
+    {
+        var myurl = $(this).attr('href');
+        $.ajax(
+                {
+                    url: myurl + '&type=sp_gd',
+                    type: "get",
+                    datatype: "html"
+                }).done(function(data) {
+            $("#sp_gd_index").hide().fadeIn("slow").html(data.html);
+        }).fail(function(jqXHR, ajaxOptions, thrownError)
+        {
+            alert('No response from server!');
+        });
+        return false;
+    });
 });
