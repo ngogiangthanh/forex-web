@@ -3,28 +3,18 @@
     <!-- tin trong nước -->
     <div class="row">
         <div class="panel panel-success">
-            <div class="panel-heading">Tin trong nước</div>
-            <div class="panel-body">
-                Tên bài viết ------------------ số lượt xem ---------- ngày đăng --- xem<br/>
-                < ảnh > Tin trong nước 1---------------- 123 ----------------- 22/12/2014 --- xem<br/>
-                < ảnh > Tin trong nước 2--------------- 123 ----------------- 22/12/2014 --- xem<br/>
-                < ảnh > Tin trong nước 3---------------- 123 ----------------- 22/12/2014 --- xem<br/>
-                < ảnh > Tin trong nước 4---------------- 123 ----------------- 22/12/2014 --- xem<br/>
-                Phân trang: << 1 2 3 >>
+            <div class="panel-heading">TIN TRONG NƯỚC</div>
+            <div class="panel-body" id='tin_tn_index'>
+               <?php echo $__env->make ('guest.news.index_tn', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             </div>
         </div>
     </div>
     <!-- tin ngoài nước -->
     <div class="row">
         <div class="panel panel-success">
-            <div class="panel-heading">Tin ngoài nước</div>
-            <div class="panel-body">
-                Tên bài viết ------------------ số lượt xem ---------- ngày đăng --- xem<br/>
-                < ảnh > Tin trong nước 1---------------- 123 ----------------- 22/12/2014 --- xem<br/>
-                < ảnh > Tin trong nước 2--------------- 123 ----------------- 22/12/2014 --- xem<br/>
-                < ảnh > Tin trong nước 3---------------- 123 ----------------- 22/12/2014 --- xem<br/>
-                < ảnh > Tin trong nước 4---------------- 123 ----------------- 22/12/2014 --- xem<br/>
-                Phân trang: << 1 2 3 >>
+            <div class="panel-heading">TIN NGOÀI NƯỚC</div>
+            <div class="panel-body" id='tin_nn_index'>
+               <?php echo $__env->make ('guest.news.index_nn', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             </div>
         </div>
     </div>

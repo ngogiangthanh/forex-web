@@ -16,5 +16,4 @@ Class LienHe extends Eloquent
     public function validate($data){
             return Validator::make($data, $this->rules);
         }
-
 }

@@ -20,5 +20,14 @@ class HomeController extends BaseController {
     {
         return Redirect::to('/');
     }
-
+    public static function getDetails() {
+        $tintuc['noidung'] = $data = TinTuc::SelectTinTuc();
+        $tintuc['phantrang'] = $data->links();
+        if(Request::ajax())
+        {
+           $html = View::make("guest.test",$tintuc)->render();
+            return Response::json(array('html'=>$html));
+        }
+   //     return View::make("guest.index",$data)->with('title','title');
+    }
 }

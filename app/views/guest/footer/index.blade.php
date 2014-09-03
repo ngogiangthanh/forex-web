@@ -1,7 +1,7 @@
 <div class="col-md-12 footer-contact">
     <div style="margin-top: 20px; margin-bottom: 10px">
         <?php $i = 0; ?>
-        @foreach ($allContacts as $ct)
+        @foreach ($contacts as $ct)
         @if ($ct != null)
         <?php $i++; ?>
         <div class="col-md-4 contact">
