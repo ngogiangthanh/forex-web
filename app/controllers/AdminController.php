@@ -1,7 +1,6 @@
 <?php
 
 class AdminController extends BaseController {
-
     public function index($alias = "") {
         switch ($alias) {
             case "qltintuc":
@@ -19,6 +18,9 @@ class AdminController extends BaseController {
             case "qllienlac":
                 return View::make('admin.lienlac.index')
                                 ->with("title", "Quản lý liên lạc");
+            case "login":
+                return View::make('admin.login')
+                                ->with("title", "Login");                   
             default:
                 return View::make('admin.news.index')
                                 ->with("title", "Quản lý tin tức");

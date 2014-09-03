@@ -11,19 +11,19 @@
             <ul class="nav navbar-nav">
 
                 <li class="dropdown">
-                    <a href="{{ url('/') }}"><span class="glyphicon glyphicon-home"></span>&nbsp;Trang chủ</a>
+                    <a href="<?php echo url('/'); ?>"><span class="glyphicon glyphicon-home"></span>&nbsp;Trang chủ</a>
                 </li>
 
                 <li class="dropdown">
-                    <a href="{{ url('news') }}"><span class="glyphicon glyphicon-list"></span>&nbsp;Tin tức</a>
+                    <a href="<?php echo url('news'); ?>"><span class="glyphicon glyphicon-list"></span>&nbsp;Tin tức</a>
                 </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-barcode"></span>&nbsp;Giao dịch <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ url('sanphamgd') }}"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Sản phẩm giao dịch </a></li>   
-                        <li><a href="{{ url('kinhnghiemgd') }}"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Kinh nghiệm giao dịch </a></li> 
-                        <li><a href="{{ url('chienluocgd') }}"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Chiến lược giao dịch </a></li>                      
+                        <li><a href="<?php echo url('sanphamgd'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Sản phẩm giao dịch </a></li>   
+                        <li><a href="<?php echo url('kinhnghiemgd'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Kinh nghiệm giao dịch </a></li> 
+                        <li><a href="<?php echo url('chienluocgd'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Chiến lược giao dịch </a></li>                      
                     </ul>
                 </li>
 
@@ -32,12 +32,12 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="{{ url('contact') }}"><span class="glyphicon glyphicon-phone"></span>&nbsp;Liên hệ </a>
+                    <a href="<?php echo url('contact'); ?>"><span class="glyphicon glyphicon-phone"></span>&nbsp;Liên hệ </a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                     <a href="{{ url('login') }}"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Đăng nhập </a>
+                     <a href="<?php echo url('login'); ?>"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Đăng nhập </a>
                 </li>
             </ul>
         </div>

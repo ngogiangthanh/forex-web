@@ -1,5 +1,4 @@
-@extends('layouts.guest')
-@section('main')       
+<?php $__env->startSection('main'); ?>       
 <div class="col-md-12">
     <div class="col-md-9">
         <!--Table economic-->
@@ -23,8 +22,8 @@
             <!--  -->
             <div class="row">
                 <div class="col-md-12 panel panel-primary">
-                    <h3>{{$chienLuoc->tieude}}</h3>
-                    <p>{{$chienLuoc->noidung}}</p>
+                    <h3><?php echo $chienLuoc->tieude; ?></h3>
+                    <p><?php echo $chienLuoc->noidung; ?></p>
                 </div>
             </div>
         </div>
@@ -35,7 +34,7 @@
                 <div class="panel panel-success">
                     <div class="panel-heading">CHIẾN LƯỢC FOREX</div>
                     <div class="panel-body" id="forex_index">
-                        @include ('guest.forex.index')
+                        <?php echo $__env->make ('guest.forex.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                     </div>
                 </div>
             </div>
@@ -60,17 +59,17 @@
                                 <div class="tab-content" style="padding: 5px">
                                     <div class="tab-pane active" id="kinhnghiemgd">
                                         <div id="kinhnghiemgd_content">
-                                            @include ('guest.chienluocvang.index_kn')
+                                            <?php echo $__env->make ('guest.chienluocvang.index_kn', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="phantichfa">
                                         <div id="phantichfa_content">
-                                            @include ('guest.chienluocvang.index_fa')
+                                            <?php echo $__env->make ('guest.chienluocvang.index_fa', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="phantichta">
                                         <div id="phantichta_content">
-                                            @include ('guest.chienluocvang.index_ta')
+                                            <?php echo $__env->make ('guest.chienluocvang.index_ta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -102,4 +101,5 @@
         </div>
     </div>
 </div>    
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.guest', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

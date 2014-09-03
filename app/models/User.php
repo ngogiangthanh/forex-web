@@ -52,22 +52,21 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      * @return string
      */
     public function getRole() {
-        if (Auth::user()->id == 0)
-            return 'admin';
-        $role = DB::table('quanly')->where('maql', $this->username)->first();
+        $role = DB::table('user')->where('username', $this->username)->first();
         if (!is_null($role)) {
-            return $role->maql;
+            return 'admin';
         }
-        return 'khachhang';
+        return 'guest';
     }
 
     public function getInfo() {
-        switch ($this->getRole()) {
-            case 'admin':
-            case 'quanly':
-                return DB::table('quanly')->where('maql', $this->username)->first();
-            case 'khachhang':
-                return DB::table('khachhang')->where('makh', $this->username)->first();
+    }
+    
+    public static function loginUser($username, $password){
+        $check = false;
+        if(count(DB::table('user')->where ('username', $username)->where('password', $password)->first())>0) {
+            $check = true;
         }
+        return $check;
     }
 }

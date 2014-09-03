@@ -98,6 +98,12 @@ class GuestController extends BaseController {
                                 ->with("supportContact", $supportContact)
                                 ->with("title", "Gửi liên hệ");
                 break;
+            case "login":
+                $supportContact = Contact::Select("CUSTOMER SUPPORT");
+                return View::make('guest.login.index')
+                                ->with('contacts', $contacts)
+                                ->with("supportContact",$supportContact)
+                                ->with("title", "Trang login");
             case "admin":
                 return View::make('admin.index')
                                 ->with("title", "Trang chủ quản lý");
