@@ -1,6 +1,6 @@
 @extends('layouts.guest')
 @section('main')
-<div class="col-md-12 news" style="margin-top: 20px">
+<div class="col-md-12 news" style="margin-top: 15px">
     <div class="row">
         <div class="panel panel-success">
             <div class="panel-heading">KINH NGHIỆM GIAO DỊCH</div>
