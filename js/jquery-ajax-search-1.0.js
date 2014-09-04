@@ -1,37 +1,33 @@
 $(document).ready(function()
 {
     $('#search').keyup(function(e) {
-                if (e.which == 13) {
-                   // $('#product_form').submit();
-                   alert("search");
-                }
-            });
-     $('#btnsearch').click(function (){
-         
-                   alert("search");
-     });
-//    $("#frmContact").submit(function(event)
-//    {
-//        // alert($(this).find('textarea[name="noidungtxt"]').val() );
-//        //    event.preventDefault();
-//        $.ajaxSetup({
-//            headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
-//        });
-//        var myurl = $(this).attr('action');
-//        $.ajax({
-//            type: "post",
-//            url: myurl,
-//            data: 'hoten=' + $(this).find('input[name="hotentxt"]').val()
-//                    + '&email=' + $(this).find('input[name="emailtxt"]').val()
-//                    + '&tieude=' + $(this).find('input[name="tieudetxt"]').val()
-//                    + '&noidung=' + $(this).find('textarea[name="noidungtxt"]').val(),
-//            success: function(data) {
-//                toastr.success("Ý kiến của bạn đã được gửi đi. Chúng tôi sẽ xem xét và phản hồi trong thời gian tới!.<br/>Cảm ơn bạn!");
-//                $("#form_contact_index").hide().fadeIn("slow").html(data.html);
-//            }}, 'html').fail(function(jqXHR, ajaxOptions, thrownError)
-//        {
-//            alert('No response from server!');
-//        });
-//        return false;
-//    });
+        if (e.which == 13) {
+            var searchtxt = $("#search").val();
+            var url = $("#urlsearch").val();
+            search(searchtxt, url);
+        }
+    });
+    $('#btnsearch').click(function() {
+        var searchtxt = $("#search").val();
+        var url = $("#urlsearch").val();
+        search(searchtxt, url);
+    });
+    function search(string, url)
+    {
+        string = trim(string);
+        if (string === null || $.trim(string) === "")
+        {
+            toastr.error("Vui lòng nhập chuỗi cần tìm kiếm!");
+        }
+        else
+        {
+
+            location.href = url + "=" + trim(string);
+        }
+    }
+    function trim(str)
+    {
+        return  str.replace(/^[\s]+/, '').replace(/[\s]+$/, '').replace(/[\s]{2,}/, ' ');
+    }
+
 });

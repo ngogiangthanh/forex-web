@@ -34,8 +34,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12 content-middle" style="background: #F0F0F0 ">
-                        @include ('guest.menu.nav_url')
                         <div id="web_content_id">
+                        @include ('guest.menu.nav_url')
                             @yield('main')
                         </div>
                         <!-- all contact -->

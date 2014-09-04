@@ -1,0 +1,21 @@
+[2014-09-05 00:03:24] log.ERROR: exception 'ErrorException' with message 'Undefined variable: tn' in C:\xampp\htdocs\Forex\app\storage\views\b110987cd0d4e710c5f0d7a1b6529b50:19
+Stack trace:
+#0 C:\xampp\htdocs\Forex\app\storage\views\b110987cd0d4e710c5f0d7a1b6529b50(19): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 19, Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'search', Object(Illuminate\View\View))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'search', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('giao')
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []

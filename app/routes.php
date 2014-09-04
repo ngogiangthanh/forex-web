@@ -29,6 +29,9 @@ Route::get('{type}/{alias}/{id}', 'GuestController@show')->where(array('type' =>
 Route::get('{type}/threads={id}', 'GuestController@showOthers')->where(array('type' => '[A-Za-z0-9]+','id' => '[0-9]+'));
 //Gửi liên hệ
 Route::post('sendcontact', 'GuestController@store');
+//Tìm kiếm
+Route::get('search={key}', 'GuestController@search');
+
 /**
  * Trang quản lý
  */
