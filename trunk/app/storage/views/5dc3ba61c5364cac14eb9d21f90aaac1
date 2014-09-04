@@ -9,9 +9,9 @@
         </div>
         <div class="col-md-3">
             <div class="input-group" style="margin-top: 30px">
-                <input type="text" class="form-control" placeholder="Nhập thông tin cần tìm kiếm" title="Nhập thông tin cần tìm kiếm">
-                <span class="input-group-btn" style="margin-top:125px">
-                    <button class="btn btn-default" type="button" title="Tìm kiếm"><span class="glyphicon glyphicon-search"></span></button>
+                <input type="text" class="form-control" id="search" placeholder="Nhập thông tin cần tìm kiếm" title="Nhập thông tin cần tìm kiếm"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="btnsearch" type="button" title="Tìm kiếm"><span class="glyphicon glyphicon-search"></span></button>
                 </span>
             </div><!-- /input-group -->
         </div>
