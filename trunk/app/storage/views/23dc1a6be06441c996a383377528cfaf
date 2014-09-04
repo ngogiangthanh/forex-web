@@ -2,26 +2,26 @@
 <div class="col-md-12 news" style="margin-top: 20px">
     <div class="row">
         <div class="panel panel-success">
-            <div class="panel-heading">KINH NGHIỆM GIAO DỊCH</div>
-            <div class="panel-body" id="kinhnghiem_content">
-                <?php foreach ($kinhnghiem as $kn): ?>
-                <?php if ($kn != null): ?>
+            <div class="panel-heading">KIẾN THỨC GIAO DỊCH</div>
+            <div class="panel-body" id="kienthuc_index">
+                <?php foreach ($kienthuc as $kt): ?>
+                <?php if ($kt != null): ?>
                 <div>
-                    <?php if(file_exists($kn->anhnho)): ?>
-                    <?php echo HTML::image($kn->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
+                    <?php if(file_exists($kt->anhnho)): ?>
+                    <?php echo HTML::image($kt->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
                     <?php else: ?>
                     <?php echo HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
                     <?php endif; ?>
-                    <p><?php echo $kn->tieude; ?></p>
-                    <p><?php echo date("H:i:s d/m/Y",strtotime($kn->thoidiemsua)); ?></p>
-                    <p>Lượt xem:&nbsp;<?php echo $kn->luotxem; ?></p>
+                    <p><?php echo $kt->tieude; ?></p>
+                    <p><?php echo date("H:i:s d/m/Y",strtotime($kt->thoidiemsua)); ?></p>
+                    <p>Lượt xem:&nbsp;<?php echo $kt->luotxem; ?></p>
                     <p>[...Xem thêm]</p>
                 </div>
                 <hr>
                 <?php endif; ?>
                 <?php endforeach; ?>
-                <div id='kinhnghiem_paging'>
-                    <?php echo $kinhnghiem->links(); ?>
+                <div id='kienthuc_paging'>
+                    <?php echo $kienthuc->links(); ?>
                 </div>
                 <style type='text/css'>
                     .pagination li {
@@ -33,7 +33,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.guest', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

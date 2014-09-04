@@ -1,7 +1,9 @@
 <?php
 
 class GuestController extends BaseController {
-    private $perpage = 3;
+
+    private $perpage = 3; //so luong ban tin tren mot trang
+
     public function index($type = "") {
         $contacts = Contact::Select();
         switch ($type) {
@@ -32,48 +34,98 @@ class GuestController extends BaseController {
                                 ->with('newsTNs', $newsTNs)
                                 ->with('newsNNs', $newsNNs)
                                 ->with("title", "Các tin tức trong nước và ngoài nước");
-            case "sanphamgd": 
+            case "chienluoc":
+                //chiến lược forex
+                //chien luọc vàng 
+                //- kim loại quý
+                //- hàng hóa
+                //- cổ phiếu
+                $forex = TinTuc::Select(1, $this->perpage);
+                //ajax pagingation forex
+                $tintuc['noidung'] = $forex;
+                $tintuc['phantrang'] = $forex->links();
+                if (Request::ajax() && Input::get("type") == "forex") {
+                    $html = View::make("guest.chienluoc.forex.ajaxpagination", $tintuc)->render();
+                    return Response::json(array('html' => $html));
+                }
+                //end ajax pagingation forex
+
+                $kimloaiquy = TinTuc::Select(2, $this->perpage);
+                //ajax pagingation kim loai quy
+                $klq['noidung'] = $kimloaiquy;
+                $klq['phantrang'] = $kimloaiquy->links();
+                if (Request::ajax() && Input::get("type") == "kimloaiquy") {
+                    $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_klq", $klq)->render();
+                    return Response::json(array('html' => $html));
+                }
+                //end ajax pagination kim loai quy
+
+                $hanghoa = TinTuc::Select(3, $this->perpage);
+                //ajax pagingation hang hoa
+                $hh['noidung'] = $hanghoa;
+                $hh['phantrang'] = $hanghoa->links();
+                if (Request::ajax() && Input::get("type") == "hanghoa") {
+                    $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_hh", $hh)->render();
+                    return Response::json(array('html' => $html));
+                }
+                //end ajax pagingation hang hoa
+
+                $cophieu = TinTuc::Select(4, $this->perpage);
+                //ajax pagingation co phieu
+                $cp['noidung'] = $cophieu;
+                $cp['phantrang'] = $cophieu->links();
+                if (Request::ajax() && Input::get("type") == "cophieu") {
+                    $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_cp", $cp)->render();
+                    return Response::json(array('html' => $html));
+                }
+                return View::make('guest.traders.chienluoc')
+                                ->with('contacts', $contacts)
+                                ->with('forex', $forex)
+                                ->with('kimloaiquy', $kimloaiquy)
+                                ->with('hanghoa', $hanghoa)
+                                ->with('cophieu', $cophieu)
+                                ->with("title", "Chiến lược giao dịch");
+            case "sanpham":
                 $sp_gd = TinTuc::Select(8, $this->perpage);
                 //ajax pagingation chien luoc giao dich
                 $spgd['noidung'] = $sp_gd;
                 $spgd['phantrang'] = $sp_gd->links();
                 if (Request::ajax() && Input::get("type") == "sp_gd") {
-                    $html = View::make("guest.traders.ajaxpagination_sanpham", $spgd)->render();
+                    $html = View::make("guest.traders.ajaxpagination_sp", $spgd)->render();
                     return Response::json(array('html' => $html));
                 }
                 //end ajax pagination chien luoc giao dich
                 return View::make('guest.traders.sanpham')
                                 ->with('contacts', $contacts)
-                                ->with('sp_gd',$sp_gd)
+                                ->with('sp_gd', $sp_gd)
                                 ->with("title", "Sản phẩm giao dịch");
-            case "kinhnghiemgd":
-                $gold = TinTuc::Select(2, $this->perpage);
-                //ajax pagingation chien luoc vang
-                $chienluocvang['noidung'] = $gold;
-                $chienluocvang['phantrang'] = $gold->links();
-                if (Request::ajax() && Input::get("type") == "kinhnghiemgd") {
-                    $html = View::make("guest.chienluocvang.ajaxpagination_kn", $chienluocvang)->render();
+            case "kinhnghiem":
+                $kinhnghiem = TinTuc::Select(10, $this->perpage);
+                //ajax pagingation kinh nghiệm giao dịch
+                $kn['noidung'] = $kinhnghiem;
+                $kn['phantrang'] = $kinhnghiem->links();
+                if (Request::ajax() && Input::get("type") == "kinhnghiem") {
+                    $html = View::make("guest.traders.ajaxpagination_kn", $kn)->render();
                     return Response::json(array('html' => $html));
                 }
                 //end ajax pagination chien luoc vang
                 return View::make('guest.traders.kinhnghiem')
                                 ->with('contacts', $contacts)
-                                ->with('gold', $gold)
+                                ->with('kinhnghiem', $kinhnghiem)
                                 ->with("title", "Kinh nghiệm giao dịch");
-                break;
-            case "chienluocgd":
-                $gdchienluoc = TinTuc::Select(9, $this->perpage);
-                //ajax pagingation chien luoc giao dich
-                $chienluoc['noidung'] = $gdchienluoc;
-                $chienluoc['phantrang'] = $gdchienluoc->links();
-                if (Request::ajax() && Input::get("type") == "gd_chien_luoc") {
-                    $html = View::make("guest.traders.ajaxpagination_chienluoc", $chienluoc)->render();
+            case "kienthuc":
+                $kienthuc = TinTuc::Select(9, $this->perpage);
+                //ajax pagingation kien thuc giao dich
+                $kt['noidung'] = $kienthuc;
+                $kt['phantrang'] = $kienthuc->links();
+                if (Request::ajax() && Input::get("type") == "kienthuc") {
+                    $html = View::make("guest.traders.ajaxpagination_kt", $kt)->render();
                     return Response::json(array('html' => $html));
                 }
-                //end ajax pagination chien luoc giao dich
-                return View::make('guest.traders.chienluoc')
+                //end ajax pagination kien thuc giao dich
+                return View::make('guest.traders.kienthuc')
                                 ->with('contacts', $contacts)
-                                ->with('gdchienluoc', $gdchienluoc)
+                                ->with('kienthuc', $kienthuc)
                                 ->with("title", "Chiến lược giao dịch");
                 break;
             case "sangd":
@@ -102,7 +154,7 @@ class GuestController extends BaseController {
                 $supportContact = Contact::Select("CUSTOMER SUPPORT");
                 return View::make('guest.login.index')
                                 ->with('contacts', $contacts)
-                                ->with("supportContact",$supportContact)
+                                ->with("supportContact", $supportContact)
                                 ->with("title", "Trang login");
             case "admin":
                 return View::make('admin.index')
@@ -113,48 +165,48 @@ class GuestController extends BaseController {
                 $tintuc['noidung'] = $forex;
                 $tintuc['phantrang'] = $forex->links();
                 if (Request::ajax() && Input::get("type") == "forex") {
-                    $html = View::make("guest.forex.ajaxpagination", $tintuc)->render();
+                    $html = View::make("guest.chienluoc.forex.ajaxpagination", $tintuc)->render();
                     return Response::json(array('html' => $html));
                 }
                 //end ajax pagingation forex
 
-                $gold = TinTuc::Select(2, $this->perpage);
-                //ajax pagingation chien luoc vang
-                $chienluocvang['noidung'] = $gold;
-                $chienluocvang['phantrang'] = $gold->links();
-                if (Request::ajax() && Input::get("type") == "kinhnghiemgd") {
-                    $html = View::make("guest.chienluocvang.ajaxpagination_kn", $chienluocvang)->render();
+                $kimloaiquy = TinTuc::Select(2, $this->perpage);
+                //ajax pagingation kim loai quy
+                $klq['noidung'] = $kimloaiquy;
+                $klq['phantrang'] = $kimloaiquy->links();
+                if (Request::ajax() && Input::get("type") == "kimloaiquy") {
+                    $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_klq", $klq)->render();
                     return Response::json(array('html' => $html));
                 }
-                //end ajax pagination chien luoc vang
+                //end ajax pagination kim loai quy
 
-                $FAs = TinTuc::Select(3, $this->perpage);
-                //ajax pagingation FA
-                $phantichFA['noidung'] = $FAs;
-                $phantichFA['phantrang'] = $FAs->links();
-                if (Request::ajax() && Input::get("type") == "phantichfa") {
-                    $html = View::make("guest.chienluocvang.ajaxpagination_fa", $phantichFA)->render();
+                $hanghoa = TinTuc::Select(3, $this->perpage);
+                //ajax pagingation hang hoa
+                $hh['noidung'] = $hanghoa;
+                $hh['phantrang'] = $hanghoa->links();
+                if (Request::ajax() && Input::get("type") == "hanghoa") {
+                    $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_hh", $hh)->render();
                     return Response::json(array('html' => $html));
                 }
-                //end ajax pagingation FA 
+                //end ajax pagingation hang hoa
 
-                $TAs = TinTuc::Select(4, $this->perpage);
-                //ajax pagingation TA
-                $phantichTA['noidung'] = $TAs;
-                $phantichTA['phantrang'] = $TAs->links();
-                if (Request::ajax() && Input::get("type") == "phantichta") {
-                    $html = View::make("guest.chienluocvang.ajaxpagination_ta", $phantichTA)->render();
+                $cophieu = TinTuc::Select(4, $this->perpage);
+                //ajax pagingation co phieu
+                $cp['noidung'] = $cophieu;
+                $cp['phantrang'] = $cophieu->links();
+                if (Request::ajax() && Input::get("type") == "cophieu") {
+                    $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_cp", $cp)->render();
                     return Response::json(array('html' => $html));
                 }
-                //end ajax pagingation FA 
+                //end ajax pagingation co phieu
                 $chienLuoc = TinTuc::Select(0);
                 return View::make('guest.index')
                                 ->with('contacts', $contacts)
                                 ->with('chienLuoc', $chienLuoc)
                                 ->with('forex', $forex)
-                                ->with('gold', $gold)
-                                ->with('FAs', $FAs)
-                                ->with('TAs', $TAs)
+                                ->with('kimloaiquy', $kimloaiquy)
+                                ->with('hanghoa', $hanghoa)
+                                ->with('cophieu', $cophieu)
                                 ->with("title", "Trang chủ Forex");
         }
     }
@@ -173,18 +225,97 @@ class GuestController extends BaseController {
             return Response::json(array('html' => $html));
         }
     }
-    
-    public function show($type,$id)
-    {
+
+    public function indexModify($type = null, $alias = null) {
         $contacts = Contact::Select();
-        switch ($type)
-        {
+        if ($type == "chienluoc") {
+            switch ($alias) {
+                case "forex": $forex = TinTuc::Select(1, $this->perpage);
+                    //ajax pagingation forex
+                    $tintuc['noidung'] = $forex;
+                    $tintuc['phantrang'] = $forex->links();
+                    if (Request::ajax() && Input::get("type") == "forex") {
+                        $html = View::make("guest.chienluoc.forex.ajaxpagination", $tintuc)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation forex
+                    return View::make('guest.traders.chienluoc_forex')
+                                    ->with('contacts', $contacts)
+                                    ->with('forex', $forex)
+                                    ->with("title", "Các chiến lược giao dịch Forex");
+                case "vang":
+                    $kimloaiquy = TinTuc::Select(2, $this->perpage);
+                    //ajax pagingation kim loai quy
+                    $klq['noidung'] = $kimloaiquy;
+                    $klq['phantrang'] = $kimloaiquy->links();
+                    if (Request::ajax() && Input::get("type") == "kimloaiquy") {
+                        $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_klq", $klq)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagination kim loai quy
+
+                    $hanghoa = TinTuc::Select(3, $this->perpage);
+                    //ajax pagingation hang hoa
+                    $hh['noidung'] = $hanghoa;
+                    $hh['phantrang'] = $hanghoa->links();
+                    if (Request::ajax() && Input::get("type") == "hanghoa") {
+                        $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_hh", $hh)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation hang hoa
+
+                    $cophieu = TinTuc::Select(4, $this->perpage);
+                    //ajax pagingation co phieu
+                    $cp['noidung'] = $cophieu;
+                    $cp['phantrang'] = $cophieu->links();
+                    if (Request::ajax() && Input::get("type") == "cophieu") {
+                        $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_cp", $cp)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation co phieu
+                    return View::make('guest.traders.chienluoc_vang')
+                                    ->with('contacts', $contacts)
+                                    ->with('kimloaiquy', $kimloaiquy)
+                                    ->with('hanghoa', $hanghoa)
+                                    ->with('cophieu', $cophieu)
+                                    ->with("title", "Các chiến lược giao dịch vàng");
+                case "vang_klq":$kimloaiquy = TinTuc::Select(2, $this->perpage);
+                    //ajax pagingation kim loai quy
+                    $klq['noidung'] = $kimloaiquy;
+                    $klq['phantrang'] = $kimloaiquy->links();
+                    if (Request::ajax() && Input::get("type") == "kimloaiquy") {
+                        $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_klq", $klq)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagination kim loai quy
+                    return View::make('guest.traders.chienluoc_vang_klq')
+                                    ->with('contacts', $contacts)
+                                    ->with("title", "Các chiến lược giao dịch vàng với kim loại quý");
+                case "vang_hh":
+                    return View::make('guest.traders.chienluoc_vang_hh')
+                                    ->with('contacts', $contacts)
+                                    ->with("title", "Các chiến lược giao dịch vàng với hàng hóa");
+                case "vang_cp":
+                    return View::make('guest.traders.chienluoc_vang_cp')
+                                    ->with('contacts', $contacts)
+                                    ->with("title", "Các chiến lược giao dịch vàng với chiến lược");
+                default:
+                    return $this->index(); //trang chủ mặc định
+            }
+        } else {
+            $this->index(); //trang chủ mặc định
+        }
+    }
+
+    public function show($type, $id) {
+        $contacts = Contact::Select();
+        switch ($type) {
             case 'forex':
-                     return View::make('guest.forex.view')
+                return View::make('guest.forex.view')
                                 ->with('contacts', $contacts)
                                 ->with("title", "Các tin tức trong nước và ngoài nước");
             default:
-                    return $this->index();
+                return $this->index();
         }
     }
 

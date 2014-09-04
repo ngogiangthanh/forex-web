@@ -27,19 +27,19 @@
                 </div>
             </div>
         </div>
-        <!--Chiến lược vàng-->
+        <!--Chiến lược forex-->
         <div class="col-md-12" style="margin-top: 15px;">
             <!--  -->
             <div class="row">
                 <div class="panel panel-success">
                     <div class="panel-heading">CHIẾN LƯỢC FOREX</div>
                     <div class="panel-body" id="forex_index">
-                        <?php echo $__env->make ('guest.forex.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                        <?php echo $__env->make ('guest.chienluoc.forex.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                     </div>
                 </div>
             </div>
         </div>
-        <!--Chiến lược forex-->
+        <!--Chiến lược vàng-->
         <div class="col-md-12" style="margin-top: 15px">
             <!-- show news -->
             <div class="row">
@@ -51,25 +51,25 @@
                             <div class="row">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li class="active"><a href="#kinhnghiemgd" role="tab" data-toggle="tab">Kinh nghiệm giao dịch</a></li>
-                                    <li><a href="#phantichfa" role="tab" data-toggle="tab">Phân tích cơ bản - FA</a></li>
-                                    <li><a href="#phantichta" role="tab" data-toggle="tab">Phân tích kỹ thuật - TA</a></li>
+                                    <li class="active"><a href="#kimloaiquy" role="tab" data-toggle="tab">Kim loại quý</a></li>
+                                    <li><a href="#hanghoa" role="tab" data-toggle="tab">Hàng hóa</a></li>
+                                    <li><a href="#cophieu" role="tab" data-toggle="tab">Cổ phiếu</a></li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content" style="padding: 5px">
-                                    <div class="tab-pane active" id="kinhnghiemgd">
-                                        <div id="kinhnghiemgd_content">
-                                            <?php echo $__env->make ('guest.chienluocvang.index_kn', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                    <div class="tab-pane active" id="kimloaiquy">
+                                        <div id="kimloaiquy_content">
+                                            <?php echo $__env->make ('guest.chienluoc.chienluocvang.index_klq', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="phantichfa">
-                                        <div id="phantichfa_content">
-                                            <?php echo $__env->make ('guest.chienluocvang.index_fa', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                    <div class="tab-pane" id="hanghoa">
+                                        <div id="hanghoa_content">
+                                            <?php echo $__env->make ('guest.chienluoc.chienluocvang.index_hh', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="phantichta">
-                                        <div id="phantichta_content">
-                                            <?php echo $__env->make ('guest.chienluocvang.index_ta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                                    <div class="tab-pane" id="cophieu">
+                                        <div id="cophieu_content">
+                                            <?php echo $__env->make ('guest.chienluoc.chienluocvang.index_cp', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -94,23 +94,10 @@
                title="Tải phần mềm MT4"><span class="glyphicon glyphicon-download-alt"></span>&nbsp;Tải phần mềm MT4</a>
         </div>
         <!-- find us on facebook -->
-        <div class="col-md-12" style="margin-top: 15px">
+        <div class="col-md-12" style="margin-top: 25px">
             <div class="facebook">
-                <div class="fb-like-box" data-href="https://www.facebook.com/ngogiangthanhblog" data-width="200px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fforexmarketcomvn%2F695512290504029&amp;width=200&amp;height=290&amp;colorscheme=dark&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:290px;" allowTransparency="true"></iframe>
             </div>
-            <div id="fb-root"></div>
-            <script type="text/javascript">
-                (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id))
-                        return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&appId=406997906044195&version=v2.0";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-
-            </script>
         </div>
     </div>
 </div>    

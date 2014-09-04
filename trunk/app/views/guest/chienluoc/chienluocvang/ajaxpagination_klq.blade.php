@@ -1,21 +1,21 @@
-@foreach ($noidung as $gd)
-@if ($gd != null)
+@foreach ($noidung as $klq)
+@if ($klq != null)
 <div>  
-    @if(file_exists($gd->anhnho))
-    {{ HTML::image($gd->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+    @if(file_exists($klq->anhnho))
+    {{ HTML::image($klq->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
     @else
     {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
     @endif
-    <p>{{ $gd->tieude }}</p>
-    <p>{{date("H:i:s d/m/Y",strtotime($gd->thoidiemsua))}}</p>
-    <p>Lượt xem:&nbsp;{{ $gd->luotxem}}</p>
+    <p>{{ $klq->tieude }}</p>
+    <p>{{date("H:i:s d/m/Y",strtotime($klq->thoidiemsua))}}</p>
+    <p>Lượt xem:&nbsp;{{ $klq->luotxem}}</p>
     <p>[...Xem thêm]</p>
 </div>
 <hr>
 @endif
 @endforeach
-<div id='exp_gold_paging'>
-{{$phantrang}}
+<div id='kimloaiquy_paging'>
+    {{$phantrang}}
 </div>
 <style type='text/css'>
     .pagination li {

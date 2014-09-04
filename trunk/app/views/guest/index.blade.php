@@ -28,19 +28,19 @@
                 </div>
             </div>
         </div>
-        <!--Chiến lược vàng-->
+        <!--Chiến lược forex-->
         <div class="col-md-12" style="margin-top: 15px;">
             <!--  -->
             <div class="row">
                 <div class="panel panel-success">
                     <div class="panel-heading">CHIẾN LƯỢC FOREX</div>
                     <div class="panel-body" id="forex_index">
-                        @include ('guest.forex.index')
+                        @include ('guest.chienluoc.forex.index')
                     </div>
                 </div>
             </div>
         </div>
-        <!--Chiến lược forex-->
+        <!--Chiến lược vàng-->
         <div class="col-md-12" style="margin-top: 15px">
             <!-- show news -->
             <div class="row">
@@ -52,25 +52,25 @@
                             <div class="row">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li class="active"><a href="#kinhnghiemgd" role="tab" data-toggle="tab">Kinh nghiệm giao dịch</a></li>
-                                    <li><a href="#phantichfa" role="tab" data-toggle="tab">Phân tích cơ bản - FA</a></li>
-                                    <li><a href="#phantichta" role="tab" data-toggle="tab">Phân tích kỹ thuật - TA</a></li>
+                                    <li class="active"><a href="#kimloaiquy" role="tab" data-toggle="tab">Kim loại quý</a></li>
+                                    <li><a href="#hanghoa" role="tab" data-toggle="tab">Hàng hóa</a></li>
+                                    <li><a href="#cophieu" role="tab" data-toggle="tab">Cổ phiếu</a></li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content" style="padding: 5px">
-                                    <div class="tab-pane active" id="kinhnghiemgd">
-                                        <div id="kinhnghiemgd_content">
-                                            @include ('guest.chienluocvang.index_kn')
+                                    <div class="tab-pane active" id="kimloaiquy">
+                                        <div id="kimloaiquy_content">
+                                            @include ('guest.chienluoc.chienluocvang.index_klq')
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="phantichfa">
-                                        <div id="phantichfa_content">
-                                            @include ('guest.chienluocvang.index_fa')
+                                    <div class="tab-pane" id="hanghoa">
+                                        <div id="hanghoa_content">
+                                            @include ('guest.chienluoc.chienluocvang.index_hh')
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="phantichta">
-                                        <div id="phantichta_content">
-                                            @include ('guest.chienluocvang.index_ta')
+                                    <div class="tab-pane" id="cophieu">
+                                        <div id="cophieu_content">
+                                            @include ('guest.chienluoc.chienluocvang.index_cp')
                                         </div>
                                     </div>
                                 </div>

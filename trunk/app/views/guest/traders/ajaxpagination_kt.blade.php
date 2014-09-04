@@ -1,20 +1,20 @@
-@foreach ($noidung as $gd)
-@if ($gd != null)
+@foreach ($noidung as $kt)
+@if ($kt != null)
 <div>  
-    @if(file_exists($gd->anhnho))
-    {{ HTML::image($gd->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+    @if(file_exists($kt->anhnho))
+    {{ HTML::image($kt->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
     @else
     {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
     @endif
-    <p>{{ $gd->tieude }}</p>
-    <p>{{date("H:i:s d/m/Y",strtotime($gd->thoidiemsua))}}</p>
-    <p>Lượt xem:&nbsp;{{ $gd->luotxem}}</p>
+    <p>{{ $kt->tieude }}</p>
+    <p>{{date("H:i:s d/m/Y",strtotime($kt->thoidiemsua))}}</p>
+    <p>Lượt xem:&nbsp;{{ $kt->luotxem}}</p>
     <p>[...Xem thêm]</p>
 </div>
 <hr>
 @endif
 @endforeach
-<div id='gd_chien_luoc_paging'>
+<div id='kienthuc_paging'>
     {{$phantrang}}
 </div>
 <style type='text/css'>

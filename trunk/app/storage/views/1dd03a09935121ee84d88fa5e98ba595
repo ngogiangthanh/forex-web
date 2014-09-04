@@ -1,0 +1,27 @@
+<?php foreach ($noidung as $kn): ?>
+<?php if ($kn != null): ?>
+<div>  
+    <?php if(file_exists($kn->anhnho)): ?>
+    <?php echo HTML::image($kn->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
+    <?php else: ?>
+    <?php echo HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
+    <?php endif; ?>
+    <p><?php echo $kn->tieude; ?></p>
+    <p><?php echo date("H:i:s d/m/Y",strtotime($kn->thoidiemsua)); ?></p>
+    <p>Lượt xem:&nbsp;<?php echo $kn->luotxem; ?></p>
+    <p>[...Xem thêm]</p>
+</div>
+<hr>
+<?php endif; ?>
+<?php endforeach; ?>
+<div id='kinhnghiem_paging'>
+    <?php echo $phantrang; ?>
+</div>
+<style type='text/css'>
+    .pagination li {
+        display: inline;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+</style>
+<?php echo HTML::script('js/jquery-ajax-pagination-1.0.js'); ?>

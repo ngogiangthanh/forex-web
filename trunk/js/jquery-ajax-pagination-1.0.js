@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+    //chien luoc forex
     $("#forex_paging a").click(function()
     {
         var myurl = $(this).attr('href');
@@ -16,54 +17,58 @@ $(document).ready(function()
         });
         return false;
     });
-    $("#exp_gold_paging a").click(function()
+    //chien luoc vang - kim loai quy
+    $("#kimloaiquy_paging a").click(function()
     {
         var myurl = $(this).attr('href');
         $.ajax(
                 {
-                    url: myurl + '&type=kinhnghiemgd',
+                    url: myurl + '&type=kimloaiquy',
                     type: "get",
                     datatype: "html"
                 }).done(function(data) {
-            $("#kinhnghiemgd_content").hide().fadeIn("slow").html(data.html);
+            $("#kimloaiquy_content").hide().fadeIn("slow").html(data.html);
         }).fail(function(jqXHR, ajaxOptions, thrownError)
         {
             alert('No response from server!');
         });
         return false;
     });
-    $("#fa_gold_paging a").click(function()
+    //chien luoc vang - hang hoa
+    $("#hanghoa_paging a").click(function()
     {
         var myurl = $(this).attr('href');
         $.ajax(
                 {
-                    url: myurl + '&type=phantichfa',
+                    url: myurl + '&type=hanghoa',
                     type: "get",
                     datatype: "html"
                 }).done(function(data) {
-            $("#phantichfa_content").hide().fadeIn("slow").html(data.html);
+            $("#hanghoa_content").hide().fadeIn("slow").html(data.html);
         }).fail(function(jqXHR, ajaxOptions, thrownError)
         {
             alert('No response from server!');
         });
         return false;
     });
-    $("#ta_gold_paging a").click(function()
+    //chien luoc vang - co phieu
+    $("#cophieu_paging a").click(function()
     {
         var myurl = $(this).attr('href');
         $.ajax(
                 {
-                    url: myurl + '&type=phantichta',
+                    url: myurl + '&type=cophieu',
                     type: "get",
                     datatype: "html"
                 }).done(function(data) {
-            $("#phantichta_content").hide().fadeIn("slow").html(data.html);
+            $("#cophieu_content").hide().fadeIn("slow").html(data.html);
         }).fail(function(jqXHR, ajaxOptions, thrownError)
         {
             alert('No response from server!');
         });
         return false;
     });
+    //san giao dich
     $("#sangd_paging a").click(function()
     {
         var myurl = $(this).attr('href');
@@ -80,6 +85,7 @@ $(document).ready(function()
         });
         return false;
     });
+    //tin tuc - tin trong nuoc
     $("#tin_tn_paging a").click(function()
     {
         var myurl = $(this).attr('href');
@@ -96,6 +102,7 @@ $(document).ready(function()
         });
         return false;
     });
+    //tin tuc - tin ngoai nuoc
     $("#tin_nn_paging a").click(function()
     {
         var myurl = $(this).attr('href');
@@ -112,22 +119,24 @@ $(document).ready(function()
         });
         return false;
     });
-    $("#gd_chien_luoc_paging a").click(function()
+    //giao dich - kien thuc giao dich
+    $("#kienthuc_paging a").click(function()
     {
         var myurl = $(this).attr('href');
         $.ajax(
                 {
-                    url: myurl + '&type=gd_chien_luoc',
+                    url: myurl + '&type=kienthuc',
                     type: "get",
                     datatype: "html"
                 }).done(function(data) {
-            $("#gd_chien_luoc_index").hide().fadeIn("slow").html(data.html);
+            $("#kienthuc_index").hide().fadeIn("slow").html(data.html);
         }).fail(function(jqXHR, ajaxOptions, thrownError)
         {
             alert('No response from server!');
         });
         return false;
     });
+    //giao dich - san pham giao dich
     $("#sp_gd_paging a").click(function()
     {
         var myurl = $(this).attr('href');
@@ -138,6 +147,23 @@ $(document).ready(function()
                     datatype: "html"
                 }).done(function(data) {
             $("#sp_gd_index").hide().fadeIn("slow").html(data.html);
+        }).fail(function(jqXHR, ajaxOptions, thrownError)
+        {
+            alert('No response from server!');
+        });
+        return false;
+    });
+    //giao dich - kinh nghiem giao dich
+    $("#kinhnghiem_paging a").click(function()
+    {
+        var myurl = $(this).attr('href');
+        $.ajax(
+                {
+                    url: myurl + '&type=kinhnghiem',
+                    type: "get",
+                    datatype: "html"
+                }).done(function(data) {
+            $("#kinhnghiem_content").hide().fadeIn("slow").html(data.html);
         }).fail(function(jqXHR, ajaxOptions, thrownError)
         {
             alert('No response from server!');
