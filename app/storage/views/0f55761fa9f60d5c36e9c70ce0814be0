@@ -33,6 +33,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12 content-middle" style="background: #F0F0F0 ">
+                        <?php
+                        echo var_dump(Request::path());
+                        ?>
                         <?php echo $__env->yieldContent('main'); ?>
                         <!-- all contact -->
                         <?php echo $__env->make('guest.footer.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
