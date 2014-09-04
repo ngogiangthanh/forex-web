@@ -98,6 +98,28 @@ DOCBLOCK;
         $this->assertNull($annot->value);
    }
 
+    public function testDefaultValueAnnotations()
+    {
+        $parser = $this->createTestParser();
+
+        // Array as first value
+        $result = $parser->parse('@Name({"key1"="value1"})');
+        $annot = $result[0];
+
+        $this->assertTrue($annot instanceof Name);
+        $this->assertTrue(is_array($annot->value));
+        $this->assertEquals('value1', $annot->value['key1']);
+
+        // Array as first value and additional values
+        $result = $parser->parse('@Name({"key1"="value1"}, foo="bar")');
+        $annot = $result[0];
+
+        $this->assertTrue($annot instanceof Name);
+        $this->assertTrue(is_array($annot->value));
+        $this->assertEquals('value1', $annot->value['key1']);
+        $this->assertEquals('bar', $annot->foo);
+    }
+
     public function testNamespacedAnnotations()
     {
         $parser = new DocParser;
@@ -699,7 +721,7 @@ DOCBLOCK;
         $parser->setTarget(Target::TARGET_PROPERTY);
         $parser->parse($docblock, $context);
     }
-   
+
     /**
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessage @Enum supports only scalar values "array" given.
@@ -725,7 +747,7 @@ DOCBLOCK;
         $parser->setIgnoreNotImportedAnnotations(false);
         $parser->parse($docblock);
     }
-    
+
     public function getConstantsProvider()
     {
         $provider[] = array(
@@ -802,6 +824,22 @@ DOCBLOCK;
                 ClassWithConstants::SOME_KEY    => IntefaceWithConstants::SOME_VALUE
             )
         );
+        $provider[] = array(
+            '@AnnotationWithConstants(AnnotationWithConstants::class)',
+            'Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants'
+        );
+        $provider[] = array(
+            '@AnnotationWithConstants({AnnotationWithConstants::class = AnnotationWithConstants::class})',
+            array('Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants' => 'Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants')
+        );
+        $provider[] = array(
+            '@AnnotationWithConstants(Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants::class)',
+            'Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants'
+        );
+        $provider[] = array(
+            '@Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants(Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants::class)',
+            'Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants'
+        );
         return $provider;
     }
 
@@ -816,7 +854,7 @@ DOCBLOCK;
             'intefacewithconstants'     => 'Doctrine\Tests\Common\Annotations\Fixtures\IntefaceWithConstants',
             'annotationwithconstants'   => 'Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants'
         ));
-        
+
         $result = $parser->parse($docblock);
         $this->assertInstanceOf('\Doctrine\Tests\Common\Annotations\Fixtures\AnnotationWithConstants', $annotation = $result[0]);
         $this->assertEquals($expected, $annotation->value);
@@ -952,6 +990,19 @@ DOCBLOCK;
         $parser = new DocParser();
         $parser->setIgnoreNotImportedAnnotations(true);
         $result = $parser->parse("@param");
+
+        $this->assertEquals(0, count($result));
+    }
+
+    /**
+     * @group DCOM-168
+     */
+    public function testNotAnAnnotationClassIsIgnoredWithoutWarning()
+    {
+        $parser = new DocParser();
+        $parser->setIgnoreNotImportedAnnotations(true);
+        $parser->setIgnoredAnnotationNames(array('PHPUnit_Framework_TestCase' => true));
+        $result = $parser->parse('@PHPUnit_Framework_TestCase');
 
         $this->assertEquals(0, count($result));
     }
@@ -1222,6 +1273,26 @@ DOCBLOCK;
         $annots = $parser->parse('@Name({"foo": {}})');
         $this->assertEquals(1, count($annots));
         $this->assertEquals(array('foo' => array()), $annots[0]->value);
+    }
+
+    public function testKeyHasNumber()
+    {
+        $parser = $this->createTestParser();
+        $annots = $parser->parse('@SettingsAnnotation(foo="test", bar2="test")');
+
+        $this->assertEquals(1, count($annots));
+        $this->assertEquals(array('foo' => 'test', 'bar2' => 'test'), $annots[0]->settings);
+    }
+}
+
+/** @Annotation */
+class SettingsAnnotation
+{
+    public $settings;
+
+    public function __construct($settings)
+    {
+        $this->settings = $settings;
     }
 }
 

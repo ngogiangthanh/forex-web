@@ -78,6 +78,8 @@ class TableHelper extends Helper
      * @param int $layout self::LAYOUT_*
      *
      * @return TableHelper
+     *
+     * @throws InvalidArgumentException when the table layout is not known
      */
     public function setLayout($layout)
     {
@@ -277,7 +279,7 @@ class TableHelper extends Helper
     /**
      * Sets cell padding type.
      *
-     * @param integer $padType STR_PAD_*
+     * @param int     $padType STR_PAD_*
      *
      * @return TableHelper
      */
@@ -376,7 +378,7 @@ class TableHelper extends Helper
      * Renders table cell with padding.
      *
      * @param array   $row
-     * @param integer $column
+     * @param int     $column
      * @param string  $cellFormat
      */
     private function renderCell(array $row, $column, $cellFormat)
@@ -388,6 +390,8 @@ class TableHelper extends Helper
         if (function_exists('mb_strlen') && false !== $encoding = mb_detect_encoding($cell)) {
             $width += strlen($cell) - mb_strlen($cell, $encoding);
         }
+
+        $width += $this->strlen($cell) - $this->computeLengthWithoutDecoration($cell);
 
         $this->output->write(sprintf(
             $cellFormat,
@@ -423,7 +427,7 @@ class TableHelper extends Helper
     /**
      * Gets column width.
      *
-     * @param integer $column
+     * @param int     $column
      *
      * @return int
      */
@@ -446,21 +450,13 @@ class TableHelper extends Helper
      * Gets cell width.
      *
      * @param array   $row
-     * @param integer $column
+     * @param int     $column
      *
      * @return int
      */
     private function getCellWidth(array $row, $column)
     {
-        if ($column < 0) {
-            return 0;
-        }
-
-        if (isset($row[$column])) {
-            return $this->strlen($row[$column]);
-        }
-
-        return $this->getCellWidth($row, $column - 1);
+        return isset($row[$column]) ? $this->computeLengthWithoutDecoration($row[$column]) : 0;
     }
 
     /**
@@ -472,8 +468,20 @@ class TableHelper extends Helper
         $this->numberOfColumns = null;
     }
 
+    private function computeLengthWithoutDecoration($string)
+    {
+        $formatter = $this->output->getFormatter();
+        $isDecorated = $formatter->isDecorated();
+        $formatter->setDecorated(false);
+
+        $string = $formatter->format($string);
+        $formatter->setDecorated($isDecorated);
+
+        return $this->strlen($string);
+    }
+
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getName()
     {
