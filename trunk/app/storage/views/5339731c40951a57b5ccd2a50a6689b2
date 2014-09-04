@@ -26,9 +26,9 @@
                                 <li class="dropdown-submenu">
                                     <a href="<?php echo url('chienluoc/vang'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Chiến lược vàng</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="<?php echo url('chienluoc/vang/klq'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Kim loại quý</a></li>
-                                        <li><a href="<?php echo url('chienluoc/vang/hh'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Hàng hóa</a></li>
-                                        <li><a href="<?php echo url('chienluoc/vang/cp'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Cổ phiếu</a></li>
+                                        <li><a href="<?php echo url('chienluoc/vang_klq'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Kim loại quý</a></li>
+                                        <li><a href="<?php echo url('chienluoc/vang_hh'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Hàng hóa</a></li>
+                                        <li><a href="<?php echo url('chienluoc/vang_cp'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Cổ phiếu</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="<?php echo url('chienluoc/forex'); ?>"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Chiến lược Forex</a></li>

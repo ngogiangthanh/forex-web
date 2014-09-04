@@ -279,7 +279,8 @@ class GuestController extends BaseController {
                                     ->with('hanghoa', $hanghoa)
                                     ->with('cophieu', $cophieu)
                                     ->with("title", "Các chiến lược giao dịch vàng");
-                case "vang_klq":$kimloaiquy = TinTuc::Select(2, $this->perpage);
+                case "vang_klq":
+                    $kimloaiquy = TinTuc::Select(2, $this->perpage);
                     //ajax pagingation kim loai quy
                     $klq['noidung'] = $kimloaiquy;
                     $klq['phantrang'] = $kimloaiquy->links();
@@ -290,14 +291,35 @@ class GuestController extends BaseController {
                     //end ajax pagination kim loai quy
                     return View::make('guest.traders.chienluoc_vang_klq')
                                     ->with('contacts', $contacts)
+                                    ->with('kimloaiquy', $kimloaiquy)
                                     ->with("title", "Các chiến lược giao dịch vàng với kim loại quý");
                 case "vang_hh":
+                    $hanghoa = TinTuc::Select(3, $this->perpage);
+                    //ajax pagingation hang hoa
+                    $hh['noidung'] = $hanghoa;
+                    $hh['phantrang'] = $hanghoa->links();
+                    if (Request::ajax() && Input::get("type") == "hanghoa") {
+                        $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_hh", $hh)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation hang hoa
                     return View::make('guest.traders.chienluoc_vang_hh')
                                     ->with('contacts', $contacts)
+                                    ->with('hanghoa', $hanghoa)
                                     ->with("title", "Các chiến lược giao dịch vàng với hàng hóa");
                 case "vang_cp":
+                    $cophieu = TinTuc::Select(4, $this->perpage);
+                    //ajax pagingation co phieu
+                    $cp['noidung'] = $cophieu;
+                    $cp['phantrang'] = $cophieu->links();
+                    if (Request::ajax() && Input::get("type") == "cophieu") {
+                        $html = View::make("guest.chienluoc.chienluocvang.ajaxpagination_cp", $cp)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation co phieu
                     return View::make('guest.traders.chienluoc_vang_cp')
                                     ->with('contacts', $contacts)
+                                    ->with('cophieu', $cophieu)
                                     ->with("title", "Các chiến lược giao dịch vàng với chiến lược");
                 default:
                     return $this->index(); //trang chủ mặc định
