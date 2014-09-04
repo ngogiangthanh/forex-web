@@ -1,15 +1,23 @@
+<?php
+$url = new FunctionController();
+?>
 <?php foreach ($noidung as $klq): ?>
 <?php if ($klq != null): ?>
+<?php
+$urlReal = $url->getURL($klq->loai);
+?>
 <div>  
-    <?php if(file_exists($klq->anhnho)): ?>
-    <?php echo HTML::image($klq->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
-    <?php else: ?>
-    <?php echo HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
-    <?php endif; ?>
-    <p><?php echo $klq->tieude; ?></p>
+    <a href="<?php echo url($urlReal."/".$klq->id); ?>">
+        <?php if(file_exists($klq->anhnho)): ?>
+        <?php echo HTML::image($klq->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
+        <?php else: ?>
+        <?php echo HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
+        <?php endif; ?>
+    </a>
+    <p><a href="<?php echo url($urlReal."/".$klq->id); ?>"><?php echo HTML::decode($klq->tieude); ?></a></p>
     <p><?php echo date("H:i:s d/m/Y",strtotime($klq->thoidiemsua)); ?></p>
     <p>Lượt xem:&nbsp;<?php echo $klq->luotxem; ?></p>
-    <p>[...Xem thêm]</p>
+    <p><a href="<?php echo url($urlReal."/".$klq->id); ?>">[...Xem thêm]</a></p>
 </div>
 <hr>
 <?php endif; ?>

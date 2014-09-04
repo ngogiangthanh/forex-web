@@ -24,7 +24,7 @@ Route::get('{type}', 'GuestController@index')->where(array('type' => '[A-Za-z0-9
         // + cổ phiếu
 Route::get('{type}/{alias}','GuestController@indexModify')->where(array('type' => '[A-Za-z0-9]+', 'alias' => '[A-Za-z0-9_]+')); 
 //Xem chi tiết
-//Route::get('{type}/{id}', 'GuestController@show')->where(array('type' => '[A-Za-z0-9]+', 'id' => '[0-9]+'));
+Route::get('{type}/{alias}/{id}', 'GuestController@show')->where(array('type' => '[A-Za-z0-9]+','alias' => '[A-Za-z0-9_]+','id' => '[0-9]+'));
 //Gửi liên hệ
 Route::post('sendcontact', 'GuestController@store');
 

@@ -329,15 +329,18 @@ class GuestController extends BaseController {
         }
     }
 
-    public function show($type, $id) {
-        $contacts = Contact::Select();
-        switch ($type) {
-            case 'forex':
-                return View::make('guest.forex.view')
-                                ->with('contacts', $contacts)
-                                ->with("title", "Các tin tức trong nước và ngoài nước");
-            default:
-                return $this->index();
+    public function show($type, $alias, $id) {
+        $url = new FunctionController();
+        if ($url->isURL($type) && $url->isURL($alias)) {
+            $contacts = Contact::Select();
+            $title = $url->switchName($alias);
+            $news = TinTuc::getANews($id,$url->getID($alias));
+            return View::make('guest.news.view')
+                            ->with('contacts', $contacts)
+                            ->with('news', $news)
+                            ->with("title", $title);
+        } else {
+            return $this->index();
         }
     }
 

@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Forex/app/views/guest/forex/view.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Forex/app/views/guest/forex/ajaxpagination.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Forex/app/views/guest/forex/index.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Forex/app/views/guest/menu/index.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Forex/app/views/layouts/guest.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Forex/app/views/guest/menu/nav_url.blade.php</file>
         </group>
     </open-files>
 </project-private>

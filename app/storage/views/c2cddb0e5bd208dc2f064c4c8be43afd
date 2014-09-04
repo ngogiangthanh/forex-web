@@ -1,15 +1,23 @@
+<?php
+$url = new FunctionController();
+?>
 <?php foreach ($cophieu as $cp): ?>
 <?php if ($cp != null): ?>
+<?php
+$urlReal = $url->getURL($cp->loai);
+?>
 <div>
-    <?php if(file_exists($cp->anhnho)): ?>
-    <?php echo HTML::image($cp->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
-    <?php else: ?>
-    <?php echo HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
-    <?php endif; ?>
-    <p><?php echo $cp->tieude; ?></p>
-    <p><?php echo date("H:i:s d/m/Y",strtotime($cp->thoidiemsua)); ?></p>
+    <a href="<?php echo url($urlReal."/".$cp->id); ?>">
+        <?php if(file_exists($cp->anhnho)): ?>
+        <?php echo HTML::image($cp->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
+        <?php else: ?>
+        <?php echo HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')); ?>
+        <?php endif; ?>
+    </a>
+    <p><a href="<?php echo url($urlReal."/".$cp->id); ?>"><?php echo HTML::decode($cp->tieude); ?></a></p>
+    <p>Ngày đăng:&nbsp;<?php echo date("h:i A | d/m/Y",strtotime($cp->thoidiemsua)); ?></p>
     <p>Lượt xem:&nbsp;<?php echo $cp->luotxem; ?></p>
-    <p>[...Xem thêm]</p>
+    <p><a href="<?php echo url($urlReal."/".$cp->id); ?>">[...Xem thêm]</a></p>
 </div>
 <hr>
 <?php endif; ?>
