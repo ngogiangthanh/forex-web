@@ -17,7 +17,8 @@ class FunctionController extends BaseController {
         "contact" => "Liên hệ",
         "forexmarket" => "Forex Market",
         "tin_tn" => "Tin trong nước",
-        "tin_nn" => "Tin ngoài nước"
+        "tin_nn" => "Tin ngoài nước",
+        "news" => "Tin tức"
     ); //ds cac loai tin tuc trong web
     private $arrayAlias = array(
         0 => "intro",
@@ -32,7 +33,8 @@ class FunctionController extends BaseController {
         9 => "kienthuc",
         10 => "kinhnghiem",
         11 => "chienluoc",
-        12 => "vang"
+        12 => "vang",
+        13 => "news"
     ); //ds cac loai tin tuc va alias tuong ung
     private $relationship = array(
         0 => -1,
@@ -41,13 +43,14 @@ class FunctionController extends BaseController {
         3 => 11,
         4 => 11,
         5 => -1,
-        6 => -1,
-        7 => -1,
+        6 => 13,
+        7 => 13,
         8 => -1,
         9 => -1,
         10 => -1,
         11 => -1,
-        12 => 11
+        12 => 11,
+        13 => -1
     ); //ds quan hệ -1 la ket thuc ko có cha
 
     //lay duong dan dua vao so loai

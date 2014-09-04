@@ -144,7 +144,7 @@ class GuestController extends BaseController {
                                 ->with("title", "Sàn giao dịch");
                 break;
             case "contact":
-                $supportContact = Contact::Select("CUSTOMER SUPPORT");
+                $supportContact = Contact::Select(1);
                 return View::make('guest.contacts.index')
                                 ->with('contacts', $contacts)
                                 ->with("supportContact", $supportContact)
@@ -324,6 +324,40 @@ class GuestController extends BaseController {
                 default:
                     return $this->index(); //trang chủ mặc định
             }
+        } else if ($type == "news") {
+            switch ($alias) {
+                case "tin_tn":
+                    $newsTNs = TinTuc::Select(6, $this->perpage);
+                    //ajax pagingation tin tức trong nước
+                    $tinTN['noidung'] = $newsTNs;
+                    $tinTN['phantrang'] = $newsTNs->links();
+                    if (Request::ajax() && Input::get("type") == "tin_tn") {
+                        $html = View::make("guest.news.ajaxpagination_tn", $tinTN)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation tin tức trong nước
+                    return View::make('guest.news.index_tn')
+                                    ->with('contacts', $contacts)
+                                    ->with('newsTNs', $newsTNs)
+                                    ->with("title", "Các tin trong nước");
+                    case "tin_nn":
+                    $newsNNs = TinTuc::Select(7, $this->perpage);
+
+                    //ajax pagingation tin tức ngoài nước
+                    $tinNN['noidung'] = $newsNNs;
+                    $tinNN['phantrang'] = $newsNNs->links();
+                    if (Request::ajax() && Input::get("type") == "tin_tn") {
+                        $html = View::make("guest.news.ajaxpagination_nn", $tinNN)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation tin tức ngoài nước
+                    return View::make('guest.news.index_nn')
+                                    ->with('contacts', $contacts)
+                                    ->with('newsNNs', $newsNNs)
+                                    ->with("title", "Các tin ngoài nước nước");
+                default:
+                    return $this->index(); //trang chủ mặc định
+            }
         } else {
             $this->index(); //trang chủ mặc định
         }
@@ -334,7 +368,7 @@ class GuestController extends BaseController {
         if ($url->isURL($type) && $url->isURL($alias)) {
             $contacts = Contact::Select();
             $title = $url->switchName($alias);
-            $news = TinTuc::getANews($id,$url->getID($alias));
+            $news = TinTuc::getANews($id, $url->getID($alias));
             return View::make('guest.news.view')
                             ->with('contacts', $contacts)
                             ->with('news', $news)

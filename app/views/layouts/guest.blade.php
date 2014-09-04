@@ -9,6 +9,7 @@
         {{ HTML::style('css/bootstrap-theme.min.css') }}
         {{ HTML::style('css/style.css') }}
         {{ HTML::style('css/nprogress.css') }}
+        {{ HTML::style('css/toastr.css') }}
         <style>
             body {
                 margin-top: 50px;
@@ -51,6 +52,7 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
         {{ HTML::script('js/jquery-1.10.2.min.js') }}
+        {{ HTML::script('js/toastr.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap.notify.min.js') }}
         {{ HTML::script('js/nprogress.js') }}
@@ -87,6 +89,8 @@
                 {{ HTML::script('js/jqwidgets.vi.js') }}
                 {{ HTML::script('js/import-export-data.js') }}-->
         <script type="text/javascript">
+            toastr.options.closeButton = true;
+            toastr.options.newestOnTop = true;
             $('body').show();
             NProgress.start();
             setTimeout(function() {
