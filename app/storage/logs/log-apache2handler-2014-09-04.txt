@@ -870,3 +870,55 @@ Stack trace:
 #14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
 #15 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
 #16 {main} [] []
+[2014-09-04 21:18:06] log.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' with message 'Controller method not found.' in C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php:290
+Stack trace:
+#0 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(302): Illuminate\Routing\Controllers\Controller->missingMethod(Array)
+#1 [internal function]: Illuminate\Routing\Controllers\Controller->__call('showOthers', Array)
+#2 [internal function]: GuestController->showOthers('kinhnghiem', '10')
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('showOthers', Array)
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'showOthers', Array)
+#6 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('kinhnghiem', '10')
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2014-09-04 21:22:16] log.ERROR: exception 'ErrorException' with message 'Undefined variable: fr' in C:\xampp\htdocs\Forex\app\storage\views\e31fbbaaaf7d5f6f0522f7ece62e8122:16
+Stack trace:
+#0 C:\xampp\htdocs\Forex\app\storage\views\e31fbbaaaf7d5f6f0522f7ece62e8122(16): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php(38): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php(45): Illuminate\View\Engines\PhpEngine->evaluatePath('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(100): Illuminate\View\Engines\CompilerEngine->get('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\View\View.php(81): Illuminate\View\View->getContents()
+#5 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Http\Response.php(70): Illuminate\View\View->render()
+#6 C:\xampp\htdocs\Forex\vendor\symfony\http-foundation\Symfony\Component\HttpFoundation\Response.php(141): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1414): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(156): Illuminate\Routing\Router->prepare(Object(Illuminate\View\View), Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(126): Illuminate\Routing\Controllers\Controller->processResponse(Object(Illuminate\Routing\Router), 'index', Object(Illuminate\View\View))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'index', Array)
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('sanpham')
+#12 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#13 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#14 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#17 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#18 {main} [] []
+[2014-09-04 21:31:19] log.ERROR: exception 'ErrorException' with message 'Undefined variable: alias' in C:\xampp\htdocs\Forex\app\controllers\GuestController.php:385
+Stack trace:
+#0 C:\xampp\htdocs\Forex\app\controllers\GuestController.php(385): Illuminate\Exception\Handler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 385, Array)
+#1 [internal function]: GuestController->showOthers('sanpham', '30')
+#2 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(138): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Controllers\Controller.php(115): Illuminate\Routing\Controllers\Controller->callMethod('showOthers', Array)
+#4 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(985): Illuminate\Routing\Controllers\Controller->callAction(Object(Illuminate\Foundation\Application), Object(Illuminate\Routing\Router), 'showOthers', Array)
+#5 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}('sanpham', '30')
+#6 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(80): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Route.php(47): Illuminate\Routing\Route->callCallable()
+#8 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1016): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(576): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\Forex\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(552): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\Forex\index.php(49): Illuminate\Foundation\Application->run()
+#12 {main} [] []

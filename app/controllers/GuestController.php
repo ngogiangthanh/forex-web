@@ -340,7 +340,7 @@ class GuestController extends BaseController {
                                     ->with('contacts', $contacts)
                                     ->with('newsTNs', $newsTNs)
                                     ->with("title", "Các tin trong nước");
-                    case "tin_nn":
+                case "tin_nn":
                     $newsNNs = TinTuc::Select(7, $this->perpage);
 
                     //ajax pagingation tin tức ngoài nước
@@ -359,7 +359,7 @@ class GuestController extends BaseController {
                     return $this->index(); //trang chủ mặc định
             }
         } else {
-            $this->index(); //trang chủ mặc định
+            return $this->index(); //trang chủ mặc định
         }
     }
 
@@ -369,6 +369,21 @@ class GuestController extends BaseController {
             $contacts = Contact::Select();
             $title = $url->switchName($alias);
             $news = TinTuc::getANews($id, $url->getID($alias));
+            return View::make('guest.news.view')
+                            ->with('contacts', $contacts)
+                            ->with('news', $news)
+                            ->with("title", $title);
+        } else {
+            return $this->index();
+        }
+    }
+
+    public function showOthers($type, $id) {
+        $url = new FunctionController();
+        if ($url->isURL($type)) {
+            $contacts = Contact::Select();
+            $title = $url->switchName($type);
+            $news = TinTuc::getANews($id, $url->getID($type));
             return View::make('guest.news.view')
                             ->with('contacts', $contacts)
                             ->with('news', $news)

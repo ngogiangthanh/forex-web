@@ -18,7 +18,8 @@ class FunctionController extends BaseController {
         "forexmarket" => "Forex Market",
         "tin_tn" => "Tin trong nước",
         "tin_nn" => "Tin ngoài nước",
-        "news" => "Tin tức"
+        "news" => "Tin tức",
+        "threads" => "Bài viết"
     ); //ds cac loai tin tuc trong web
     private $arrayAlias = array(
         0 => "intro",
@@ -104,8 +105,9 @@ class FunctionController extends BaseController {
         } else {
             $arrayUrlElements = explode("/", $fullUrl);
             $size = sizeof($arrayUrlElements);
-            if ($size == 3)
+            if ($size == 3) {
                 $size--;
+            }
             for ($i = 0; $i < $size; $i++) {
                 if ($this->switchName($arrayUrlElements[$i]) == null) {
                     return false;
@@ -123,9 +125,6 @@ class FunctionController extends BaseController {
         for ($i = 0; $i < $size - 1; $i++) {
             $stringNAV .= " > <a href='" . url($this->getURLAlias($arrayUrlElements[$i])) . "'>" . $this->switchName($arrayUrlElements[$i]) . "</a>";
         }
-//        if($this->switchName($arrayUrlElements[$size - 1]) == null)
-//        $stringNAV .= " > Bài viết";
-//        else 
         $stringNAV .= ($this->switchName($arrayUrlElements[$size - 1]) == null) ? " > Bài viết" : " > " . $this->switchName($arrayUrlElements[$size - 1]);
         return $stringNAV;
     }

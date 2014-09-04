@@ -5,18 +5,26 @@
         <div class="panel panel-success">
             <div class="panel-heading">SẢN PHẨM GIAO DỊCH</div>
             <div class="panel-body" id="sp_gd_index">
+                <?php
+                $url = new FunctionController();
+                ?>
                 @foreach ($sp_gd as $gd)
                 @if ($gd != null)
+                <?php
+                $urlReal = $url->getURL($gd->loai);
+                ?>
                 <div>
-                    @if(file_exists($gd->anhnho))
-                    {{ HTML::image($gd->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
-                    @else
-                    {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
-                    @endif
-                    <p>{{ $gd->tieude }}</p>
-                    <p>{{date("H:i:s d/m/Y",strtotime($gd->thoidiemsua))}}</p>
+                    <a href="{{url($urlReal."/threads=".$gd->id)}}">
+                        @if(file_exists($gd->anhnho))
+                        {{ HTML::image($gd->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+                        @else
+                        {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+                        @endif
+                    </a>
+                    <p><a href="{{url($urlReal."/threads=".$gd->id)}}">{{HTML::decode($gd->tieude)}}</a></p>
+                    <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($gd->thoidiemsua))}}</p>
                     <p>Lượt xem:&nbsp;{{ $gd->luotxem}}</p>
-                    <p>[...Xem thêm]</p>
+                    <p><a href="{{url($urlReal."/threads=".$gd->id)}}">[...Xem thêm]</a></p>
                 </div>
                 <hr>
                 @endif
