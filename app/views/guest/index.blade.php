@@ -84,20 +84,20 @@
     <div class="col-md-3">
         <div class="col-md-12"  style="margin-top:15px;">
             <a class="btn btn-primary btn-function" href="https://www.ironfx.com/vi/register?utm_source=16014148&utm_medium=ib_link&utm_campaign=IB" 
-               title="Mở tài khoản thật"><span class="glyphicon glyphicon-user"></span>&nbsp;Mở tài khoản thật</a>
+               title="Mở tài khoản thật" target="_blank"><span class="glyphicon glyphicon-user"></span>&nbsp;Mở tài khoản thật</a>
         </div> 
         <div class="col-md-12"  style="margin-top: 15px">
             <a class="btn btn-success btn-function" href="https://www.ironfx.com/en/demo" 
-               title="Mở tài khoản Demo"><span class="glyphicon glyphicon-user"></span>&nbsp;Mở tài khoản Demo</a>
+               title="Mở tài khoản Demo" target="_blank"><span class="glyphicon glyphicon-user"></span>&nbsp;Mở tài khoản Demo</a>
         </div>
         <div class="col-md-12"  style="margin-top: 15px">
             <a class="btn btn-warning btn-function" href="http://www.ironfx.com/en/trading-platform/mt4-trader-advanced" 
-               title="Tải phần mềm MT4"><span class="glyphicon glyphicon-download-alt"></span>&nbsp;Tải phần mềm MT4</a>
+               title="Tải phần mềm MT4" target="_blank"><span class="glyphicon glyphicon-download-alt"></span>&nbsp;Tải phần mềm MT4</a>
         </div>
         <!-- find us on facebook -->
         <div class="col-md-12" style="margin-top: 25px">
             <div class="facebook">
-                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fforexmarketcomvn%2F695512290504029&amp;width=200&amp;height=290&amp;colorscheme=dark&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:290px;" allowTransparency="true"></iframe>
+                <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fforexmarketcomvn%2F695512290504029&amp;width=200&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:290px;" allowTransparency="true"></iframe>
             </div>
         </div>
     </div>

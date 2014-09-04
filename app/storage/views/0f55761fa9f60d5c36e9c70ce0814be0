@@ -35,7 +35,9 @@
                 <div class="col-md-12">
                     <div class="col-md-12 content-middle" style="background: #F0F0F0 ">
                         <?php echo $__env->make ('guest.menu.nav_url', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-                        <?php echo $__env->yieldContent('main'); ?>
+                        <div id="web_content_id">
+                            <?php echo $__env->yieldContent('main'); ?>
+                        </div>
                         <!-- all contact -->
                         <?php echo $__env->make('guest.footer.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                     </div>
@@ -58,6 +60,7 @@
         <?php echo HTML::script('js/nprogress.js'); ?>
         <?php echo HTML::script('js/jquery-ajax-pagination-1.0.js'); ?>
         <?php echo HTML::script('js/jquery-ajax-contact-1.0.js'); ?>
+        <?php echo HTML::script('js/jquery-ajax-search-1.0.js'); ?>
         <!--jqWidget-->
         <!--        <?php echo HTML::style('js/jqwidgets/styles/jqx.base.css'); ?>
                 <?php echo HTML::style('js/jqwidgets/styles/jqx.bootstrap.css'); ?>
@@ -97,32 +100,6 @@
                 NProgress.done();
                 $('.fade').removeClass('out');
             }, 100);
-//            $(document).ready(function()
-//            {
-//                $(".pagination a").click(function()
-//                {
-//                    var myurl = $(this).attr('href');
-//                    $.ajax(
-//                            {
-//                                url: myurl,
-//                                type: "get",
-//                                datatype: "html"
-////                              beforeSend: function()
-////                              {
-////                                  $('#ajax-loading').show();
-////                              }
-//                            }).done(function(data)
-//                    {
-//                        console.log(data);
-//                        $("#forex_index").empty().html(data.html);
-//                    })
-//                            .fail(function(jqXHR, ajaxOptions, thrownError)
-//                            {
-//                                alert('No response from server');
-//                            });
-//                    return false;
-//                });
-//            });
         </script>
     </body>
 </html>
