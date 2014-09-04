@@ -78,7 +78,7 @@ EOF;
     /**
      * Generates the code for the match method implementing UrlMatcherInterface.
      *
-     * @param Boolean $supportsRedirections Whether redirections are supported by the base class
+     * @param bool    $supportsRedirections Whether redirections are supported by the base class
      *
      * @return string Match method as PHP code
      */
@@ -103,7 +103,7 @@ EOF;
      * Generates PHP code to match a RouteCollection with all its routes.
      *
      * @param RouteCollection $routes               A RouteCollection instance
-     * @param Boolean         $supportsRedirections Whether redirections are supported by the base class
+     * @param bool            $supportsRedirections Whether redirections are supported by the base class
      *
      * @return string PHP code
      */
@@ -144,7 +144,7 @@ EOF;
      * Generates PHP code recursively to match a tree of routes
      *
      * @param DumperPrefixCollection $collection           A DumperPrefixCollection instance
-     * @param Boolean                $supportsRedirections Whether redirections are supported by the base class
+     * @param bool                   $supportsRedirections Whether redirections are supported by the base class
      * @param string                 $parentPrefix         Prefix of the parent collection
      *
      * @return string PHP code
@@ -184,7 +184,7 @@ EOF;
      *
      * @param Route       $route                A Route instance
      * @param string      $name                 The name of the Route
-     * @param Boolean     $supportsRedirections Whether redirections are supported by the base class
+     * @param bool        $supportsRedirections Whether redirections are supported by the base class
      * @param string|null $parentPrefix         The prefix of the parent collection used to optimize the code
      *
      * @return string PHP code
@@ -280,15 +280,14 @@ EOF;
 EOF;
         }
 
-        if ($schemes = $route->getSchemes()) {
+        if ($scheme = $route->getRequirement('_scheme')) {
             if (!$supportsRedirections) {
-                throw new \LogicException('The "schemes" requirement is only supported for URL matchers that implement RedirectableUrlMatcherInterface.');
+                throw new \LogicException('The "_scheme" requirement is only supported for URL matchers that implement RedirectableUrlMatcherInterface.');
             }
-            $schemes = str_replace("\n", '', var_export(array_flip($schemes), true));
+
             $code .= <<<EOF
-            \$requiredSchemes = $schemes;
-            if (!isset(\$requiredSchemes[\$this->context->getScheme()])) {
-                return \$this->redirect(\$pathinfo, '$name', key(\$requiredSchemes));
+            if (\$this->context->getScheme() !== '$scheme') {
+                return \$this->redirect(\$pathinfo, '$name', '$scheme');
             }
 
 
@@ -306,11 +305,8 @@ EOF;
             }
             $vars[] = "array('_route' => '$name')";
 
-            $code .= sprintf(
-                "            return \$this->mergeDefaults(array_replace(%s), %s);\n",
-                implode(', ', $vars),
-                str_replace("\n", '', var_export($route->getDefaults(), true))
-            );
+            $code .= sprintf("            return \$this->mergeDefaults(array_replace(%s), %s);\n"
+                , implode(', ', $vars), str_replace("\n", '', var_export($route->getDefaults(), true)));
 
         } elseif ($route->getDefaults()) {
             $code .= sprintf("            return %s;\n", str_replace("\n", '', var_export(array_replace($route->getDefaults(), array('_route' => $name)), true)));
