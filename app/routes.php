@@ -13,18 +13,25 @@
  * Trang khách hàng
  */
 //Trang chủ
-Route::get('',array('as' => '', 'uses' => 'GuestController@index'));
+Route::get('', array('as' => '', 'uses' => 'GuestController@index'));
 //Các trang còn lại
-Route::get('{type}','GuestController@index')->where(array('type' => '[A-Za-z0-9]+'));
+Route::get('{type}', 'GuestController@index')->where(array('type' => '[A-Za-z0-9]+'));
+//Chiến lược
+    //Chiến lược - forex
+    //chiến lược - vàng
+        // + kim loại quý
+        // + hàng hóa
+        // + cổ phiếu
+Route::get('{type}/{alias}','GuestController@indexModify')->where(array('type' => '[A-Za-z0-9]+', 'alias' => '[A-Za-z0-9]+')); 
 //Xem chi tiết
-Route::get('{type}/{id}','GuestController@show')->where(array('type' => '[A-Za-z0-9]+','id' => '[0-9]+'));
+//Route::get('{type}/{id}', 'GuestController@show')->where(array('type' => '[A-Za-z0-9]+', 'id' => '[0-9]+'));
 //Gửi liên hệ
-Route::post('sendcontact','GuestController@store'); 
+Route::post('sendcontact', 'GuestController@store');
 
 /**
  * Trang quản lý
  */
-Route::get('admin/{alias}', 'AdminController@index')->where(array('alias'=>'[A-Za-z0-9]+'));
+Route::get('admin/{alias}', 'AdminController@index')->where(array('alias' => '[A-Za-z0-9]+'));
 /**
  * Trang login
  */
@@ -38,21 +45,21 @@ Route::post('login', function() {
         $username = trim(Input::get('username'));
         $password = Input::get('password');
         $user = DB::table('user')->where('username', $username)->first();
-        if(isset($user)) {
-            if($user->password == md5($password)) { // If their password is still MD5
+        if (isset($user)) {
+            if ($user->password == md5($password)) { // If their password is still MD5
                 $user->password = Hash::make($password); // Convert to new format
                 return Redirect::to('admin');
             } else {
                 return Redirect::to('login')
-                    ->with('flash_error', 'Sai mật khẩu.')
-                    ->withInput()
-                    ->withErrors($validation);
+                                ->with('flash_error', 'Sai mật khẩu.')
+                                ->withInput()
+                                ->withErrors($validation);
             }
-        } else{
+        } else {
             return Redirect::to('login')
-                    ->with('flash_error', 'Tên người dùng và mật khẩu không hợp lệ.')
-                    ->withInput()
-                    ->withErrors($validation);
+                            ->with('flash_error', 'Tên người dùng và mật khẩu không hợp lệ.')
+                            ->withInput()
+                            ->withErrors($validation);
         }
     }
     return Redirect::to('login')

@@ -1,21 +1,21 @@
-@foreach ($noidung as $fa)
-@if ($fa != null)
+@foreach ($noidung as $kn)
+@if ($kn != null)
 <div>  
-    @if(file_exists($fa->anhnho))
-    {{ HTML::image($fa->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+    @if(file_exists($kn->anhnho))
+    {{ HTML::image($kn->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
     @else
     {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
     @endif
-    <p>{{ $fa->tieude }}</p>
-    <p>{{date("H:i:s d/m/Y",strtotime($fa->thoidiemsua))}}</p>
-    <p>Lượt xem:&nbsp;{{ $fa->luotxem}}</p>
+    <p>{{ $kn->tieude }}</p>
+    <p>{{date("H:i:s d/m/Y",strtotime($kn->thoidiemsua))}}</p>
+    <p>Lượt xem:&nbsp;{{ $kn->luotxem}}</p>
     <p>[...Xem thêm]</p>
 </div>
 <hr>
 @endif
 @endforeach
-<div id='fa_gold_paging'>
-{{$phantrang}}
+<div id='kinhnghiem_paging'>
+    {{$phantrang}}
 </div>
 <style type='text/css'>
     .pagination li {
