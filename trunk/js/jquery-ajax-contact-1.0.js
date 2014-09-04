@@ -16,6 +16,7 @@ $(document).ready(function()
                     + '&tieude=' + $(this).find('input[name="tieudetxt"]').val()
                     + '&noidung=' + $(this).find('textarea[name="noidungtxt"]').val(),
             success: function(data) {
+                toastr.success("Ý kiến của bạn đã được gửi đi. Chúng tôi sẽ xem xét và phản hồi trong thời gian tới!.<br/>Cảm ơn bạn!");
                 $("#form_contact_index").hide().fadeIn("slow").html(data.html);
             }}, 'html').fail(function(jqXHR, ajaxOptions, thrownError)
         {

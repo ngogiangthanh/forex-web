@@ -1,17 +1,18 @@
 <?php
 $url = new FunctionController();
 ?>
-@foreach ($noidung as $nn)
-@if ($nn != null)    <?php
+@foreach ($newsNNs as $nn)
+@if ($nn != null)
+<?php
 $urlReal = $url->getURL($nn->loai);
 ?>
-<div>  
+<div>
     <a href="{{url($urlReal."/".$nn->id)}}">
-    @if(file_exists($nn->anhnho))
-    {{ HTML::image($nn->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
-    @else
-    {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
-    @endif
+        @if(file_exists($nn->anhnho))
+        {{ HTML::image($nn->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+        @else
+        {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+        @endif
     </a>
     <p><a href="{{url($urlReal."/".$nn->id)}}">{{HTML::decode($nn->tieude)}}</a></p>
     <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($nn->thoidiemsua))}}</p>
@@ -22,7 +23,7 @@ $urlReal = $url->getURL($nn->loai);
 @endif
 @endforeach
 <div id='tin_nn_paging'>
-    {{$phantrang}}
+    {{$newsNNs->links()}}
 </div>
 <style type='text/css'>
     .pagination li {
@@ -31,4 +32,3 @@ $urlReal = $url->getURL($nn->loai);
         margin-right: 0.5em;
     }
 </style>
-{{ HTML::script('js/jquery-ajax-pagination-1.0.js') }}
