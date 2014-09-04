@@ -10,6 +10,7 @@
         <div class="col-md-3">
             <div class="input-group" style="margin-top: 30px">
                 <input type="text" class="form-control" id="search" placeholder="Nhập thông tin cần tìm kiếm" title="Nhập thông tin cần tìm kiếm"/>
+                <input type="hidden" name="urlsearch" id="urlsearch" value="{{url('search')}}"/>
                 <span class="input-group-btn">
                     <button class="btn btn-default" id="btnsearch" type="button" title="Tìm kiếm"><span class="glyphicon glyphicon-search"></span></button>
                 </span>

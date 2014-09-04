@@ -393,4 +393,23 @@ class GuestController extends BaseController {
         }
     }
 
+    public function search($key) {
+        $key =  preg_replace('/\s\s+/', ' ', trim($key)); 
+        $contacts = Contact::Select();
+        $resultsearch = TinTuc::search($key, 10);
+        //ajax pagingation tìm kiếm
+        $rs['noidung'] = $resultsearch;
+        $rs['phantrang'] = $resultsearch->links();
+        if (Request::ajax() && Input::get("type") == "search") {
+            $html = View::make("guest.searches.ajaxpagination", $rs)->render();
+            return Response::json(array('html' => $html));
+        }
+        //end ajax pagingation tìm kiếm
+        return View::make('guest.searches.index')
+                        ->with('contacts', $contacts)
+                        ->with("keysearch", $key)
+                        ->with("result", $resultsearch)
+                        ->with("title", "Kết quả tìm kiếm");
+    }
+
 }

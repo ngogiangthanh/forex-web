@@ -24,26 +24,35 @@ Class TinTuc extends Eloquent {
                     ->first();
         } else {
             $data = DB::table('tintuc')
-                    ->select('id','tieude','anhnho',"thoidiemsua",'luotxem','loai')
+                    ->select('id', 'tieude', 'anhnho', "thoidiemsua", 'luotxem', 'loai')
                     ->where('loai', $loai)
                     ->orderBy('thoidiemdang')
                     ->paginate($soluong);
         }
         return $data;
     }
-    
-    public static function getANews($id,$type)
-    {
+
+    public static function getANews($id, $type) {
         $data = DB::table("tintuc")
-                ->select('id','tieude','anhnho',"thoidiemsua",'luotxem','loai','noidung')
-                ->where("loai",$type,"and")
-                ->where("id",$id)
+                ->select('id', 'tieude', 'anhnho', "thoidiemsua", 'luotxem', 'loai', 'noidung')
+                ->where("loai", $type, "and")
+                ->where("id", $id)
                 ->first();
-        if($data != null)
-        {
+        if ($data != null) {
             //tang len mot don vi, can xem xet lai dua vao ip va thoi gian truy xuat
-            DB::table("tintuc")->where("id",$id)->increment("luotxem");
+            DB::table("tintuc")->where("id", $id)->increment("luotxem");
         }
         return $data;
     }
+
+    public static function search($arraykey, $soluong) {
+        $data = DB::table("tintuc")
+                ->select('id', 'tieude', 'anhnho', "thoidiemsua", 'luotxem', 'loai')
+                ->where('tieude', 'LIKE', "%" . $arraykey . "%")
+                ->orderBy("luotxem",'desc')
+                ->orderBy("thoidiemsua")
+                ->paginate($soluong);
+        return $data;
+    }
+
 }

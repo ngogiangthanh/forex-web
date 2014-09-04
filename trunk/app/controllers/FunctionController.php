@@ -19,7 +19,8 @@ class FunctionController extends BaseController {
         "tin_tn" => "Tin trong nước",
         "tin_nn" => "Tin ngoài nước",
         "news" => "Tin tức",
-        "threads" => "Bài viết"
+        "threads" => "Bài viết",
+        "search" => "Kết quả tìm kiếm"
     ); //ds cac loai tin tuc trong web
     private $arrayAlias = array(
         0 => "intro",
@@ -53,6 +54,7 @@ class FunctionController extends BaseController {
         12 => 11,
         13 => -1
     ); //ds quan hệ -1 la ket thuc ko có cha
+    private $upexpect = array(8, 9, 10, 5);
 
     //lay duong dan dua vao so loai
 
@@ -87,6 +89,11 @@ class FunctionController extends BaseController {
     public function getURLAlias($alias) {
         $numtype = $this->getID($alias);
         return ($numtype != -1) ? $this->getURL($numtype) : "";
+    }
+
+    //
+    public function isUnexpected($numtype) {
+        return (array_search($numtype, $this->upexpect) == null || !array_search($numtype, $this->upexpect)) ? false : true;
     }
 
     //

@@ -170,4 +170,21 @@ $(document).ready(function()
         });
         return false;
     });
+    //tìm kiếm
+    $("#result_search_paging a").click(function()
+    {
+        var myurl = $(this).attr('href');
+        $.ajax(
+                {
+                    url: myurl + '&type=search',
+                    type: "get",
+                    datatype: "html"
+                }).done(function(data) {
+            $("#result_search_index").hide().fadeIn("slow").html(data.html);
+        }).fail(function(jqXHR, ajaxOptions, thrownError)
+        {
+            alert('No response from server!');
+        });
+        return false;
+    });
 });
