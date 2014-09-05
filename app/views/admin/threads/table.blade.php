@@ -51,7 +51,7 @@
             <button class="btn btn-default" id="reset_id" onclick="location.href ='{{url('admin/ql=baiviet')}}'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
         </span>
         @endif
-        <a href="" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;Thêm bài viết</a><br/>
+        <a href="{{url('admin/add=baiviet')}}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;Thêm bài viết</a><br/>
     </div>
     <div class="form-group col-xs-4" style='margin-left: -15px'>
         <select id="type_id" name='loaibaiviet'  class="form-control">
@@ -103,7 +103,7 @@
                 <td>{{date("h:i A | d/m/Y",strtotime($thread->thoidiemdang))}}</td>
                 <td>{{date("h:i A | d/m/Y",strtotime($thread->thoidiemsua))}}</td>
                 <td>{{$thread->luotxem}}</td>
-                <td><a href="" class="text-success"><i class="glyphicon glyphicon-edit" title="Sửa"></i></a>&nbsp;
+                <td><a href="{{url('admin/edit=baiviet/'.$thread->id)}}" class="text-success"><i class="glyphicon glyphicon-edit" title="Sửa"></i></a>&nbsp;
                     <a href="{{url('admin/delete=baiviet')}}" id="{{$thread->id}}"  class="delete_bv text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>
