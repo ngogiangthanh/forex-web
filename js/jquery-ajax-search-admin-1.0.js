@@ -36,12 +36,40 @@ $(document).ready(function()
     $("#type_id").change(function() {
         var url = $("#urlchosen").val();
         var type = $("#type_id option:selected").val();
-        location.href = url+"/"+type;
+        location.href = url + "/" + type;
+    });
+
+    $('#searchLH').keyup(function(e) {
+        if (e.which === 13) {
+            var searchtxt = $("#searchLH").val();
+            var url = $("#urlsearchLH").val();
+            searchtxt = trim(searchtxt);
+            if (searchtxt === null || searchtxt === "")
+            {
+                toastr.error("Vui lòng nhập chuỗi cần tìm kiếm!");
+            }
+            else
+            {
+                location.href = url + "=" + searchtxt;
+            }
+        }
+    });
+    $('#btnsearchLH').click(function() {
+        var searchtxt = $("#searchLH").val();
+        var url = $("#urlsearchLH").val();
+        searchtxt = trim(searchtxt);
+        if (searchtxt === null || searchtxt === "")
+        {
+            toastr.error("Vui lòng nhập chuỗi cần tìm kiếm!");
+        }
+        else
+        {
+            location.href = url + "=" + searchtxt;
+        }
     });
 
     function trim(str)
     {
         return  str.replace(/^[\s]+/, '').replace(/[\s]+$/, '').replace(/[\s]{2,}/, ' ');
     }
-
 });

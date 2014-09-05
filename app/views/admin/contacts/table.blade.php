@@ -33,11 +33,12 @@
     <div class="form-group">
         <!-- Single button -->
         <div class="btn-group">
-            <input id="search" name="search" type="text" class="form-control" placeholder="Nhập email hoặc họ tên" style="width: 100%" value="{{isset($key) && $key != null ? $key : ""}}"/>
-            <input type="hidden" name="urlsearch" id="urlsearch" value="{{url('admin/searchlienhe')}}"/>
+            <input id="searchLH" name="searchLH" type="text" class="form-control" placeholder="Nhập email hoặc họ tên" style="width: 100%" value="{{isset($key) && $key != null ? $key : ""}}"/>
+            <input type="hidden" name="urlsearchLH" id="urlsearchLH" value="{{url('admin/searchlienhe')}}"/>
+            <input type="hidden" name="urlsearchCheckXL" id="urlsearchCheckXL" value="{{url('admin/qllienhe')}}"/>
         </div>
         <span>
-            <button class="btn btn-default" id="btnsearch" type="button" title="Tìm kiếm"><span class="glyphicon glyphicon-search"></span></button>
+            <button class="btn btn-default" id="btnsearchLH" type="button" title="Tìm kiếm"><span class="glyphicon glyphicon-search"></span></button>
         </span>
         @if(isset($key) && $key != null)
         <span>
@@ -59,9 +60,36 @@
             </tr>
         </thead>
         <tbody> 
-
+            <?php
+            $count = $perpage * ($currentpage - 1);
+            ?>
+            @foreach($lienhe as $lh)
+            @if($lh != null)
+            <tr>
+                <td>{{++$count}}</td>
+                <td>{{HTML::decode($lh->hoten)}}</td>
+                <td><a href="mailto:{{$lh->email}}" style="color: #FF0000 "> {{$lh->email}}</a></td>
+                <td>{{HTML::decode($lh->tieude)}}</td>
+                <td>{{date("h:i A | d/m/Y",strtotime($lh->thoidiemgui))}}</td>
+                <td id="time_{{$lh->id}}">
+                @if($lh->thoidiemxuly == null)
+                Chưa xử lý
+                @else
+                {{date("h:i A | d/m/Y",strtotime($lh->thoidiemxuly))}}
+                @endif
+                </td>
+                <td>
+                    <input type="checkbox" name="xuly" class="xulylh" value="{{$lh->id}}" id="xuly" <?=$lh->trangthai == 0 ? "" : "checked='checked'"?>/>
+                </td>
+                <td><a href="" class="text-success"><i class="glyphicon glyphicon-search" title="Xem"></i></a>&nbsp;
+                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                </td>
+            </tr>
+            @endif
+            @endforeach
         </tbody>
     </table>
     <div class="text-right">
+        {{$lienhe->links()}}
     </div>	
 </div>
