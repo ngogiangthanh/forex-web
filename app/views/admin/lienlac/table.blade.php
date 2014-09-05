@@ -47,10 +47,34 @@
             </tr>
         </thead>
         <tbody> 
-            
+            <?php
+            $count = 0;
+            ?>
+            @foreach ($lienlac as $lc)
+            @if($lc != null)
+            <?php
+            $count++;
+            ?>
+            <tr>
+                <td>{{$count}}</td>
+                <td><b>{{HTML::decode($lc->address)}}</b></td>
+                <td>{{$lc->tel}}</td>
+                <td>{{$lc->fax}}</td>
+                <td><a href="mailto:{{$lc->email}}" style="color: #FF0000 "> {{$lc->email}}</a></td>
+                <td><a href='{{$lc->link}}'>{{$lc->facebook}}</a></td>
+                <td>
+                    @if($lc->vitri == 0)
+                    Footer
+                    @else
+                    Liên hệ
+                    @endif
+                </td>
+                <td>
+                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                </td>
+            </tr>
+            @endif
+            @endforeach
         </tbody>
-    </table>
-    <div class="text-right">
-      
-    </div>	
+    </table>	
 </div>

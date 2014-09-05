@@ -41,16 +41,33 @@
         <div class="btn-group">
             <input id="search" name="search" type="text" class="form-control" placeholder="Nhập tiêu đề bài viết" style="width: 100%" value="{{isset($key) && $key != null ? $key : ""}}"/>
             <input type="hidden" name="urlsearch" id="urlsearch" value="{{url('admin/searchbaiviet')}}"/>
+            <input type="hidden" name="urlchosen" id="urlchosen" value="{{url('admin/ql=baiviet')}}"/>
         </div>
         <span>
             <button class="btn btn-default" id="btnsearch" type="button" title="Tìm kiếm"><span class="glyphicon glyphicon-search"></span></button>
         </span>
         @if(isset($key) && $key != null)
         <span>
-            <button class="btn btn-default" onclick="location.href ='{{url('admin/ql=baiviet')}}'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
+            <button class="btn btn-default" id="reset_id" onclick="location.href ='{{url('admin/ql=baiviet')}}'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
         </span>
         @endif
         <a href="" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;Thêm bài viết</a><br/>
+    </div>
+    <div class="form-group col-xs-4" style='margin-left: -15px'>
+        <select id="type_id" name='loaibaiviet'  class="form-control">
+            <option value='-1'>--Tất cả ---</option>
+            <option value='0' {{isset($type) && $type == 0 ? "selected='selected'" : ""}}>Giới thiệu Forex</option>
+            <option value='1' {{isset($type) && $type == 1 ? "selected='selected'" : ""}}>Chiến lược Forex</option>
+            <option value='2' {{isset($type) && $type == 2 ? "selected='selected'" : ""}}>Kim loại quý</option>
+            <option value='3' {{isset($type) && $type == 3 ? "selected='selected'" : ""}}>Hàng hóa</option>
+            <option value='4' {{isset($type) && $type == 4 ? "selected='selected'" : ""}}>Cổ phiếu</option>
+            <option value='5' {{isset($type) && $type == 5 ? "selected='selected'" : ""}}>Sàn giao dịch</option>
+            <option value='6' {{isset($type) && $type == 6 ? "selected='selected'" : ""}}>Tin tức trong nước</option>
+            <option value='7' {{isset($type) && $type == 7 ? "selected='selected'" : ""}}>Tin tức ngoài nước</option>
+            <option value='8' {{isset($type) && $type == 8 ? "selected='selected'" : ""}}>Sản phẩm giao dịch</option>
+            <option value='9' {{isset($type) && $type == 9 ? "selected='selected'" : ""}}>Kiến thức giao dịch</option>
+            <option value='10' {{isset($type) && $type == 10 ? "selected='selected'" : ""}}>Kinh nghiệm giao dịch</option>
+        </select>
     </div>
     <table class="table table-bordered table-hover">
         <thead>

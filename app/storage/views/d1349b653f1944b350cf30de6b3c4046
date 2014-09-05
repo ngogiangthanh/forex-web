@@ -47,10 +47,34 @@
             </tr>
         </thead>
         <tbody> 
-            
+            <?php
+            $count = 0;
+            ?>
+            <?php foreach ($lienlac as $lc): ?>
+            <?php if($lc != null): ?>
+            <?php
+            $count++;
+            ?>
+            <tr>
+                <td><?php echo $count; ?></td>
+                <td><b><?php echo HTML::decode($lc->address); ?></b></td>
+                <td><?php echo $lc->tel; ?></td>
+                <td><?php echo $lc->fax; ?></td>
+                <td><a href="mailto:<?php echo $lc->email; ?>" style="color: #FF0000 "> <?php echo $lc->email; ?></a></td>
+                <td><a href='<?php echo $lc->link; ?>'><?php echo $lc->facebook; ?></a></td>
+                <td>
+                    <?php if($lc->vitri == 0): ?>
+                    Footer
+                    <?php else: ?>
+                    Liên hệ
+                    <?php endif; ?>
+                </td>
+                <td>
+                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                </td>
+            </tr>
+            <?php endif; ?>
+            <?php endforeach; ?>
         </tbody>
-    </table>
-    <div class="text-right">
-      
-    </div>	
+    </table>	
 </div>
