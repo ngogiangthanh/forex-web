@@ -33,11 +33,12 @@
     <div class="form-group">
         <!-- Single button -->
         <div class="btn-group">
-            <input id="search" name="search" type="text" class="form-control" placeholder="Nhập email hoặc họ tên" style="width: 100%" value="<?php echo isset($key) && $key != null ? $key : ""; ?>"/>
-            <input type="hidden" name="urlsearch" id="urlsearch" value="<?php echo url('admin/searchlienhe'); ?>"/>
+            <input id="searchLH" name="searchLH" type="text" class="form-control" placeholder="Nhập email hoặc họ tên" style="width: 100%" value="<?php echo isset($key) && $key != null ? $key : ""; ?>"/>
+            <input type="hidden" name="urlsearchLH" id="urlsearchLH" value="<?php echo url('admin/searchlienhe'); ?>"/>
+            <input type="hidden" name="urlsearchCheckXL" id="urlsearchCheckXL" value="<?php echo url('admin/qllienhe'); ?>"/>
         </div>
         <span>
-            <button class="btn btn-default" id="btnsearch" type="button" title="Tìm kiếm"><span class="glyphicon glyphicon-search"></span></button>
+            <button class="btn btn-default" id="btnsearchLH" type="button" title="Tìm kiếm"><span class="glyphicon glyphicon-search"></span></button>
         </span>
         <?php if(isset($key) && $key != null): ?>
         <span>
@@ -59,9 +60,36 @@
             </tr>
         </thead>
         <tbody> 
-
+            <?php
+            $count = $perpage * ($currentpage - 1);
+            ?>
+            <?php foreach($lienhe as $lh): ?>
+            <?php if($lh != null): ?>
+            <tr>
+                <td><?php echo ++$count; ?></td>
+                <td><?php echo HTML::decode($lh->hoten); ?></td>
+                <td><a href="mailto:<?php echo $lh->email; ?>" style="color: #FF0000 "> <?php echo $lh->email; ?></a></td>
+                <td><?php echo HTML::decode($lh->tieude); ?></td>
+                <td><?php echo date("h:i A | d/m/Y",strtotime($lh->thoidiemgui)); ?></td>
+                <td id="time_<?php echo $lh->id; ?>">
+                <?php if($lh->thoidiemxuly == null): ?>
+                Chưa xử lý
+                <?php else: ?>
+                <?php echo date("h:i A | d/m/Y",strtotime($lh->thoidiemxuly)); ?>
+                <?php endif; ?>
+                </td>
+                <td>
+                    <input type="checkbox" name="xuly" class="xulylh" value="<?php echo $lh->id; ?>" id="xuly" <?=$lh->trangthai == 0 ? "" : "checked='checked'"?>/>
+                </td>
+                <td><a href="" class="text-success"><i class="glyphicon glyphicon-search" title="Xem"></i></a>&nbsp;
+                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                </td>
+            </tr>
+            <?php endif; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
     <div class="text-right">
+        <?php echo $lienhe->links(); ?>
     </div>	
 </div>
