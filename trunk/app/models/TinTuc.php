@@ -15,18 +15,37 @@ Class TinTuc extends Eloquent {
         return Validator::make($data, $this->rules);
     }
 
-    public static function Select($loai, $soluong = null) {
+    public static function Select($loai, $soluong = null, $tieude = null) {
         $data = null;
         if ($soluong == null) {
             $data = DB::table('tintuc')
                     ->select('tieude', 'noidung')
                     ->where('loai', $loai)
                     ->first();
+        } else if ($loai == -1) {
+            if ($tieude == null) {
+                $data = DB::table('tintuc')
+                        ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
+                        ->orderBy('thoidiemsua', 'desc')
+                        ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('luotxem', 'desc')
+                        ->paginate($soluong);
+            } else {
+                $data = DB::table('tintuc')
+                        ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
+                        ->where("tieude", "LIKE", "%" . $tieude . "%")
+                        ->orderBy('thoidiemsua', 'desc')
+                        ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('luotxem', 'desc')
+                        ->paginate($soluong);
+            }
         } else {
             $data = DB::table('tintuc')
                     ->select('id', 'tieude', 'anhnho', "thoidiemsua", 'luotxem', 'loai')
                     ->where('loai', $loai)
-                    ->orderBy('thoidiemdang')
+                    ->orderBy('thoidiemsua', 'desc')
+                    ->orderBy('thoidiemdang', 'desc')
+                    ->orderBy('luotxem', 'desc')
                     ->paginate($soluong);
         }
         return $data;
@@ -49,7 +68,7 @@ Class TinTuc extends Eloquent {
         $data = DB::table("tintuc")
                 ->select('id', 'tieude', 'anhnho', "thoidiemsua", 'luotxem', 'loai')
                 ->where('tieude', 'LIKE', "%" . $arraykey . "%")
-                ->orderBy("luotxem",'desc')
+                ->orderBy("luotxem", 'desc')
                 ->orderBy("thoidiemsua")
                 ->paginate($soluong);
         return $data;

@@ -1,0 +1,17 @@
+<?php $__env->startSection('main'); ?>
+<div id="menu">
+    <a href="<?php echo url('/'); ?>" target="_blank" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-home"></i>&nbsp;Trang chủ
+    </a>
+    <a href="<?php echo url('admin/ql=baiviet'); ?>" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-th-list"></i>&nbsp;Quản lý bài viết
+    </a>
+    <a href="<?php echo url('admin/ql=lienhe'); ?>" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Quản lý các liên hệ
+    </a>
+    <a href="<?php echo url('admin/ql=lienlac'); ?>" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý địa chỉ liên lạc
+    </a>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

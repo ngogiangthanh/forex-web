@@ -35,7 +35,8 @@ Route::get('search={key}', 'GuestController@search');
 /**
  * Trang quản lý
  */
-Route::get('admin/{alias}', 'AdminController@index')->where(array('alias' => '[A-Za-z0-9]+'));
+Route::get('admin/ql={type}', 'AdminController@index')->where(array('type' => '[A-Za-z0-9]+'));
+Route::get('admin/searchbaiviet={key}', 'AdminController@searchBaiViet');
 /**
  * Trang login
  */

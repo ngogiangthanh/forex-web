@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
     $('#search').keyup(function(e) {
-        if (e.which == 13) {
+        if (e.which === 13) {
             var searchtxt = $("#search").val();
             var url = $("#urlsearch").val();
             search(searchtxt, url);
@@ -21,7 +21,6 @@ $(document).ready(function()
         }
         else
         {
-
             location.href = url + "=" + trim(string);
         }
     }
