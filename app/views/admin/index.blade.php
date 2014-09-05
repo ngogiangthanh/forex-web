@@ -4,20 +4,14 @@
     <a href="{{ url('/') }}" target="_blank" class="col-6 col-sm-4 col-lg-3">
         <i class="glyphicon glyphicon-home"></i>&nbsp;Trang chủ
     </a>
-    <a href="{{ url('admin/qltintuc') }}" class="col-6 col-sm-4 col-lg-3">
-        <i class="glyphicon glyphicon-th-list"></i>&nbsp;Quản lý tin tức
+    <a href="{{ url('admin/ql=baiviet') }}" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-th-list"></i>&nbsp;Quản lý bài viết
     </a>
-    <a href="{{ url('admin/qlgiaodich') }}" class="col-6 col-sm-4 col-lg-3">
-        <i class="glyphicon glyphicon-book"></i>&nbsp;Quản lý giao dịch
+    <a href="{{ url('admin/ql=lienhe') }}" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Quản lý các liên hệ
     </a>
-    <a href="{{ url('admin/qlsangiaodich') }}" class="col-6 col-sm-4 col-lg-3">
-        <i class="glyphicon glyphicon-list-alt"></i>&nbsp;Quản lý sàn giao dịch
-    </a>
-    <a href="{{ url('admin/qllienhe') }}" class="col-6 col-sm-4 col-lg-3">
-        <i class="glyphicon glyphicon-gift"></i>&nbsp;Quản lý liên hệ
-    </a>
-    <a href="{{ url('admin/qllienlac') }}" class="col-6 col-sm-4 col-lg-3">
-        <i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý liên lạc
+    <a href="{{ url('admin/ql=lienlac') }}" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý địa chỉ liên lạc
     </a>
 </div>
 @stop

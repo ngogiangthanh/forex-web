@@ -7,7 +7,7 @@
             <div class="col-sm-9 col-xs-12 pull-right">
                 <div class="row">
                     <!-- BEGIN CONTENT -->
-                    Quản lý sàn giao dịch
+                   @include('admin.threads.table')
                     <!-- END CONTENT -->
                 </div>
             </div><!--/span-->            

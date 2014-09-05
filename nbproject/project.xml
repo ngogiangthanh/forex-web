@@ -7,6 +7,7 @@
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>cophieu</word>
+            <word>endforeach</word>
             <word>endif</word>
             <word>forex</word>
             <word>hh</word>
@@ -17,7 +18,13 @@
             <word>Lỗi</word>
             <word>narbar</word>
             <word>quý</word>
+            <word>sửa</word>
+            <word>URL</word>
             <word>vàng</word>
+            <word>vụ</word>
+            <word>xem</word>
+            <word>đăng</word>
+            <word>đề</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

@@ -6,11 +6,9 @@
         </h3>
     </div>
     <div class="list-group hidden-xs">
-        <a href="{{ url('/') }}" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i>&nbsp;Trang chủ</a>
-        <a href="{{ url('admin/qltintuc') }}" class="list-group-item"><i class="glyphicon glyphicon-book"></i>&nbsp;Quản lý tin tức</a>
-        <a href="{{ url('admin/qlgiaodich') }}" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;Quản lý giao dịch</a>
-        <a href="{{ url('admin/qlsangiaodich') }}" class="list-group-item"><i class="glyphicon glyphicon-gift"></i>&nbsp;Quản lý sàn giao dịch</a>
-        <a href="{{ url('admin/qllienhe') }}" class="list-group-item"><i class="glyphicon glyphicon-gift"></i>&nbsp;Quản lý liên hệ</a>
-        <a href="{{ url('admin/qllienlac') }}" class="list-group-item"><i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý liên lạc</a>
+        <a href="{{ url('/') }}" class="list-group-item" target="_blank"><i class="glyphicon glyphicon-th-list"></i>&nbsp;Trang chủ</a>
+        <a href="{{ url('admin/ql=baiviet') }}" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;Quản lý bài viết</a>
+        <a href="{{ url('admin/ql=lienhe') }}" class="list-group-item"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Quản lý các liên hệ</a>
+        <a href="{{ url('admin/ql=lienlac') }}" class="list-group-item"><i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý địa chỉ liên lạc</a>
     </div>
 </div>
