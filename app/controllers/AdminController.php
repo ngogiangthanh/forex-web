@@ -8,7 +8,7 @@ class AdminController extends BaseController {
         switch ($type) {
             case "baiviet":
                 $currentpage = 1;
-                if (Input::has('page')) {
+                if (Input::has('page') && Input::get('page') > 0) {
                     $currentpage = Input::get('page');
                 }
                 if ($alias == "") {
@@ -24,7 +24,7 @@ class AdminController extends BaseController {
             case "lienhe":
                 $lienhe = LienHe::Select(null, $this->perpage);
                 $currentpage = 1;
-                if (Input::has('page')) {
+                if (Input::has('page') && Input::get('page') > 0) {
                     $currentpage = Input::get('page');
                 }
                 return View::make('admin.contacts.index')
@@ -70,7 +70,7 @@ class AdminController extends BaseController {
         $key = preg_replace('/\s\s+/', ' ', trim($key));
         if ($key != null || $key == "") {
             $currentpage = 1;
-            if (Input::has('page')) {
+            if (Input::has('page') && Input::get('page') > 0) {
                 $currentpage = Input::get('page');
             }
             $lienhe = LienHe::Select(null, $this->perpage, $key);
@@ -88,11 +88,62 @@ class AdminController extends BaseController {
     public function updateQLLH($id) {
         if (Request::ajax()) {
             $result = LienHe::UpdateTT($id);
-            if($result)
-            {
-                return Response::json(array('html' => date("h:i A | d/m/Y",time())));
+            if ($result) {
+                return Response::json(array('html' => date("h:i A | d/m/Y", time())));
             }
             return Response::json(array('html' => ""));
+        }
+    }
+
+    public function delete($type, $id) {
+        switch ($type) {
+            case 'lienlac':
+                if (Request::ajax()) {
+                    Contact::DeleteCT($id);
+                    return Response::json(array('html' => true));
+                }
+                break;
+            case 'lienhe':
+                if (Request::ajax()) {
+                    LienHe::DeleteLH($id);
+                    return Response::json(array('html' => true));
+                }
+                break;
+            case 'baiviet':
+                if (Request::ajax()) {
+                    TinTuc::DeleteTT($id);
+                    return Response::json(array('html' => true));
+                }
+                break;
+        }
+    }
+
+    public function create($type) {
+        switch ($type) {
+            case 'lienlac':
+                return View::make('admin.lienlac.add')
+                                ->with("title", "Thêm mới liên lạc");
+            case 'baiviet':
+                return View::make('admin.threads.add')
+                                ->with("title", "Thêm mới bài viết");
+            default: return $this->index();
+        }
+    }
+
+    public function show($id) {
+        return View::make('admin.contacts.view')
+                        ->with("title", "Xem chi tiết liên hệ");
+    }
+
+    public function edit($type, $id) {
+         switch ($type) {
+            case 'lienlac':
+                return View::make('admin.lienlac.edit')
+                                ->with("title", "Chỉnh sửa liên lạc");
+            case 'baiviet':
+                return View::make('admin.threads.edit')
+                                ->with("title", "Chỉnh sửa bài viết");
+            default: return $this->index();
         }
     }
 

@@ -76,5 +76,10 @@ Class LienHe extends Eloquent {
         }
         return $data;
     }
-
+    
+   public static function DeleteLH($id)
+    {
+        return DB::table("lienhe")
+                  ->where("id",$id)->delete();
+    }
 }

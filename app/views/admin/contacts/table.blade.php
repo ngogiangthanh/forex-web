@@ -65,7 +65,7 @@
             ?>
             @foreach($lienhe as $lh)
             @if($lh != null)
-            <tr>
+            <tr id="row_{{$lh->id}}">
                 <td>{{++$count}}</td>
                 <td>{{HTML::decode($lh->hoten)}}</td>
                 <td><a href="mailto:{{$lh->email}}" style="color: #FF0000 "> {{$lh->email}}</a></td>
@@ -82,7 +82,7 @@
                     <input type="checkbox" name="xuly" class="xulylh" value="{{$lh->id}}" id="xuly" <?=$lh->trangthai == 0 ? "" : "checked='checked'"?>/>
                 </td>
                 <td><a href="" class="text-success"><i class="glyphicon glyphicon-search" title="Xem"></i></a>&nbsp;
-                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="{{url('admin/delete=lienhe')}}" name="" id="{{$lh->id}}"  class="delete_lh text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>
             @endif

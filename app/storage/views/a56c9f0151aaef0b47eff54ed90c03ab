@@ -65,7 +65,7 @@
             ?>
             <?php foreach($lienhe as $lh): ?>
             <?php if($lh != null): ?>
-            <tr>
+            <tr id="row_<?php echo $lh->id; ?>">
                 <td><?php echo ++$count; ?></td>
                 <td><?php echo HTML::decode($lh->hoten); ?></td>
                 <td><a href="mailto:<?php echo $lh->email; ?>" style="color: #FF0000 "> <?php echo $lh->email; ?></a></td>
@@ -82,7 +82,7 @@
                     <input type="checkbox" name="xuly" class="xulylh" value="<?php echo $lh->id; ?>" id="xuly" <?=$lh->trangthai == 0 ? "" : "checked='checked'"?>/>
                 </td>
                 <td><a href="" class="text-success"><i class="glyphicon glyphicon-search" title="Xem"></i></a>&nbsp;
-                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="<?php echo url('admin/delete=lienhe'); ?>" name="" id="<?php echo $lh->id; ?>"  class="delete_lh text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>
             <?php endif; ?>
