@@ -35,7 +35,7 @@
                     Nội dung: 
                 </div>
                 <div class="col-md-9">
-                    <textarea rows="4" name="noidungtxt" cols="45" width="100%" placeholder="Nhập nội dung" required=""></textarea>
+                    <textarea rows="4" name="noidungtxt" cols="30" width="90%" placeholder="Nhập nội dung" required=""></textarea>
                 </div>
             </div>
             <div class="col-md-12" style="margin-top: 15px; margin-bottom: 15px;">

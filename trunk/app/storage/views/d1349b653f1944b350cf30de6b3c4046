@@ -55,7 +55,7 @@
             <?php
             $count++;
             ?>
-            <tr>
+            <tr id="row_<?php echo $lc->id; ?>">
                 <td><?php echo $count; ?></td>
                 <td><b><?php echo HTML::decode($lc->address); ?></b></td>
                 <td><?php echo $lc->tel; ?></td>
@@ -70,7 +70,7 @@
                     <?php endif; ?>
                 </td>
                 <td>
-                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="<?php echo url('admin/delete=lienlac'); ?>" name="" id="<?php echo $lc->id; ?>" class="delete_ll text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>
             <?php endif; ?>

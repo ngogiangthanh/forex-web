@@ -91,7 +91,7 @@
             <?php
             $urlReal = $url->getURL($thread->loai);
             ?>
-            <tr>
+            <tr id="row_<?php echo $thread->id; ?>">
                 <td><?php echo ++$count; ?></td>
                 <td><b><?php echo HTML::decode($thread->tieude); ?></b></td>
                 <td>
@@ -104,7 +104,7 @@
                 <td><?php echo date("h:i A | d/m/Y",strtotime($thread->thoidiemsua)); ?></td>
                 <td><?php echo $thread->luotxem; ?></td>
                 <td><a href="" class="text-success"><i class="glyphicon glyphicon-edit" title="Sửa"></i></a>&nbsp;
-                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="<?php echo url('admin/delete=baiviet'); ?>" id="<?php echo $thread->id; ?>"  class="delete_bv text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>
             <?php endif; ?>

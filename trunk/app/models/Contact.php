@@ -35,5 +35,9 @@ Class Contact extends Eloquent {
         }
         return $contacts;
     }
-
+    public static function DeleteCT($id)
+    {
+        return DB::table("contact")
+                  ->where("id",$id)->delete();
+    }
 }

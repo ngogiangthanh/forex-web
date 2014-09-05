@@ -55,7 +55,7 @@
             <?php
             $count++;
             ?>
-            <tr>
+            <tr id="row_{{$lc->id}}">
                 <td>{{$count}}</td>
                 <td><b>{{HTML::decode($lc->address)}}</b></td>
                 <td>{{$lc->tel}}</td>
@@ -70,7 +70,7 @@
                     @endif
                 </td>
                 <td>
-                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="{{url('admin/delete=lienlac')}}" name="" id="{{$lc->id}}" class="delete_ll text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>
             @endif

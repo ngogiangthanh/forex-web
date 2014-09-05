@@ -40,6 +40,15 @@ Route::get('admin/ql={type}/{alias}', 'AdminController@index')->where(array('typ
 Route::get('admin/searchbaiviet={key}/{alias}', 'AdminController@searchBaiViet')->where(array('alias' => '[\\-0-9]+'));
 Route::get('admin/searchlienhe={key}', 'AdminController@searchLienHe');
 Route::get('admin/qllienhe={id}', 'AdminController@updateQLLH')->where(array('id' => '[0-9]+'));
+//xoa
+Route::get('admin/delete={type}/{id}', 'AdminController@delete')->where(array('id' => '[0-9]+'));
+//them
+Route::get('admin/add={type}', 'AdminController@create');
+//sua
+Route::get('admin/edit={type}/{id}', 'AdminController@edit')->where(array('id' => '[0-9]+'));
+//xem
+Route::get('admin/view=lienhe/{id}', 'AdminController@show')->where(array('id' => '[0-9]+'));
+
 /**
  * Trang login
  */

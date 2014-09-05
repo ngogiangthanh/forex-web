@@ -85,4 +85,10 @@ Class TinTuc extends Eloquent {
         return $data;
     }
 
+    public static function DeleteTT($id) {
+        return DB::table("tintuc")
+                        ->where("id", $id)
+                        ->delete();
+    }
+
 }

@@ -1,0 +1,1 @@
+[2014-09-06 00:28:33] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Cannot make non static method Illuminate\Database\Eloquent\Model::Delete() static in class LienHe' in C:\xampp\htdocs\Forex\app\models\LienHe.php:5 Stack trace: #0 [internal function]: Illuminate\Exception\Handler->handleShutdown() #1 {main} [] []

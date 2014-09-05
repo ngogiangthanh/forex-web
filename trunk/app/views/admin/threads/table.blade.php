@@ -91,7 +91,7 @@
             <?php
             $urlReal = $url->getURL($thread->loai);
             ?>
-            <tr>
+            <tr id="row_{{$thread->id}}">
                 <td>{{++$count}}</td>
                 <td><b>{{HTML::decode($thread->tieude)}}</b></td>
                 <td>
@@ -104,7 +104,7 @@
                 <td>{{date("h:i A | d/m/Y",strtotime($thread->thoidiemsua))}}</td>
                 <td>{{$thread->luotxem}}</td>
                 <td><a href="" class="text-success"><i class="glyphicon glyphicon-edit" title="Sửa"></i></a>&nbsp;
-                    <a href="#" class="text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="{{url('admin/delete=baiviet')}}" id="{{$thread->id}}"  class="delete_bv text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>
             @endif
