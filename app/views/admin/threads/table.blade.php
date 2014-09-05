@@ -29,6 +29,11 @@
     .table td:nth-child(7) {
         width:10%;
     }
+    .pagination li {
+        display: inline;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
 </style>
 <div class="col-xs-12">
     <div class="form-group">
@@ -42,7 +47,7 @@
         </span>
         @if(isset($key) && $key != null)
         <span>
-            <button class="btn btn-default" onclick="location.href='{{url('admin/ql=baiviet')}}'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
+            <button class="btn btn-default" onclick="location.href ='{{url('admin/ql=baiviet')}}'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
         </span>
         @endif
         <a href="" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;Thêm bài viết</a><br/>
@@ -93,10 +98,3 @@
         {{$threads->links()}}
     </div>	
 </div>
-<style type='text/css'>
-    .pagination li {
-        display: inline;
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-    }
-</style>
