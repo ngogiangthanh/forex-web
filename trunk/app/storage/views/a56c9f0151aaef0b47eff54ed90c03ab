@@ -81,7 +81,7 @@
                 <td>
                     <input type="checkbox" name="xuly" class="xulylh" value="<?php echo $lh->id; ?>" id="xuly" <?=$lh->trangthai == 0 ? "" : "checked='checked'"?>/>
                 </td>
-                <td><a href="" class="text-success"><i class="glyphicon glyphicon-search" title="Xem"></i></a>&nbsp;
+                <td><a href="<?php echo url('admin/view=lienhe/'.$lh->id); ?>" class="text-success"><i class="glyphicon glyphicon-search" title="Xem"></i></a>&nbsp;
                     <a href="<?php echo url('admin/delete=lienhe'); ?>" name="" id="<?php echo $lh->id; ?>"  class="delete_lh text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>

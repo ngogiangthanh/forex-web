@@ -51,7 +51,7 @@
             <button class="btn btn-default" id="reset_id" onclick="location.href ='<?php echo url('admin/ql=baiviet'); ?>'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
         </span>
         <?php endif; ?>
-        <a href="" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;Thêm bài viết</a><br/>
+        <a href="<?php echo url('admin/add=baiviet'); ?>" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;Thêm bài viết</a><br/>
     </div>
     <div class="form-group col-xs-4" style='margin-left: -15px'>
         <select id="type_id" name='loaibaiviet'  class="form-control">
@@ -103,7 +103,7 @@
                 <td><?php echo date("h:i A | d/m/Y",strtotime($thread->thoidiemdang)); ?></td>
                 <td><?php echo date("h:i A | d/m/Y",strtotime($thread->thoidiemsua)); ?></td>
                 <td><?php echo $thread->luotxem; ?></td>
-                <td><a href="" class="text-success"><i class="glyphicon glyphicon-edit" title="Sửa"></i></a>&nbsp;
+                <td><a href="<?php echo url('admin/edit=baiviet/'.$thread->id); ?>" class="text-success"><i class="glyphicon glyphicon-edit" title="Sửa"></i></a>&nbsp;
                     <a href="<?php echo url('admin/delete=baiviet'); ?>" id="<?php echo $thread->id; ?>"  class="delete_bv text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
                 </td>
             </tr>
