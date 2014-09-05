@@ -21,10 +21,17 @@ Class Contact extends Eloquent {
                     ->orderBy('address')
                     ->get();
         } else {
-            $contacts = DB::table('contact')
-                    ->select('*')
-                    ->where('vitri', $vitri)
-                    ->first();
+            if ($vitri != -1) {
+                $contacts = DB::table('contact')
+                        ->select('*')
+                        ->where('vitri', $vitri)
+                        ->first();
+            } else {
+                $contacts = DB::table('contact')
+                        ->select('*')
+                        ->orderBy('address')
+                        ->get();
+            }
         }
         return $contacts;
     }

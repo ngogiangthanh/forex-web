@@ -14,8 +14,8 @@
             <br/>
             <div>Tel: +{{$ct->tel}}</div>
             <div>Fax: +{{$ct->fax}}</div>
-            <div>Facebook: <a href="https://www.facebook.com/syluong282" style="color: #0000FF">{{$ct->facebook}}</a></div>
-            <div>Email:<a href="mailto:forextrader@gmail.com" style="color: #FF0000 "> {{$ct->email}}</a></div>
+            <div>Facebook: <a href="{{$ct->link}}" style="color: #0000FF">{{$ct->facebook}}</a></div>
+            <div>Email:<a href="mailto:{{$ct->email}}" style="color: #FF0000 "> {{$ct->email}}</a></div>
         </div>  
         @endif
         @endforeach

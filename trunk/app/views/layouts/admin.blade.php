@@ -34,7 +34,7 @@
         {{ HTML::script('js/toastr.js') }}
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         {{ HTML::script('js/bootstrap.min.js') }}
-        {{ HTML::script('js/jquery-ajax-search-1.0.js') }}
+        {{ HTML::script('js/jquery-ajax-search-admin-1.0.js') }}
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#sidebar .panel-heading').click(function() {

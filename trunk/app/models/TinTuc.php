@@ -40,13 +40,24 @@ Class TinTuc extends Eloquent {
                         ->paginate($soluong);
             }
         } else {
-            $data = DB::table('tintuc')
-                    ->select('id', 'tieude', 'anhnho', "thoidiemsua", 'luotxem', 'loai')
-                    ->where('loai', $loai)
-                    ->orderBy('thoidiemsua', 'desc')
-                    ->orderBy('thoidiemdang', 'desc')
-                    ->orderBy('luotxem', 'desc')
-                    ->paginate($soluong);
+            if ($tieude != null) {
+                $data = DB::table('tintuc')
+                        ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
+                        ->where("tieude", "LIKE", "%" . $tieude . "%", "and")
+                        ->where('loai', $loai)
+                        ->orderBy('thoidiemsua', 'desc')
+                        ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('luotxem', 'desc')
+                        ->paginate($soluong);
+            } else {
+                $data = DB::table('tintuc')
+                        ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
+                        ->where('loai', $loai)
+                        ->orderBy('thoidiemsua', 'desc')
+                        ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('luotxem', 'desc')
+                        ->paginate($soluong);
+            }
         }
         return $data;
     }

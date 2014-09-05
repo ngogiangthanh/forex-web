@@ -14,8 +14,8 @@
             <br/>
             <div>Tel: +<?php echo $ct->tel; ?></div>
             <div>Fax: +<?php echo $ct->fax; ?></div>
-            <div>Facebook: <a href="https://www.facebook.com/syluong282" style="color: #0000FF"><?php echo $ct->facebook; ?></a></div>
-            <div>Email:<a href="mailto:forextrader@gmail.com" style="color: #FF0000 "> <?php echo $ct->email; ?></a></div>
+            <div>Facebook: <a href="<?php echo $ct->link; ?>" style="color: #0000FF"><?php echo $ct->facebook; ?></a></div>
+            <div>Email:<a href="mailto:<?php echo $ct->email; ?>" style="color: #FF0000 "> <?php echo $ct->email; ?></a></div>
         </div>  
         <?php endif; ?>
         <?php endforeach; ?>
