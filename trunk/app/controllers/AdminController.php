@@ -131,12 +131,14 @@ class AdminController extends BaseController {
     }
 
     public function show($id) {
+        $row = LienHe::Select($id);
         return View::make('admin.contacts.view')
+                        ->with('row', $row)
                         ->with("title", "Xem chi tiết liên hệ");
     }
 
     public function edit($type, $id) {
-         switch ($type) {
+        switch ($type) {
             case 'lienlac':
                 return View::make('admin.lienlac.edit')
                                 ->with("title", "Chỉnh sửa liên lạc");
@@ -145,6 +147,12 @@ class AdminController extends BaseController {
                                 ->with("title", "Chỉnh sửa bài viết");
             default: return $this->index();
         }
+    }
+
+    public function send() {
+        Mail::send('admin.contacts.mail', array("data"), function($message) {
+            $message->to('thanh101682@student.ctu.edu.vn', 'John Smith')->subject('Welcome!');
+        });
     }
 
 }

@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'forex@gmail.com.vn', 'name' => 'Hệ thống quản lý giao dịch'),
+	'from' => array('address' => 'thanhthanh1516@gmail.com', 'name' => 'Hệ thống quản lý giao dịch'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'forex@gmail.com.vn',
+	'username' => 'thanhthanh1516@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'forex',
+	'password' => '16753491516',
 
 	/*
 	|--------------------------------------------------------------------------
