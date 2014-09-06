@@ -34,9 +34,9 @@ Class LienHe extends Eloquent {
     public static function UpdateTT($id) {
         $row = DB::table("lienhe")
                 ->select("trangthai")
-                ->where('id',$id)
+                ->where('id', $id)
                 ->first();
-       if ($row != null) {
+        if ($row != null) {
             $trangthai = 0;
             if ($row->trangthai == 0) {
                 $trangthai = 1;
@@ -73,13 +73,28 @@ Class LienHe extends Eloquent {
                         ->orderBy('thoidiemxuly', 'desc')
                         ->paginate($soluong);
             }
+        } else {
+            $data = DB::table("lienhe")
+                    ->select('*')
+                    ->where("id", $id)
+                    ->first();
         }
         return $data;
     }
-    
-   public static function DeleteLH($id)
-    {
+
+    public static function DeleteLH($id) {
         return DB::table("lienhe")
-                  ->where("id",$id)->delete();
+                        ->where("id", $id)->delete();
     }
+
+    public static function UpdatePH($id, $content, $trangthai) {
+        DB::table('lienhe')
+                ->where("id", $id)
+                ->update(array(
+                    "noidungtraloi" => $content,
+                    "trangthai" => $trangthai)
+        );
+        return true;
+    }
+
 }

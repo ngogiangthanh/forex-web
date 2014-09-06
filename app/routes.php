@@ -48,7 +48,8 @@ Route::get('admin/add={type}', 'AdminController@create');
 Route::get('admin/edit={type}/{id}', 'AdminController@edit')->where(array('id' => '[0-9]+'));
 //xem
 Route::get('admin/view=lienhe/{id}', 'AdminController@show')->where(array('id' => '[0-9]+'));
-
+//gui email
+Route::post('admin/send=email', 'AdminController@send');
 /**
  * Trang login
  */
