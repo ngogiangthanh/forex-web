@@ -7,7 +7,7 @@
             <div class="col-sm-9 col-xs-12 pull-right">
                 <div class="row">
                     <!-- BEGIN CONTENT -->
-                    Thêm liên lạc
+                    @include('admin.lienlac.form_add')
                     <!-- END CONTENT -->
                 </div>
             </div><!--/span-->            

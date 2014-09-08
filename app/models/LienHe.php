@@ -87,10 +87,11 @@ Class LienHe extends Eloquent {
                         ->where("id", $id)->delete();
     }
 
-    public static function UpdatePH($id, $content, $trangthai) {
+    public static function UpdatePH($id, $tieude,$content, $trangthai) {
         DB::table('lienhe')
                 ->where("id", $id)
                 ->update(array(
+                    "tieudetraloi" => $tieude,
                     "noidungtraloi" => $content,
                     "trangthai" => $trangthai)
         );
