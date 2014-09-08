@@ -152,11 +152,15 @@ class AdminController extends BaseController {
     public function send() {
         $id = Input::get('id');
         $tieudetraloi = Input::get('tieudetraloi');
-        $noidungtraloi['noidung'] = Input::get('noidungtraloi');
-        $html = View::make("admin.contacts.mail", $noidungtraloi)->render();
-        Mail::send($html, array("data"), function($message) {
-            $message->to('thanh101682@student.ctu.edu.vn', 'John Smith')->subject('Welcome!');
+        $noidungtraloi = Input::get('noidungtraloi');
+        $trangthai = Input::get('xuly');
+        LienHe::UpdatePH($id, $tieudetraloi, $noidungtraloi, $trangthai);
+        $data = array('hoten' => Input::get("hoten"),
+            "noidung" => $noidungtraloi);
+        Mail::send('admin.contacts.mail', $data, function($message) {
+            $message->to($email = Input::get("email"), Input::get("hoten"))->subject(Input::get('tieudetraloi'));
         });
+        return Redirect::to('admin/view=lienhe/' . $id)->with('title', 'Thanks for registering!');
     }
 
 }

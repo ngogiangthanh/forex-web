@@ -34,13 +34,9 @@
             </div>
              <div class="form-group">
                 <label for="" class="col-sm-3 control-label">Trạng thái:</label>
-                <label class="col-sm-9">
-                @if($row->trangthai == 0)
-                    Chưa xử lý
-                @else
-                    Đã xử lý
-                @endif
-                </label>
+                <div class="col-sm-9">
+                  <input type="checkbox" name="xuly" class="xuly" value="{{$row->id}}" id="xuly" <?=$row->trangthai == 0 ? "" : "checked='checked'"?>/>
+                </div>
             </div>
              <div class="form-group">
                 <label for="tieudetraloi" class="col-sm-3 control-label">Tiêu đề trả lời:</label>

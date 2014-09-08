@@ -1,1 +1,4 @@
-<?php echo HTML::decode($noidung); ?>
+Chào bạn,<?php echo HTML::decode($hoten); ?>
+<p>
+    <?php echo HTML::decode($noidung); ?>
+</p>
