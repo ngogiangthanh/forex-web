@@ -1,1 +1,1 @@
-sned
+<?php echo HTML::decode($noidung); ?>
