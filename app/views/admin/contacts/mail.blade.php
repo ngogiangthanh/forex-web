@@ -1,1 +1,1 @@
-sned
+{{HTML::decode($noidung)}}

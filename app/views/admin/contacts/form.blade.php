@@ -45,13 +45,13 @@
              <div class="form-group">
                 <label for="tieudetraloi" class="col-sm-3 control-label">Tiêu đề trả lời:</label>
                 <div class="col-sm-9">
-                    <input name="tieudetraloi" type="text" class="form-control" id="title" required="" value=""/>
+                    <input name="tieudetraloi" type="text" class="form-control" id="title" placeholder="Tiêu đề phản hồi" required="" value="{{HTML::decode($row->tieudetraloi)}}"/>
                 </div>
             </div>                      
             <div class="form-group">
                 <label for="noidungtraloi" class="col-sm-3 control-label">Nội dung trả lời:</label>
                 <div class="col-sm-9">
-                    <textarea name="noidungtraloi" rows=15 class="form-control" id="respone" placeholder="" required=""/></textarea>
+                    <textarea name="noidungtraloi" rows=15 class="form-control" id="respone" placeholder="Nhập nội dung phản hồi" required=""/>{{HTML::decode($row->noidungtraloi)}}</textarea>
                 </div>
             </div>      
             <div class="form-group">

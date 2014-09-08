@@ -150,7 +150,11 @@ class AdminController extends BaseController {
     }
 
     public function send() {
-        Mail::send('admin.contacts.mail', array("data"), function($message) {
+        $id = Input::get('id');
+        $tieudetraloi = Input::get('tieudetraloi');
+        $noidungtraloi['noidung'] = Input::get('noidungtraloi');
+        $html = View::make("admin.contacts.mail", $noidungtraloi)->render();
+        Mail::send($html, array("data"), function($message) {
             $message->to('thanh101682@student.ctu.edu.vn', 'John Smith')->subject('Welcome!');
         });
     }
