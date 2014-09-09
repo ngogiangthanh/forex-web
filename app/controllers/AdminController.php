@@ -37,9 +37,9 @@ class AdminController extends BaseController {
                 return View::make('admin.lienlac.index')
                                 ->with("lienlac", $lienlac)
                                 ->with("title", "Quản lý liên lạc");
-            case "login":
-                return View::make('admin.login')
-                                ->with("title", "Login");
+            case "doimatkhau":
+                return View::make('admin.profile.index')
+                                ->with("title", "Profile");
             default:
                 return View::make('admin.index')
                                 ->with("title", "Trang chủ quản lý");
