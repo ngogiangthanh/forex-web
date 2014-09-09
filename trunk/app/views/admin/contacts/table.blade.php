@@ -42,7 +42,7 @@
         </span>
         @if(isset($key) && $key != null)
         <span>
-            <button class="btn btn-default" onclick="location.href ='{{url('admin/ql=lienhe')}}'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
+            <button class="btn btn-default" onclick="location.href ='{{url('admin/ql=lienhe')}};'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
         </span>
         @endif
     </div>

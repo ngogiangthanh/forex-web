@@ -48,7 +48,7 @@
         </span>
         @if(isset($key) && $key != null)
         <span>
-            <button class="btn btn-default" id="reset_id" onclick="location.href ='{{url('admin/ql=baiviet')}}'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
+            <button class="btn btn-default" id="reset_id" onclick="location.href ='{{url('admin/ql=baiviet')}};'" id="btnreset" type="button" title="Reset"><span class="glyphicon glyphicon-remove"></span></button>
         </span>
         @endif
         <a href="{{url('admin/add=baiviet')}}" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;Thêm bài viết</a><br/>
