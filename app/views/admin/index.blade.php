@@ -13,5 +13,8 @@
     <a href="{{ url('admin/ql=lienlac') }}" class="col-6 col-sm-4 col-lg-3">
         <i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý địa chỉ liên lạc
     </a>
+    <a href="{{ url('admin/ql=doimatkhau') }}" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-user"></i>&nbsp;Đổi mật khẩu
+    </a>
 </div>
 @stop
