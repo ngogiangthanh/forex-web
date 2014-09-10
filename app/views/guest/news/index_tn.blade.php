@@ -4,7 +4,7 @@
     <!-- tin trong nước -->
     <div class="row">
         <div class="panel panel-success">
-            <div class="panel-heading">TIN TRONG NƯỚC</div>
+            <div class="panel-heading"><h3>TIN TRONG NƯỚC</h3></div>
             <div class="panel-body" id='tin_tn_index'>
                @include ('guest.news.tin_tn')
             </div>

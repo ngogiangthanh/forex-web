@@ -14,7 +14,7 @@ $urlReal = $url->getURL($klq->loai);
     {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
     @endif
     </a>
-    <p><a href="{{url($urlReal."/".$klq->id)}}">{{ HTML::decode($klq->tieude) }}</a></p>
+    <p><h4><a href="{{url($urlReal."/".$klq->id)}}">{{ HTML::decode($klq->tieude) }}</a></h4></p>
     <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($klq->thoidiemdang))}}</p>
     <p>Lượt xem:&nbsp;{{ $klq->luotxem}}</p>
     <p><a href="{{url($urlReal."/".$klq->id)}}">[...Xem thêm]</a></p>

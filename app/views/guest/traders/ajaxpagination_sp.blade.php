@@ -14,7 +14,7 @@ $urlReal = $url->getURL($sp->loai);
         {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
         @endif
     </a>
-    <p><a href="{{url($urlReal."/threads=".$sp->id)}}">{{HTML::decode($sp->tieude)}}</a></p>
+    <p><h4><a href="{{url($urlReal."/threads=".$sp->id)}}">{{HTML::decode($sp->tieude)}}</a></h4></p>
     <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($sp->thoidiemdang))}}</p>
     <p>Lượt xem:&nbsp;{{ $sp->luotxem}}</p>
     <p><a href="{{url($urlReal."/threads=".$sp->id)}}">[...Xem thêm]</a></p>

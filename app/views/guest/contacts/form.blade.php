@@ -35,7 +35,7 @@
                     Nội dung: 
                 </div>
                 <div class="col-md-9">
-                    <textarea rows="4" name="noidungtxt" cols="45" width="100%" placeholder="Nhập nội dung" required=""></textarea>
+                    <textarea rows="4" name="noidungtxt" id="noidungtxt" cols="45" width="100%" placeholder="Nhập nội dung" required=""></textarea>
                 </div>
             </div>
             <div class="col-md-12" style="margin-top: 15px; margin-bottom: 15px;">
@@ -45,7 +45,7 @@
                     <button id="btn_send_contact" type="submit" class="btn btn-success">
                         Gửi
                     </button>
-                    <button id="btn-send-contact" type="reset" class="btn btn-success">
+                    <button id="btn-send-contact" type="reset" class="btn btn-warning">
                         Làm lại
                     </button>
                 </div>
@@ -55,3 +55,10 @@
         </form>
     </div>
 </div>
+{{ HTML::script('js/ckeditor/ckeditor.js'); }}
+<script type="text/javascript">
+    CKEDITOR.replace('noidungtxt', {
+        height: 150,
+        toolbar: 'Basic'
+    });
+</script>
