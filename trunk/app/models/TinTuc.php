@@ -21,21 +21,22 @@ Class TinTuc extends Eloquent {
             $data = DB::table('tintuc')
                     ->select('tieude', 'noidung')
                     ->where('loai', $loai)
+                    ->orderBy('thoidiemdang', 'desc')
                     ->first();
         } else if ($loai == -1) {
             if ($tieude == null) {
                 $data = DB::table('tintuc')
                         ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
-                        ->orderBy('thoidiemsua', 'desc')
                         ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('thoidiemsua', 'desc')
                         ->orderBy('luotxem', 'desc')
                         ->paginate($soluong);
             } else {
                 $data = DB::table('tintuc')
                         ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
                         ->where("tieude", "LIKE", "%" . $tieude . "%")
-                        ->orderBy('thoidiemsua', 'desc')
                         ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('thoidiemsua', 'desc')
                         ->orderBy('luotxem', 'desc')
                         ->paginate($soluong);
             }
@@ -45,16 +46,16 @@ Class TinTuc extends Eloquent {
                         ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
                         ->where("tieude", "LIKE", "%" . $tieude . "%", "and")
                         ->where('loai', $loai)
-                        ->orderBy('thoidiemsua', 'desc')
                         ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('thoidiemsua', 'desc')
                         ->orderBy('luotxem', 'desc')
                         ->paginate($soluong);
             } else {
                 $data = DB::table('tintuc')
                         ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
                         ->where('loai', $loai)
-                        ->orderBy('thoidiemsua', 'desc')
                         ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('thoidiemsua', 'desc')
                         ->orderBy('luotxem', 'desc')
                         ->paginate($soluong);
             }
@@ -64,7 +65,7 @@ Class TinTuc extends Eloquent {
 
     public static function getANews($id, $type) {
         $data = DB::table("tintuc")
-                ->select('id', 'tieude', 'anhnho', "thoidiemsua", 'luotxem', 'loai', 'noidung')
+                ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai', 'noidung')
                 ->where("loai", $type, "and")
                 ->where("id", $id)
                 ->first();
@@ -77,24 +78,30 @@ Class TinTuc extends Eloquent {
 
     public static function search($arraykey, $soluong) {
         $data = DB::table("tintuc")
-                ->select('id', 'tieude', 'anhnho', "thoidiemsua", 'luotxem', 'loai')
+                ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
                 ->where('tieude', 'LIKE', "%" . $arraykey . "%")
                 ->orderBy("luotxem", 'desc')
-                ->orderBy("thoidiemsua")
+                ->orderBy("thoidiemdang")
                 ->paginate($soluong);
         return $data;
     }
 
     public static function DeleteTT($id) {
+        $row = DB::table("tintuc")
+                ->select("anhnho")
+                ->where("id", $id)
+                ->first();
+        if (File::exists($row->anhnho)) {
+            File::delete($row->anhnho);
+        }
         return DB::table("tintuc")
                         ->where("id", $id)
                         ->delete();
     }
-    
-    
-    public static function InsertTT($data)
-    {
-        return DB::table("tintuc")->insert($data);
+
+    public static function InsertTT($data) {
+        return DB::table("tintuc")
+                        ->insertGetId($data);
     }
 
 }

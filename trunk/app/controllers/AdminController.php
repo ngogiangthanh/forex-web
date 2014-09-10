@@ -193,30 +193,28 @@ class AdminController extends BaseController {
                 Contact::InsertLL($data);
                 return Redirect::to('admin/add=lienlac')->with('title', 'Thêm mới liên lạc');
             case 'baiviet':
-                if (Request::ajax()) {
-                    $data = array("tieude" => Input::get('tieude'),
-                        "anhnho" => Input::get('anhnho'),
-                        "loai" => Input::get('loai'),
-                        "noidung" => preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', Input::get('noidung')));
-
-                    TinTuc::InsertTT($data);
-                    return Response::json(array('html' => true));
-                } else {
-                    return $this->index();
+                $filename = "";
+                if (isset($_FILES['anhnho'])) {
+                    //       ------Process your file upload code -------
+                    $file = Input::file('anhnho');
+                    //  $file->resize(96,96);
+                    $destinationPath = 'uploads/';
+                    $filename = md5($file->getClientOriginalName()) . "." . $file->getClientOriginalExtension();
+                    Input::file('anhnho')->move($destinationPath, $filename);
                 }
+                $data = array("tieude" => Input::get('tieude'),
+                    "anhnho" => $destinationPath . "/" . $filename,
+                    "loai" => Input::get('loaibaiviet'),
+                    "noidung" => (Input::get('noidung')),
+                    "thoidiemdang" => date("Y-m-d H:i:s", time()));
+
+                TinTuc::InsertTT($data);
+                return View::make('admin.threads.add')
+                                ->with("title", "Thêm mới bài viết")
+                                ->with("message", "Đăng tin thành công!");
             default: return $this->index();
         }
     }
-function mysql_escape_mimic($inp) { 
-    if(is_array($inp)) 
-        return array_map(__METHOD__, $inp); 
-
-    if(!empty($inp) && is_string($inp)) { 
-        return str_replace(array('\\', "\0", "\n", "\r", "'", '"', "\x1a","&"), array('\\\\', '\\0', '\\n', '\\r', "\\'", '\\"', '\\Z',"\\&"), $inp); 
-    } 
-
-    return $inp; 
-}
 
     public function upload() {
         if (isset($_FILES['upload'])) {

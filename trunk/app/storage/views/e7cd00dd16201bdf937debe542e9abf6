@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading"><i class="glyphicon glyphicon-new-window"></i>&nbsp;Thêm bài viết</div>
     <div class="panel-body">
-        <form id="threads_sform" class="form-horizontal" method="post" action="{{url('admin/add=baiviet')}}" enctype="multipart/form-data" role="form">
+        <form id="threads_sform" class="form-horizontal" method="post" action="<?php echo url('admin/add=baiviet'); ?>" enctype="multipart/form-data" role="form">
             <div class="form-group">
                 <label for="tieude" class="col-sm-3 control-label">Tiêu đề:</label>
                 <div class="col-sm-9">
@@ -43,7 +43,7 @@
                 <div class="col-sm-offset-3 col-sm-9"> 
                     <button class="btn btn-success" id='submitbtn' type='submit'>Đăng bài viết</button>
                     <button class="btn btn-warning" id='resetbtn' type='reset'>Làm lại</button>
-                    <a class="btn btn-default" href="{{url('admin/ql=baiviet')}}">Quay lại</a>
+                    <a class="btn btn-default" href="<?php echo url('admin/ql=baiviet'); ?>">Quay lại</a>
                 </div>
             </div>
         </form>
@@ -54,13 +54,13 @@
         height: 400,
         toolbar: 'Full',
         //   filebrowserBrowseUrl : '/browser/browse.php',
-        filebrowserUploadUrl: "{{url('upload/imgs')}}"
+        filebrowserUploadUrl: "<?php echo url('upload/imgs'); ?>"
     });
     <?php
     if(isset($message))
     {
         ?>
-            toastr.success('{{$message}}')
+            toastr.success('<?php echo $message; ?>')
             <?php
     }
         ?>

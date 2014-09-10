@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title><?php echo $title; ?></title>
+        <link rel="shortcut icon" href="<?php echo URL::to('favicon_img.ico'); ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php echo HTML::style('css/bootstrap.min.css'); ?>
+        <?php echo HTML::style('css/bootstrap-theme.min.css'); ?>
+        <?php echo HTML::style('css/style.css'); ?>
+        <?php echo HTML::style('css/nprogress.css'); ?>
+        <?php echo HTML::style('css/toastr.css'); ?>
+        <style>
+            body {
+                margin-top: 50px;
+                font-family: sans-serif !important;
+                font-size: 15px
+            }
+            .navbar {
+                -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 1);
+                -moz-box-shadow: 0px 0px 10px rgba(50, 50, 50, 1);
+                box-shadow: 0px 0px 10px rgba(50, 50, 50, 1);
+            }
+        </style>
+    </head>
+    <body>
+        <?php echo $__env->make ('guest.menu.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <div class="overview">
+            <div class="container">
+                <?php echo $__env->make ('guest.header.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            </div>
+        </div>
+        <div id="main" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12 content-middle" style="background: #F0F0F0 ">
+                        <div id="web_content_id">
+                        <?php echo $__env->make ('guest.menu.nav_url', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                            <?php echo $__env->yieldContent('main'); ?>
+                        </div>
+                        <!-- all contact -->
+                        <?php echo $__env->make('guest.footer.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div style="border-top: 1px #fff solid;text-align: center;">&copy; Bản quyền thuộc về Forexker Market 2014.</div>
+        </div>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <?php echo HTML::script('js/jquery-1.10.2.min.js'); ?>
+        <?php echo HTML::script('js/toastr.js'); ?>
+        <?php echo HTML::script('js/bootstrap.min.js'); ?>
+        <?php echo HTML::script('js/bootstrap.notify.min.js'); ?>
+        <?php echo HTML::script('js/nprogress.js'); ?>
+        <?php echo HTML::script('js/jquery-ajax-pagination-1.0.js'); ?>
+        <?php echo HTML::script('js/jquery-ajax-contact-1.0.js'); ?>
+        <?php echo HTML::script('js/jquery-ajax-search-1.0.js'); ?>
+        <!--jqWidget-->
+        <!--        <?php echo HTML::style('js/jqwidgets/styles/jqx.base.css'); ?>
+                <?php echo HTML::style('js/jqwidgets/styles/jqx.bootstrap.css'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxcore.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxdata.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxdata.export.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxbuttons.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxscrollbar.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxmenu.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxchart.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxinput.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxcheckbox.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxlistbox.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxdropdownlist.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxmaskedinput.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxnumberinput.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxdatetimeinput.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxcalendar.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxvalidator.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.sort.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.pager.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.selection.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.filter.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.columnsresize.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.columnsreorder.js '); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.export.js'); ?>
+                <?php echo HTML::script('js/jqwidgets/jqxgrid.edit.js'); ?>
+                <?php echo HTML::script('js/jqwidgets.vi.js'); ?>
+                <?php echo HTML::script('js/import-export-data.js'); ?>-->
+        <script type="text/javascript">
+            toastr.options.closeButton = true;
+            toastr.options.newestOnTop = true;
+            $('body').show();
+            NProgress.start();
+            setTimeout(function() {
+                NProgress.done();
+                $('.fade').removeClass('out');
+            }, 100);
+        </script>
+    </body>
+</html>
