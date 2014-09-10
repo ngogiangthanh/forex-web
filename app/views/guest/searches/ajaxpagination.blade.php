@@ -10,9 +10,9 @@ $urlReal = $url->getURL($rs->loai);
 ?>
 <div>
     @if($url->isUnexpected($rs->loai))
-    <a href="{{url($urlReal."/threads=".$rs->id)}}" target="_blank">{{$rs->tieude}}</a>
+    <a href="{{url($urlReal."/threads=".$rs->id)}}" target="_blank"><span class="glyphicon glyphicon-search"></span>&nbsp;{{$rs->tieude}}</a>
     @else
-    <a href="{{url($urlReal."/".$rs->id)}}" target="_blank">{{$rs->tieude}}</a>
+    <a href="{{url($urlReal."/".$rs->id)}}" target="_blank"><span class="glyphicon glyphicon-search"></span>&nbsp;{{$rs->tieude}}</a>
     @endif
 </div>
 <hr>
