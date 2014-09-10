@@ -13,7 +13,7 @@ $urlReal = $url->getURL($san->loai);
         {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
         @endif
     </a>
-    <p><a href="{{url($urlReal."/threads=".$san->id)}}">{{HTML::decode($san->tieude)}}</a></p>
+    <p><h4><a href="{{url($urlReal."/threads=".$san->id)}}">{{HTML::decode($san->tieude)}}</a></h4></p>
     <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($san->thoidiemdang))}}</p>
     <p>Lượt xem:&nbsp;{{ $san->luotxem}}</p>
     <p><a href="{{url($urlReal."/threads=".$san->id)}}">[...Xem thêm]</a></p>

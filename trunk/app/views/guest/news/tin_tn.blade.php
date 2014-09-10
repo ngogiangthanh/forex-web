@@ -14,7 +14,7 @@ $urlReal = $url->getURL($tn->loai);
         {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
         @endif
     </a>
-    <p><a href="{{url($urlReal."/".$tn->id)}}">{{HTML::decode($tn->tieude)}}</a></p>
+    <p><h4><a href="{{url($urlReal."/".$tn->id)}}">{{HTML::decode($tn->tieude)}}</a></h4></p>
     <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($tn->thoidiemdang))}}</p>
     <p>Lượt xem:&nbsp;{{ $tn->luotxem}}</p>
     <p><a href="{{url($urlReal."/".$tn->id)}}">[...Xem thêm]</a></p>

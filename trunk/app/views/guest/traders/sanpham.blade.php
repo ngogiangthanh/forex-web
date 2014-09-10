@@ -3,7 +3,7 @@
 <div class="col-md-12 news" style="margin-top: 15px">
     <div class="row">
         <div class="panel panel-success">
-            <div class="panel-heading">SẢN PHẨM GIAO DỊCH</div>
+            <div class="panel-heading"><h3>SẢN PHẨM GIAO DỊCH</h3></div>
             <div class="panel-body" id="sp_gd_index">
                 <?php
                 $url = new FunctionController();
@@ -21,7 +21,7 @@
                         {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
                         @endif
                     </a>
-                    <p><a href="{{url($urlReal."/threads=".$gd->id)}}">{{HTML::decode($gd->tieude)}}</a></p>
+                    <p><h4><a href="{{url($urlReal."/threads=".$gd->id)}}">{{HTML::decode($gd->tieude)}}</a></h4></p>
                     <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($gd->thoidiemdang))}}</p>
                     <p>Lượt xem:&nbsp;{{ $gd->luotxem}}</p>
                     <p><a href="{{url($urlReal."/threads=".$gd->id)}}">[...Xem thêm]</a></p>

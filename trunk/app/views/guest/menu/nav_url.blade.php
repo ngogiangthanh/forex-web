@@ -7,7 +7,7 @@ $url = explode("=", Request::path());
     <div class="row">
         <div class="panel panel-default">
             <div class="panel-heading">
-               <span class="glyphicon glyphicon-home"></span>&nbsp;{{$urlBar->getNAVName($url[0])}}
+                <h4><span class="glyphicon glyphicon-home"></span>&nbsp;{{$urlBar->getNAVName($url[0])}}</h4>
             </div>
         </div>
     </div>

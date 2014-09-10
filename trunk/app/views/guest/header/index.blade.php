@@ -21,14 +21,16 @@
 <!-- all contact running -->
 <div class="col-md-12" style="background: #000000;margin-top: 20px">
     <div style="vertical-align: middle">
-        <marquee behavior="scroll" direction="left" scrollamount="3">
-            @foreach ($contacts as $ct)
-            @if ($ct != null)
-            &nbsp;<span class="name-contact" style="color: #FFFFFF  ">{{$ct->address}}</span>
-            &nbsp;<span class="sdt-contact" style="color: #6600FF;">+{{$ct->tel}}</span>
-            &nbsp;<span style="border-right: 2px solid red;"></span>
-            @endif
-            @endforeach
-        </marquee>
+        <h4>
+            <marquee behavior="scroll" direction="left" scrollamount="3">
+                @foreach ($contacts as $ct)
+                @if ($ct != null)
+                &nbsp;<span class="name-contact" style="color: #FFFFFF  ">{{$ct->address}}</span>
+                &nbsp;<span class="sdt-contact" style="color: #6600FF;">+{{$ct->tel}}</span>
+                &nbsp;<span style="border-right: 2px solid red;"></span>
+                @endif
+                @endforeach
+            </marquee>
+        </h4>
     </div>
 </div>

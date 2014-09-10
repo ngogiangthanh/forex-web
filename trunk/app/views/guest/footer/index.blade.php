@@ -8,8 +8,8 @@
             @if ($i > 3)
             <br/>
             @endif
-            <div class="name-contact" style="color:#0066ff;font-weight: bold">
-                {{$ct->address}}
+            <div class="name-contact" style="color:#0066ff;">
+                <h4>{{$ct->address}}</h4> 
             </div>
             <br/>
             <div>Tel: +{{$ct->tel}}</div>

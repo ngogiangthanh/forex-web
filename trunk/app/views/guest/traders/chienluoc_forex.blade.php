@@ -4,7 +4,7 @@
     <!-- chiến lược forex -->
     <div class="row">
         <div class="panel panel-success">
-            <div class="panel-heading">CHIẾN LƯỢC FOREX</div>
+            <div class="panel-heading"><h3>CHIẾN LƯỢC FOREX</h3></div>
             <div class="panel-body" id='forex_index'>
                 @include ('guest.chienluoc.forex.index')
             </div>
