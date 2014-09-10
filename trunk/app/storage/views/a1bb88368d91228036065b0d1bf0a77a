@@ -15,9 +15,9 @@ $urlReal = $url->getURL($sp->loai);
         <?php endif; ?>
     </a>
     <p><h4><a href="<?php echo url($urlReal."/threads=".$sp->id); ?>"><?php echo HTML::decode($sp->tieude); ?></a></h4></p>
-    <p>Thời gian đăng:&nbsp;<?php echo date("h:i A | d/m/Y",strtotime($sp->thoidiemdang)); ?></p>
-    <p>Lượt xem:&nbsp;<?php echo $sp->luotxem; ?></p>
-    <p><a href="<?php echo url($urlReal."/threads=".$sp->id); ?>">[...Xem thêm]</a></p>
+    <p><span class="glyphicon glyphicon-time"></span>&nbsp;<?php echo date("h:i A | d/m/Y",strtotime($sp->thoidiemdang)); ?></p>
+    <p><span class="glyphicon glyphicon-search"></span>&nbsp;Lượt xem:&nbsp;<?php echo $sp->luotxem; ?></p>
+    <p><a href="<?php echo url($urlReal."/threads=".$sp->id); ?>"><span class="glyphicon glyphicon-play"></span>&nbsp;Xem thêm</a></p>
 </div>
 <hr>
 <?php endif; ?>

@@ -1,13 +1,16 @@
 <?php $__env->startSection('main'); ?>
 <div class="col-md-12 news" style="margin-top: 15px">
     <!-- tin ngoài nước -->
-    <div class="row">
+    <div class="col-md-8">
         <div class="panel panel-success">
-            <div class="panel-heading"><h3>TIN NGOÀI NƯỚC</h3></div>
+            <div class="panel-heading"><h3><span class="glyphicon glyphicon-th-large"></span>&nbsp;TIN NGOÀI NƯỚC</h3></div>
             <div class="panel-body" id='tin_nn_index'>
-               <?php echo $__env->make ('guest.news.tin_nn', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php echo $__env->make ('guest.news.tin_nn', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             </div>
         </div>
+    </div>
+    <div class="col-md-4">
+        <?php echo $__env->make('guest.relations.index_views', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     </div>
 </div>
 <?php $__env->stopSection(); ?>

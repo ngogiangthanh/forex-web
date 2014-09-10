@@ -15,9 +15,9 @@ $urlReal = $url->getURL($kn->loai);
         @endif
     </a>
     <p><h4><a href="{{url($urlReal."/threads=".$kn->id)}}">{{HTML::decode($kn->tieude)}}</a></h4></p>
-    <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($kn->thoidiemdang))}}</p>
-    <p>Lượt xem:&nbsp;{{ $kn->luotxem}}</p>
-    <p><a href="{{url($urlReal."/threads=".$kn->id)}}">[...Xem thêm]</a></p>
+    <p><span class="glyphicon glyphicon-time"></span>&nbsp;{{date("h:i A | d/m/Y",strtotime($kn->thoidiemdang))}}</p>
+    <p><span class="glyphicon glyphicon-search"></span>&nbsp;Lượt xem:&nbsp;{{ $kn->luotxem}}</p>
+    <p><a href="{{url($urlReal."/threads=".$kn->id)}}"><span class="glyphicon glyphicon-play"></span>&nbsp;Xem thêm</a></p>
 </div>
 <hr>
 @endif
