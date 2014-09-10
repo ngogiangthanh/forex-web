@@ -3,7 +3,7 @@
 <div class="col-md-12 news" style="margin-top: 15px">
     <div class="row">
         <div class="panel panel-success">
-            <div class="panel-heading">Kết quả tìm kiếm của từ <b>{{$keysearch}}</b></div>
+            <div class="panel-heading"><h3>Kết quả tìm kiếm của từ <b>{{$keysearch}}</b></h3></div>
             <div class="panel-body" id="result_search_index">
                 <?php
                 $url = new FunctionController();
@@ -17,9 +17,9 @@
                 ?>
                 <div>
                     @if($url->isUnexpected($rs->loai))
-                    <a href="{{url($urlReal."/threads=".$rs->id)}}" target="_blank"> + {{$rs->tieude}}</a>
+                    <a href="{{url($urlReal."/threads=".$rs->id)}}" target="_blank"><span class="glyphicon glyphicon-search"></span>&nbsp;{{$rs->tieude}}</a>
                     @else
-                    <a href="{{url($urlReal."/".$rs->id)}}" target="_blank"> + {{$rs->tieude}}</a>
+                    <a href="{{url($urlReal."/".$rs->id)}}" target="_blank"><span class="glyphicon glyphicon-search"></span>&nbsp;{{$rs->tieude}}</a>
                     @endif
                 </div>
                 <hr>
