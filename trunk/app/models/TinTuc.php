@@ -112,10 +112,41 @@ Class TinTuc extends Eloquent {
         return $data;
     }
 
-    public static function UpdateTT($data,$id) {
+    public static function UpdateTT($data, $id) {
         return DB::table("tintuc")
                         ->where("id", $id)
                         ->update($data);
+    }
+
+    public static function SelectRelate($option,$id,$type = null, $limit = 5) {
+        $data = null;
+        if ($option == "same") {
+            $data = DB::table('tintuc')
+                        ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
+                        ->where("loai", $type)
+                        ->where("id",'<>', $id)
+                        ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('thoidiemsua', 'desc')
+                        ->orderBy('luotxem', 'desc')
+                        ->paginate($limit);
+        } else if ($option == "new") {
+              $data = DB::table('tintuc')
+                        ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
+                        ->where("id",'<>', $id)
+                        ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('thoidiemsua', 'desc')
+                        ->orderBy('luotxem', 'desc')
+                        ->paginate($limit);
+        } else {//most view
+             $data = DB::table('tintuc')
+                        ->select('id', 'tieude', 'anhnho', "thoidiemsua", "thoidiemdang", 'luotxem', 'loai')
+                        ->where("id",'<>', $id)
+                        ->orderBy('luotxem', 'desc')
+                        ->orderBy('thoidiemdang', 'desc')
+                        ->orderBy('thoidiemsua', 'desc')
+                        ->paginate($limit);
+        }
+        return $data;
     }
 
 }
