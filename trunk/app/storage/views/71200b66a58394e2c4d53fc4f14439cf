@@ -1,5 +1,4 @@
 <?php $__env->startSection('main'); ?>
-<?php echo HTML::script('js/ckeditor/ckeditor.js');; ?>
 <div class="row">
     <div class="col-sm-3 col-xs-12 pull-left" id="sidebar" role="navigation">
         <?php echo $__env->make ('admin.menu.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -130,22 +130,31 @@ class AdminController extends BaseController {
         }
     }
 
-    public function show($id) {
+    public function show($id, $message = null) {
         $row = LienHe::Select($id);
-        return View::make('admin.contacts.view')
-                        ->with('row', $row)
-                        ->with("title", "Xem chi tiết liên hệ");
+        if ($message == null) {
+            return View::make('admin.contacts.view')
+                            ->with('row', $row)
+                            ->with("title", "Xem chi tiết liên hệ");
+        } else {
+            return View::make('admin.contacts.view')
+                            ->with('row', $row)
+                            ->with("message", $message)
+                            ->with("title", "Xem chi tiết liên hệ");
+        }
     }
 
     public function edit($type, $id) {
         switch ($type) {
             case 'lienlac':
+                $contact = Contact::getAContact($id);
                 return View::make('admin.lienlac.edit')
+                                ->with("contact", $contact)
                                 ->with("title", "Chỉnh sửa liên lạc");
             case 'baiviet':
                 $thread = TinTuc::getAThread($id);
                 return View::make('admin.threads.edit')
-                                ->with("thread",$thread)
+                                ->with("thread", $thread)
                                 ->with("title", "Chỉnh sửa bài viết");
             default: return $this->index();
         }
@@ -160,9 +169,9 @@ class AdminController extends BaseController {
         $data = array('hoten' => Input::get("hoten"),
             "noidung" => $noidungtraloi);
         Mail::send('admin.contacts.mail', $data, function($message) {
-            $message->to($email = Input::get("email"), Input::get("hoten"))->subject(Input::get('tieudetraloi'));
+            $message->to(Input::get("email"), Input::get("hoten"))->subject(Input::get('tieudetraloi'));
         });
-        return Redirect::to('admin/view=lienhe/' . $id)->with('title', 'Xem chi tiết liên hệ');
+        return $this->show($id, "Đã gửi email phản hồi đến địa chỉ " . Input::get("email") . "!");
     }
 
     public function save($type) {
@@ -178,7 +187,10 @@ class AdminController extends BaseController {
                     "vitri" => Input::get("vitri"),
                 );
                 Contact::InsertLL($data);
-                return Redirect::to('admin/add=lienlac')->with('title', 'Thêm mới liên lạc');
+                return View::make('admin.lienlac.add')
+                                ->with("message", "Thêm mới liên lạc thành công!")
+                                ->with("title", "Thêm mới liên lạc");
+                ;
             case 'baiviet':
                 $filename = "";
                 if (isset($_FILES['anhnho'])) {
@@ -202,24 +214,38 @@ class AdminController extends BaseController {
             default: return $this->index();
         }
     }
-    
+
     public function store($type) {
         switch ($type) {
             case 'lienlac':
-              
-                return Redirect::to('admin/add=lienlac')->with('title', 'Thêm mới liên lạc');
+                $id = Input::get("id");
+                $data = array(
+                    "address" => Input::get("tenbophan"),
+                    "tel" => Input::get("sodienthoai"),
+                    "fax" => Input::get("sofax"),
+                    "email" => Input::get("email"),
+                    "facebook" => Input::get("facebook"),
+                    "link" => Input::get("urlfacebook"),
+                    "vitri" => Input::get("vitri"),
+                );
+                Contact::UpdateLL($id, $data);
+                $contact = Contact::getAContact($id);
+                return View::make('admin.lienlac.edit')
+                                ->with("contact", $contact)
+                                ->with("message", "Chỉnh sửa liên lạc hoàn tất!")
+                                ->with("title", "Chỉnh sửa liên lạc");
             case 'baiviet':
                 $filename = Input::get('anhcu');
                 if (isset($_FILES['anhnho']) && $_FILES['anhnho']['name'] != "") {
-                if (File::exists(Input::get('anhcu'))) {
-                    File::delete(Input::get('anhcu'));
-                }
+                    if (File::exists(Input::get('anhcu'))) {
+                        File::delete(Input::get('anhcu'));
+                    }
                     $file = Input::file('anhnho');
                     //  $file->resize(96,96);
                     $destinationPath = 'uploads/';
                     $filename = md5($file->getClientOriginalName()) . "." . $file->getClientOriginalExtension();
                     Input::file('anhnho')->move($destinationPath, $filename);
-                    $filename = $destinationPath."/".$filename;
+                    $filename = $destinationPath . "/" . $filename;
                 }
                 $data = array("tieude" => Input::get('tieude'),
                     "anhnho" => $filename,
@@ -227,11 +253,11 @@ class AdminController extends BaseController {
                     "noidung" => (Input::get('noidung')),
                     "thoidiemsua" => date("Y-m-d H:i:s", time()));
                 $id = Input::get('id');
-                TinTuc::UpdateTT($data,$id);
+                TinTuc::UpdateTT($data, $id);
                 $thread = TinTuc::getAThread($id);
                 return View::make('admin.threads.edit')
-                                ->with("thread",$thread)
-                                ->with("message","Chỉnh sửa tin tức hoàn tất!")
+                                ->with("thread", $thread)
+                                ->with("message", "Chỉnh sửa tin tức hoàn tất!")
                                 ->with("title", "Chỉnh sửa bài viết");
             default: return $this->index();
         }

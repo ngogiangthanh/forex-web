@@ -59,8 +59,8 @@ Class LienHe extends Eloquent {
             if ($search == null) {
                 $data = DB::table("lienhe")
                         ->select('id', 'hoten', 'email', 'tieude', 'thoidiemgui', 'thoidiemxuly', 'trangthai')
-                        ->orderBy('thoidiemgui', 'desc')
                         ->orderBy('trangthai')
+                        ->orderBy('thoidiemgui', 'desc')
                         ->orderBy('thoidiemxuly', 'desc')
                         ->paginate($soluong);
             } else {
@@ -68,8 +68,8 @@ Class LienHe extends Eloquent {
                         ->select('id', 'hoten', 'email', 'tieude', 'thoidiemgui', 'thoidiemxuly', 'trangthai')
                         ->where("email", "LIKE", "%" . $search . "%")
                         ->orWhere("hoten", "LIKE", "%" . $search . "%")
-                        ->orderBy('thoidiemgui', 'desc')
                         ->orderBy('trangthai')
+                        ->orderBy('thoidiemgui', 'desc')
                         ->orderBy('thoidiemxuly', 'desc')
                         ->paginate($soluong);
             }

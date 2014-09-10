@@ -7,7 +7,7 @@
             <div class="col-sm-9 col-xs-12 pull-right">
                 <div class="row">
                     <!-- BEGIN CONTENT -->
-                    Chỉnh sửa liên lạc
+                    @include('admin.lienlac.form_edit')
                     <!-- END CONTENT -->
                 </div>
             </div><!--/span-->            
