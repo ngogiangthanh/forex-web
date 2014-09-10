@@ -22,9 +22,9 @@
                         @endif
                     </a>
                     <p><h4><a href="{{url($urlReal."/threads=".$san->id)}}">{{HTML::decode($san->tieude)}}</a></h4></p>
-                    <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($san->thoidiemdang))}}</p>
-                    <p>Lượt xem:&nbsp;{{ $san->luotxem}}</p>
-                    <p><a href="{{url($urlReal."/threads=".$san->id)}}">[...Xem thêm]</a></p>
+                    <p><span class="glyphicon glyphicon-time"></span>&nbsp;{{date("h:i A | d/m/Y",strtotime($san->thoidiemdang))}}</p>
+                    <p><span class="glyphicon glyphicon-search"></span>&nbsp;Lượt xem:&nbsp;{{ $san->luotxem}}</p>
+                    <p><a href="{{url($urlReal."/threads=".$san->id)}}"><span class="glyphicon glyphicon-play"></span>&nbsp;Xem thêm</a></p>
                 </div>
                 <hr>
                 @endif

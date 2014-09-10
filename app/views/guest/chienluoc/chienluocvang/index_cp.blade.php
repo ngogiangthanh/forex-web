@@ -15,9 +15,9 @@ $urlReal = $url->getURL($cp->loai);
         @endif
     </a>
     <p><h4><a href="{{url($urlReal."/".$cp->id)}}">{{HTML::decode($cp->tieude)}}</a></h4></p>
-    <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($cp->thoidiemdang))}}</p>
-    <p>Lượt xem:&nbsp;{{ $cp->luotxem}}</p>
-    <p><a href="{{url($urlReal."/".$cp->id)}}">[...Xem thêm]</a></p>
+    <p><span class="glyphicon glyphicon-time"></span>&nbsp;{{date("h:i A | d/m/Y",strtotime($cp->thoidiemdang))}}</p>
+    <p><span class="glyphicon glyphicon-search"></span>&nbsp;Lượt xem:&nbsp;{{ $cp->luotxem}}</p>
+    <p><a href="{{url($urlReal."/".$cp->id)}}"><span class="glyphicon glyphicon-play"></span>&nbsp;Xem thêm</a></p>
 </div>
 <hr>
 @endif

@@ -470,7 +470,7 @@ class GuestController extends BaseController {
                     //ajax pagingation tin tức ngoài nước
                     $tinNN['noidung'] = $newsNNs;
                     $tinNN['phantrang'] = $newsNNs->links();
-                    if (Request::ajax() && Input::get("type") == "tin_tn") {
+                    if (Request::ajax() && Input::get("type") == "tin_nn") {
                         $html = View::make("guest.news.ajaxpagination_nn", $tinNN)->render();
                         return Response::json(array('html' => $html));
                     }
