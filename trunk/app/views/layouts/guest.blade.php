@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="footer">
-            <div style="border-top: 1px #fff solid;text-align: center;">&copy; Bản quyền thuộc về Forexker Market 2014.</div>
+            <div style="border-top: 1px #fff solid;text-align: center;">&copy; Bản quyền thuộc về Forexker Market 2014, phát triển bởi nhóm <a href="https://www.facebook.com/ngogiangthanhblog" target="_blank"><b>TT</b></a></div>
         </div>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,36 +61,6 @@
         {{ HTML::script('js/jquery-ajax-pagination-1.0.js') }}
         {{ HTML::script('js/jquery-ajax-contact-1.0.js') }}
         {{ HTML::script('js/jquery-ajax-search-1.0.js') }}
-        <!--jqWidget-->
-        <!--        {{ HTML::style('js/jqwidgets/styles/jqx.base.css') }}
-                {{ HTML::style('js/jqwidgets/styles/jqx.bootstrap.css') }}
-                {{ HTML::script('js/jqwidgets/jqxcore.js') }}
-                {{ HTML::script('js/jqwidgets/jqxdata.js') }}
-                {{ HTML::script('js/jqwidgets/jqxdata.export.js') }}
-                {{ HTML::script('js/jqwidgets/jqxbuttons.js') }}
-                {{ HTML::script('js/jqwidgets/jqxscrollbar.js') }}
-                {{ HTML::script('js/jqwidgets/jqxmenu.js') }}
-                {{ HTML::script('js/jqwidgets/jqxchart.js') }}
-                {{ HTML::script('js/jqwidgets/jqxinput.js') }}
-                {{ HTML::script('js/jqwidgets/jqxcheckbox.js') }}
-                {{ HTML::script('js/jqwidgets/jqxlistbox.js') }}
-                {{ HTML::script('js/jqwidgets/jqxdropdownlist.js') }}
-                {{ HTML::script('js/jqwidgets/jqxmaskedinput.js') }}
-                {{ HTML::script('js/jqwidgets/jqxnumberinput.js') }}
-                {{ HTML::script('js/jqwidgets/jqxdatetimeinput.js') }}
-                {{ HTML::script('js/jqwidgets/jqxcalendar.js') }}
-                {{ HTML::script('js/jqwidgets/jqxvalidator.js') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.js') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.sort.js') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.pager.js') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.selection.js') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.filter.js') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.columnsresize.js') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.columnsreorder.js ') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.export.js') }}
-                {{ HTML::script('js/jqwidgets/jqxgrid.edit.js') }}
-                {{ HTML::script('js/jqwidgets.vi.js') }}
-                {{ HTML::script('js/import-export-data.js') }}-->
         <script type="text/javascript">
             toastr.options.closeButton = true;
             toastr.options.newestOnTop = true;
