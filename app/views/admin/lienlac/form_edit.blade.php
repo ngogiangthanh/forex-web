@@ -1,36 +1,38 @@
+@if($contact != null)
 <div class="panel panel-default">
-    <div class="panel-heading"><i class="glyphicon glyphicon-new-window"></i>&nbsp;Thêm liên lạc</div>
+    <div class="panel-heading"><i class="glyphicon glyphicon-new-window"></i>&nbsp;Sửa liên lạc</div>
     <div class="panel-body">
-        <form id="lienhe_form" class="form-horizontal" method="post" action="{{url('admin/add=lienlac')}}" enctype="multipart/form-data" role="form">
+        <form id="lienhe_form" class="form-horizontal" method="post" action="{{url('admin/edit=lienlac')}}" enctype="multipart/form-data" role="form">
             <div class="form-group">
                 <label for="tenbophan" class="col-sm-3 control-label">Tên bộ phận:</label>
                 <div class="col-sm-9">
-                    <input name="tenbophan" type="text" class="form-control" id="tenbophan" value="" placeholder="Nhập tên bộ phận" required=""/>
+                    <input name="id" type="hidden" value="{{$contact->id}}"/>
+                    <input name="tenbophan" type="text" class="form-control" id="tenbophan" value="{{$contact->address}}" placeholder="Nhập tên bộ phận" required=""/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="sodienthoai" class="col-sm-3 control-label">Điện thoại:</label>
                 <div class="col-sm-9">
-                    <input name="sodienthoai" type="text" class="form-control" id="sodienthoai" value="" placeholder="Nhập số điện thoại" required=""/>
+                    <input name="sodienthoai" type="text" class="form-control" id="sodienthoai" value="{{$contact->tel}}" placeholder="Nhập số điện thoại" required=""/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="sofax" class="col-sm-3 control-label">Fax:</label>
                 <div class="col-sm-9">
-                    <input name="sofax" type="text" class="form-control" id="sofax" value="" placeholder="Nhập số Fax" required=""/>
+                    <input name="sofax" type="text" class="form-control" id="sofax" value="{{$contact->fax}}" placeholder="Nhập số Fax" required=""/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-3 control-label">Email:</label>
                 <div class="col-sm-9">
-                    <input name="email" type="email" class="form-control" id="email" value="" placeholder="Nhập email" required=""/>
+                    <input name="email" type="email" class="form-control" id="email" value="{{$contact->email}}" placeholder="Nhập email" required=""/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="facebook" class="col-sm-3 control-label">Facebook:</label>
                 <div class="col-sm-9">
-                    <input name="facebook" type="text" class="form-control" id="facebook" value="" placeholder="Tên Facebook" required=""/><br/>
-                    <input name="urlfacebook" type="url" class="form-control" id="urlfacebook" value="" placeholder="Đường dẫn facebook http://www.facebook.com/yyyyy" required=""/>
+                    <input name="facebook" type="text" class="form-control" id="facebook" value="{{$contact->facebook}}" placeholder="Tên Facebook" required=""/><br/>
+                    <input name="urlfacebook" type="url" class="form-control" id="urlfacebook" value="{{$contact->link}}" placeholder="Đường dẫn facebook http://www.facebook.com/yyyyy" required=""/>
                 </div>
             </div>
             <div class="form-group">
@@ -38,15 +40,14 @@
                 <div class="col-sm-9">
                     <select name="vitri" class="form-control" >
                         <option value="-1">--- Chọn vị trí hiển thị ---</option>
-                        <option value="0">Footer của trang khách hàng</option>
-                        <option value="1">Phần liên hệ trang khách hàng</option>
+                        <option value="0" {{$contact->vitri == 0 ? "selected='selected'" : ""}}>Footer của trang khách hàng</option>
+                        <option value="1" {{$contact->vitri == 1 ? "selected='selected'" : ""}}>Phần liên hệ trang khách hàng</option>
                     </select>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
                     <button type="submit" class="btn btn-primary">Lưu</button>
-                    <button type="reset" class="btn btn-warning">Làm lại</button>
                     <a class="btn btn-default" href="{{url('admin/ql=lienlac')}}">Quay lại</a>
                 </div>
             </div>
@@ -63,3 +64,6 @@ if (isset($message)) {
 }
 ?>
 </script>
+@else
+<script>location.href = "{{url('admin/ql=lienlac')}}";</script>
+@endif

@@ -35,19 +35,27 @@ Class Contact extends Eloquent {
         }
         return $contacts;
     }
-    public static function DeleteCT($id)
-    {
+
+    public static function DeleteCT($id) {
         return DB::table("contact")
-                  ->where("id",$id)->delete();
+                        ->where("id", $id)->delete();
     }
-    
-    public static function InsertLL($data)
-    {
+
+    public static function InsertLL($data) {
         return DB::table("contact")->insert($data);
     }
-    
-    public static function UpdateLL($id,$data)
-    {
-        return DB::table("contact")->where("id",$id)->update($data);
+
+    public static function UpdateLL($id, $data) {
+        return DB::table("contact")
+                ->where("id", $id)
+                ->update($data);
+    }
+
+    public static function getAContact($id) {
+        $data = DB::table("contact")
+                ->select('id','address','tel','fax','email','facebook','link','vitri')
+                ->where("id", $id)
+                ->first();
+        return $data;
     }
 }
