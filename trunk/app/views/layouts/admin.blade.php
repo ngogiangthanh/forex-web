@@ -38,6 +38,7 @@
         {{ HTML::script('js/jquery-ajax-checklh-admin-1.0.js') }}
         {{ HTML::script('js/jquery-ajax-delete-admin-1.0.js') }}
         {{ HTML::script('js/bootstrap.notify.min.js') }}
+        {{ HTML::script('js/jquery-threads_admin-1.0.js') }}
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#sidebar .panel-heading').click(function() {

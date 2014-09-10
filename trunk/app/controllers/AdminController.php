@@ -160,7 +160,91 @@ class AdminController extends BaseController {
         Mail::send('admin.contacts.mail', $data, function($message) {
             $message->to($email = Input::get("email"), Input::get("hoten"))->subject(Input::get('tieudetraloi'));
         });
-        return Redirect::to('admin/view=lienhe/' . $id)->with('title', 'Thanks for registering!');
+        return Redirect::to('admin/view=lienhe/' . $id)->with('title', 'Xem chi tiết liên hệ');
+    }
+
+    public function save($type) {
+//        if (get_magic_quotes_gpc()) {
+//            $process = array(&$_GET, &$_POST, &$_COOKIE, &$_REQUEST);
+//            while (list($key, $val) = each($process)) {
+//                foreach ($val as $k => $v) {
+//                    unset($process[$key][$k]);
+//                    if (is_array($v)) {
+//                        $process[$key][stripslashes($k)] = $v;
+//                        $process[] = &$process[$key][stripslashes($k)];
+//                    } else {
+//                        $process[$key][stripslashes($k)] = stripslashes($v);
+//                    }
+//                }
+//            }
+//            unset($process);
+//        }
+        switch ($type) {
+            case 'lienlac':
+                $data = array(
+                    "address" => Input::get("tenbophan"),
+                    "tel" => Input::get("sodienthoai"),
+                    "fax" => Input::get("sofax"),
+                    "email" => Input::get("email"),
+                    "facebook" => Input::get("facebook"),
+                    "link" => Input::get("urlfacebook"),
+                    "vitri" => Input::get("vitri"),
+                );
+                Contact::InsertLL($data);
+                return Redirect::to('admin/add=lienlac')->with('title', 'Thêm mới liên lạc');
+            case 'baiviet':
+                if (Request::ajax()) {
+                    $data = array("tieude" => Input::get('tieude'),
+                        "anhnho" => Input::get('anhnho'),
+                        "loai" => Input::get('loai'),
+                        "noidung" => preg_replace('/[^a-zA-Z0-9_ %\[\]\.\(\)%&-]/s', '', Input::get('noidung')));
+
+                    TinTuc::InsertTT($data);
+                    return Response::json(array('html' => true));
+                } else {
+                    return $this->index();
+                }
+            default: return $this->index();
+        }
+    }
+function mysql_escape_mimic($inp) { 
+    if(is_array($inp)) 
+        return array_map(__METHOD__, $inp); 
+
+    if(!empty($inp) && is_string($inp)) { 
+        return str_replace(array('\\', "\0", "\n", "\r", "'", '"', "\x1a","&"), array('\\\\', '\\0', '\\n', '\\r', "\\'", '\\"', '\\Z',"\\&"), $inp); 
+    } 
+
+    return $inp; 
+}
+
+    public function upload() {
+        if (isset($_FILES['upload'])) {
+            //       ------Process your file upload code -------
+            $file = Input::file('upload');
+            $input = array('image' => $file);
+            $rules = array(
+                'image' => 'image'
+            );
+            $validator = Validator::make($input, $rules);
+            if ($validator->fails()) {
+                echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction(1, '', 'Vui lòng chọn tệp hình ảnh!');</script>";
+            } else {
+                $destinationPath = 'uploads/';
+                $filename = md5($file->getClientOriginalName()) . "." . $file->getClientOriginalExtension();
+                Input::file('upload')->move($destinationPath, $filename);
+                //   return Response::json(array('html' => $destinationPath . $filename));
+                $url = url('/') . "/" . $destinationPath . $filename;
+                $funcNum = Input::get('CKEditorFuncNum');
+                // Optional: instance name (might be used to load a specific configuration file or anything else).
+                //  $CKEditor = Input::get('CKEditor');
+                // Optional: might be used to provide localized messages.
+                //  $langCode = Input::get('langCode');
+                // Usually you will only assign something here if the file could not be uploaded.
+                $message = '';
+                echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
+            }
+        }
     }
 
 }
