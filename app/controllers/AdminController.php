@@ -143,7 +143,9 @@ class AdminController extends BaseController {
                 return View::make('admin.lienlac.edit')
                                 ->with("title", "Chỉnh sửa liên lạc");
             case 'baiviet':
+                $thread = TinTuc::getAThread($id);
                 return View::make('admin.threads.edit')
+                                ->with("thread",$thread)
                                 ->with("title", "Chỉnh sửa bài viết");
             default: return $this->index();
         }
@@ -164,21 +166,6 @@ class AdminController extends BaseController {
     }
 
     public function save($type) {
-//        if (get_magic_quotes_gpc()) {
-//            $process = array(&$_GET, &$_POST, &$_COOKIE, &$_REQUEST);
-//            while (list($key, $val) = each($process)) {
-//                foreach ($val as $k => $v) {
-//                    unset($process[$key][$k]);
-//                    if (is_array($v)) {
-//                        $process[$key][stripslashes($k)] = $v;
-//                        $process[] = &$process[$key][stripslashes($k)];
-//                    } else {
-//                        $process[$key][stripslashes($k)] = stripslashes($v);
-//                    }
-//                }
-//            }
-//            unset($process);
-//        }
         switch ($type) {
             case 'lienlac':
                 $data = array(
@@ -215,6 +202,40 @@ class AdminController extends BaseController {
             default: return $this->index();
         }
     }
+    
+    public function store($type) {
+        switch ($type) {
+            case 'lienlac':
+              
+                return Redirect::to('admin/add=lienlac')->with('title', 'Thêm mới liên lạc');
+            case 'baiviet':
+                $filename = Input::get('anhcu');
+                if (isset($_FILES['anhnho']) && $_FILES['anhnho']['name'] != "") {
+                if (File::exists(Input::get('anhcu'))) {
+                    File::delete(Input::get('anhcu'));
+                }
+                    $file = Input::file('anhnho');
+                    //  $file->resize(96,96);
+                    $destinationPath = 'uploads/';
+                    $filename = md5($file->getClientOriginalName()) . "." . $file->getClientOriginalExtension();
+                    Input::file('anhnho')->move($destinationPath, $filename);
+                    $filename = $destinationPath."/".$filename;
+                }
+                $data = array("tieude" => Input::get('tieude'),
+                    "anhnho" => $filename,
+                    "loai" => Input::get('loaibaiviet'),
+                    "noidung" => (Input::get('noidung')),
+                    "thoidiemsua" => date("Y-m-d H:i:s", time()));
+                $id = Input::get('id');
+                TinTuc::UpdateTT($data,$id);
+                $thread = TinTuc::getAThread($id);
+                return View::make('admin.threads.edit')
+                                ->with("thread",$thread)
+                                ->with("message","Chỉnh sửa tin tức hoàn tất!")
+                                ->with("title", "Chỉnh sửa bài viết");
+            default: return $this->index();
+        }
+    }
 
     public function upload() {
         if (isset($_FILES['upload'])) {
@@ -234,11 +255,6 @@ class AdminController extends BaseController {
                 //   return Response::json(array('html' => $destinationPath . $filename));
                 $url = url('/') . "/" . $destinationPath . $filename;
                 $funcNum = Input::get('CKEditorFuncNum');
-                // Optional: instance name (might be used to load a specific configuration file or anything else).
-                //  $CKEditor = Input::get('CKEditor');
-                // Optional: might be used to provide localized messages.
-                //  $langCode = Input::get('langCode');
-                // Usually you will only assign something here if the file could not be uploaded.
                 $message = '';
                 echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
             }

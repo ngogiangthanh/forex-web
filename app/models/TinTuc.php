@@ -104,4 +104,18 @@ Class TinTuc extends Eloquent {
                         ->insertGetId($data);
     }
 
+    public static function getAThread($id) {
+        $data = DB::table("tintuc")
+                ->select('id', 'tieude', 'anhnho', 'loai', 'noidung')
+                ->where("id", $id)
+                ->first();
+        return $data;
+    }
+
+    public static function UpdateTT($data,$id) {
+        return DB::table("tintuc")
+                        ->where("id", $id)
+                        ->update($data);
+    }
+
 }

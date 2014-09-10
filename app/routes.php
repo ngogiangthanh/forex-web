@@ -52,9 +52,11 @@ Route::get('admin/edit={type}/{id}', 'AdminController@edit')->where(array('id' =
 Route::get('admin/view=lienhe/{id}', 'AdminController@show')->where(array('id' => '[0-9]+'));
 //gui email
 Route::post('admin/send=email', 'AdminController@send');
-//them lien lac
+//them 
 Route::post('admin/add={type}', 'AdminController@save')->where(array('type' => '[A-Za-z0-9]+'));
-//
+//sua 
+Route::post('admin/edit={type}', 'AdminController@store')->where(array('type' => '[A-Za-z0-9]+'));
+//upload hinh anh
 Route::post('upload/imgs', 'AdminController@upload');
 /**
  * Trang login

@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 @section('main')
-{{ HTML::script('js/ckeditor/ckeditor.js'); }}
 <div class="row">
     <div class="col-sm-3 col-xs-12 pull-left" id="sidebar" role="navigation">
         @include ('admin.menu.sidebar')
