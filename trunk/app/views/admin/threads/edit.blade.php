@@ -7,7 +7,7 @@
     <div class="col-sm-9 col-xs-12 pull-right">
         <div class="row">
             <!-- BEGIN CONTENT -->
-            Chỉnh sửa bài viết
+            @include('admin.threads.form_edit')
             <!-- END CONTENT -->
         </div>
     </div><!--/span-->            

@@ -1,0 +1,80 @@
+<style type="text/css">
+    .table th, .table td {
+        text-align: center;
+        vertical-align: middle!important;
+    }
+    .table th:nth-child(1), 
+    .table td:nth-child(1) {
+        width: 9%;
+    } 
+    .table td:nth-child(2),
+    .table th:nth-child(2),
+    .table th:nth-child(3), 
+    .table td:nth-child(3),
+    .table th:nth-child(4), 
+    .table td:nth-child(4),
+    .table th:nth-child(5), 
+    .table td:nth-child(5),
+    .table th:nth-child(6), 
+    .table td:nth-child(6),
+    .table th:nth-child(7), 
+    .table td:nth-child(7) 
+    .table th:nth-child(8), 
+    .table td:nth-child(8){
+        width:13%;
+    }
+    .pagination li {
+        display: inline;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+</style>
+<div class="col-xs-12">
+    <div class="form-group">
+        <a href="<?php echo url('admin/add=lienlac'); ?>" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;Thêm liên lạc</a><br/><br/>
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên bộ phận</th>
+                <th>Số điện thoại</th>
+                <th>Số fax</th>
+                <th>Email</th>
+                <th>Facebook</th>
+                <th>Vị trí</th>
+                <th>Tác vụ</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <?php
+            $count = 0;
+            ?>
+            <?php foreach ($lienlac as $lc): ?>
+            <?php if($lc != null): ?>
+            <?php
+            $count++;
+            ?>
+            <tr id="row_<?php echo $lc->id; ?>">
+                <td><?php echo $count; ?></td>
+                <td><b><?php echo HTML::decode($lc->address); ?></b></td>
+                <td><?php echo $lc->tel; ?></td>
+                <td><?php echo $lc->fax; ?></td>
+                <td><a href="mailto:<?php echo $lc->email; ?>" style="color: #FF0000 "> <?php echo $lc->email; ?></a></td>
+                <td><a href='<?php echo $lc->link; ?>'><?php echo $lc->facebook; ?></a></td>
+                <td>
+                    <?php if($lc->vitri == 0): ?>
+                    Footer
+                    <?php else: ?>
+                    Liên hệ
+                    <?php endif; ?>
+                </td>
+                <td><a href="<?php echo url('admin/edit=lienlac/'.$lc->id); ?>" class="text-success"><i class="glyphicon glyphicon-edit" title="Sửa"></i></a>&nbsp;
+                    <a href="<?php echo url('admin/delete=lienlac'); ?>" name="" id="<?php echo $lc->id; ?>" class="delete_ll text-danger" title="Xóa"><i class="glyphicon glyphicon-remove"></i></a>
+                </td>
+            </tr>
+            <?php endif; ?>
+            <?php endforeach; ?>
+        </tbody>
+    </table>	
+</div>

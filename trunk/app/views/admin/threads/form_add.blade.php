@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading"><i class="glyphicon glyphicon-new-window"></i>&nbsp;Thêm bài viết</div>
     <div class="panel-body">
-        <form id="threads_sform" class="form-horizontal" method="post" action="{{url('admin/add=baiviet')}}" enctype="multipart/form-data" role="form">
+        <form id="threads_form" class="form-horizontal" method="post" action="{{url('admin/add=baiviet')}}" enctype="multipart/form-data" role="form">
             <div class="form-group">
                 <label for="tieude" class="col-sm-3 control-label">Tiêu đề:</label>
                 <div class="col-sm-9">
@@ -11,7 +11,7 @@
             <div class="form-group">
                 <label for="anhnho" class="col-sm-3 control-label">Ảnh nhỏ:</label>
                 <div class="col-sm-9">
-                    <input name="anhnho" type="file" class="form-control" required=""/>
+                    <input name="anhnho" type="file" class="form-control" accept="image/*" required=""/>
                 </div>
             </div>
             <div class="form-group">
@@ -49,6 +49,7 @@
         </form>
     </div>
 </div>
+{{ HTML::script('js/ckeditor/ckeditor.js'); }}
 <script type="text/javascript">
     CKEDITOR.replace('noidung', {
         height: 400,

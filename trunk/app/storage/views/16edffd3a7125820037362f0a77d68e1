@@ -3,7 +3,7 @@
     <div class="row">
         <div class="panel panel-success">
             <?php if($news != null): ?>
-            <div class="panel-heading"><?php echo HTML::decode($news->tieude); ?></div>
+            <div class="panel-heading"><h1><?php echo HTML::decode($news->tieude); ?></h1></div>
             <div class="panel-body" id="">
                 <p>Thời gian đăng:&nbsp;<?php echo date("h:i A | d/m/Y",strtotime($news->thoidiemdang)); ?> || Lượt xem:&nbsp;<?php echo $news->luotxem; ?></p>
                 <hr/>
