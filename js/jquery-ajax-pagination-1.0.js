@@ -187,4 +187,55 @@ $(document).ready(function()
         });
         return false;
     });
+    //bv cung chuyen muc
+    $("#cungchuyenmuc_paging a").click(function()
+    {
+        var myurl = $(this).attr('href');
+        $.ajax(
+                {
+                    url: myurl + '&type=cungchuyenmuc',
+                    type: "get",
+                    datatype: "html"
+                }).done(function(data) {
+            $("#cungchuyenmuc_index").hide().fadeIn("slow").html(data.html);
+        }).fail(function(jqXHR, ajaxOptions, thrownError)
+        {
+            alert('No response from server!');
+        });
+        return false;
+    });
+    //bv moi nhat
+    $("#baivietmoi_paging a").click(function()
+    {
+        var myurl = $(this).attr('href');
+        $.ajax(
+                {
+                    url: myurl + '&type=baivietmoi',
+                    type: "get",
+                    datatype: "html"
+                }).done(function(data) {
+            $("#baivietmoi_index").hide().fadeIn("slow").html(data.html);
+        }).fail(function(jqXHR, ajaxOptions, thrownError)
+        {
+            alert('No response from server!');
+        });
+        return false;
+    });
+    //bv xem nhieu
+    $("#xemnhieu_paging a").click(function()
+    {
+        var myurl = $(this).attr('href');
+        $.ajax(
+                {
+                    url: myurl + '&type=xemnhieu',
+                    type: "get",
+                    datatype: "html"
+                }).done(function(data) {
+            $("#xemnhieu_index").hide().fadeIn("slow").html(data.html);
+        }).fail(function(jqXHR, ajaxOptions, thrownError)
+        {
+            alert('No response from server!');
+        });
+        return false;
+    });
 });

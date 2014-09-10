@@ -9,7 +9,7 @@ class FunctionController extends BaseController {
         "forex" => "Chiến lược Forex",
         "vang_klq" => "Kim loại quý",
         "vang_hh" => "Hàng hóa",
-        "vang_cp" => "Cổ phần",
+        "vang_cp" => "Cổ phiếu",
         "sanpham" => "Sản phẩm giao dịch",
         "kinhnghiem" => "Kinh nghiệm giao dịch",
         "kienthuc" => "Kiến thức giao dịch",

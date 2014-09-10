@@ -25,8 +25,8 @@
             <marquee behavior="scroll" direction="left" scrollamount="3">
                 @foreach ($contacts as $ct)
                 @if ($ct != null)
-                &nbsp;<span class="name-contact" style="color: #FFFFFF  ">{{$ct->address}}</span>
-                &nbsp;<span class="sdt-contact" style="color: #6600FF;">+{{$ct->tel}}</span>
+                &nbsp;<span class="" style="color: #fff  "><span class="glyphicon glyphicon-phone"></span>&nbsp;{{$ct->address}}</span>
+                &nbsp;<span class="" style="color: #6600FF;"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;{{$ct->tel}}</span>
                 &nbsp;<span style="border-right: 2px solid red;"></span>
                 @endif
                 @endforeach

@@ -95,9 +95,20 @@ class GuestController extends BaseController {
                     return Response::json(array('html' => $html));
                 }
                 //end ajax pagination chien luoc giao dich
+                //bv xem nhieu
+                $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                //ajax pagingation bv xem nhieu
+                $xemnhieu['noidung'] = $viewsthreads;
+                $xemnhieu['phantrang'] = $viewsthreads->links();
+                if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                    $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                    return Response::json(array('html' => $html));
+                }
+                //end ajax pagingation bv xem nhieu
                 return View::make('guest.traders.sanpham')
                                 ->with('contacts', $contacts)
                                 ->with('sp_gd', $sp_gd)
+                                ->with('viewsthreads', $viewsthreads)
                                 ->with("title", "Sản phẩm giao dịch");
             case "kinhnghiem":
                 $kinhnghiem = TinTuc::Select(10, $this->perpage);
@@ -109,9 +120,20 @@ class GuestController extends BaseController {
                     return Response::json(array('html' => $html));
                 }
                 //end ajax pagination chien luoc vang
+                //bv xem nhieu
+                $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                //ajax pagingation bv xem nhieu
+                $xemnhieu['noidung'] = $viewsthreads;
+                $xemnhieu['phantrang'] = $viewsthreads->links();
+                if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                    $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                    return Response::json(array('html' => $html));
+                }
+                //end ajax pagingation bv xem nhieu
                 return View::make('guest.traders.kinhnghiem')
                                 ->with('contacts', $contacts)
                                 ->with('kinhnghiem', $kinhnghiem)
+                                ->with('viewsthreads', $viewsthreads)
                                 ->with("title", "Kinh nghiệm giao dịch");
             case "kienthuc":
                 $kienthuc = TinTuc::Select(9, $this->perpage);
@@ -123,9 +145,20 @@ class GuestController extends BaseController {
                     return Response::json(array('html' => $html));
                 }
                 //end ajax pagination kien thuc giao dich
+                //bv xem nhieu
+                $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                //ajax pagingation bv xem nhieu
+                $xemnhieu['noidung'] = $viewsthreads;
+                $xemnhieu['phantrang'] = $viewsthreads->links();
+                if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                    $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                    return Response::json(array('html' => $html));
+                }
+                //end ajax pagingation bv xem nhieu
                 return View::make('guest.traders.kienthuc')
                                 ->with('contacts', $contacts)
                                 ->with('kienthuc', $kienthuc)
+                                ->with('viewsthreads', $viewsthreads)
                                 ->with("title", "Chiến lược giao dịch");
                 break;
             case "sangd":
@@ -138,9 +171,20 @@ class GuestController extends BaseController {
                     return Response::json(array('html' => $html));
                 }
                 //end ajax pagingation sàn giao dịch
+                //bv xem nhieu
+                $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                //ajax pagingation bv xem nhieu
+                $xemnhieu['noidung'] = $viewsthreads;
+                $xemnhieu['phantrang'] = $viewsthreads->links();
+                if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                    $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                    return Response::json(array('html' => $html));
+                }
+                //end ajax pagingation bv xem nhieu
                 return View::make('guest.floortrader.index')
                                 ->with('contacts', $contacts)
                                 ->with('sangd', $sangd)
+                                ->with('viewsthreads', $viewsthreads)
                                 ->with("title", "Sàn giao dịch");
                 break;
             case "contact":
@@ -200,6 +244,17 @@ class GuestController extends BaseController {
                 }
                 //end ajax pagingation co phieu
                 $chienLuoc = TinTuc::Select(0);
+
+                //bv moi nhat
+                $newthreads = TinTuc::SelectRelate("new", "", null, 5);
+                //ajax pagingation bv moi nhat
+                $bvm['noidung'] = $newthreads;
+                $bvm['phantrang'] = $newthreads->links();
+                if (Request::ajax() && Input::get("type") == "baivietmoi") {
+                    $html = View::make("guest.relations.ajaxpagination_new", $bvm)->render();
+                    return Response::json(array('html' => $html));
+                }
+                //end ajax pagingation bv moi nhat
                 return View::make('guest.index')
                                 ->with('contacts', $contacts)
                                 ->with('chienLuoc', $chienLuoc)
@@ -207,6 +262,7 @@ class GuestController extends BaseController {
                                 ->with('kimloaiquy', $kimloaiquy)
                                 ->with('hanghoa', $hanghoa)
                                 ->with('cophieu', $cophieu)
+                                ->with('newthreads', $newthreads)
                                 ->with("title", "Trang chủ Forex");
         }
     }
@@ -225,7 +281,7 @@ class GuestController extends BaseController {
             return Response::json(array('html' => $html));
         }
     }
-    
+
     public function updatepwd() {
         if (Request::ajax()) {
             $currentpwd = Input::get("current_pwd");
@@ -237,7 +293,7 @@ class GuestController extends BaseController {
             $html = View::make("admin.profile.complete", array("result" => $result))->render();
             return Response::json(array('html' => $html));
         }
-    } 
+    }
 
     public function indexModify($type = null, $alias = null) {
         $contacts = Contact::Select();
@@ -252,9 +308,20 @@ class GuestController extends BaseController {
                         return Response::json(array('html' => $html));
                     }
                     //end ajax pagingation forex
+                    //bv xem nhieu
+                    $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                    //ajax pagingation bv xem nhieu
+                    $xemnhieu['noidung'] = $viewsthreads;
+                    $xemnhieu['phantrang'] = $viewsthreads->links();
+                    if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                        $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation bv xem nhieu
                     return View::make('guest.traders.chienluoc_forex')
                                     ->with('contacts', $contacts)
                                     ->with('forex', $forex)
+                                    ->with('viewsthreads', $viewsthreads)
                                     ->with("title", "Các chiến lược giao dịch Forex");
                 case "vang":
                     $kimloaiquy = TinTuc::Select(2, $this->perpage);
@@ -302,9 +369,20 @@ class GuestController extends BaseController {
                         return Response::json(array('html' => $html));
                     }
                     //end ajax pagination kim loai quy
+                    //bv xem nhieu
+                    $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                    //ajax pagingation bv xem nhieu
+                    $xemnhieu['noidung'] = $viewsthreads;
+                    $xemnhieu['phantrang'] = $viewsthreads->links();
+                    if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                        $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation bv xem nhieu
                     return View::make('guest.traders.chienluoc_vang_klq')
                                     ->with('contacts', $contacts)
                                     ->with('kimloaiquy', $kimloaiquy)
+                                    ->with('viewsthreads', $viewsthreads)
                                     ->with("title", "Các chiến lược giao dịch vàng với kim loại quý");
                 case "vang_hh":
                     $hanghoa = TinTuc::Select(3, $this->perpage);
@@ -316,9 +394,20 @@ class GuestController extends BaseController {
                         return Response::json(array('html' => $html));
                     }
                     //end ajax pagingation hang hoa
+                    //bv xem nhieu
+                    $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                    //ajax pagingation bv xem nhieu
+                    $xemnhieu['noidung'] = $viewsthreads;
+                    $xemnhieu['phantrang'] = $viewsthreads->links();
+                    if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                        $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation bv xem nhieu
                     return View::make('guest.traders.chienluoc_vang_hh')
                                     ->with('contacts', $contacts)
                                     ->with('hanghoa', $hanghoa)
+                                    ->with('viewsthreads', $viewsthreads)
                                     ->with("title", "Các chiến lược giao dịch vàng với hàng hóa");
                 case "vang_cp":
                     $cophieu = TinTuc::Select(4, $this->perpage);
@@ -330,9 +419,20 @@ class GuestController extends BaseController {
                         return Response::json(array('html' => $html));
                     }
                     //end ajax pagingation co phieu
+                    //bv xem nhieu
+                    $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                    //ajax pagingation bv xem nhieu
+                    $xemnhieu['noidung'] = $viewsthreads;
+                    $xemnhieu['phantrang'] = $viewsthreads->links();
+                    if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                        $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation bv xem nhieu
                     return View::make('guest.traders.chienluoc_vang_cp')
                                     ->with('contacts', $contacts)
                                     ->with('cophieu', $cophieu)
+                                    ->with('viewsthreads', $viewsthreads)
                                     ->with("title", "Các chiến lược giao dịch vàng với chiến lược");
                 default:
                     return $this->index(); //trang chủ mặc định
@@ -349,9 +449,20 @@ class GuestController extends BaseController {
                         return Response::json(array('html' => $html));
                     }
                     //end ajax pagingation tin tức trong nước
+                    //bv xem nhieu
+                    $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                    //ajax pagingation bv xem nhieu
+                    $xemnhieu['noidung'] = $viewsthreads;
+                    $xemnhieu['phantrang'] = $viewsthreads->links();
+                    if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                        $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation bv xem nhieu
                     return View::make('guest.news.index_tn')
                                     ->with('contacts', $contacts)
                                     ->with('newsTNs', $newsTNs)
+                                    ->with('viewsthreads', $viewsthreads)
                                     ->with("title", "Các tin trong nước");
                 case "tin_nn":
                     $newsNNs = TinTuc::Select(7, $this->perpage);
@@ -364,9 +475,20 @@ class GuestController extends BaseController {
                         return Response::json(array('html' => $html));
                     }
                     //end ajax pagingation tin tức ngoài nước
+                    //bv xem nhieu
+                    $viewsthreads = TinTuc::SelectRelate("views", "", null, 5);
+                    //ajax pagingation bv xem nhieu
+                    $xemnhieu['noidung'] = $viewsthreads;
+                    $xemnhieu['phantrang'] = $viewsthreads->links();
+                    if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                        $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                        return Response::json(array('html' => $html));
+                    }
+                    //end ajax pagingation bv xem nhieu
                     return View::make('guest.news.index_nn')
                                     ->with('contacts', $contacts)
                                     ->with('newsNNs', $newsNNs)
+                                    ->with('viewsthreads', $viewsthreads)
                                     ->with("title", "Các tin ngoài nước nước");
                 default:
                     return $this->index(); //trang chủ mặc định
@@ -382,9 +504,42 @@ class GuestController extends BaseController {
             $contacts = Contact::Select();
             $title = $url->switchName($alias);
             $news = TinTuc::getANews($id, $url->getID($alias));
+            //bv cung chuyen muc
+            $threads = TinTuc::SelectRelate("same", $id, $url->getID($alias), 3);
+            //ajax pagingation cung chuyen muc
+            $bv['noidung'] = $threads;
+            $bv['phantrang'] = $threads->links();
+            if (Request::ajax() && Input::get("type") == "cungchuyenmuc") {
+                $html = View::make("guest.relations.ajaxpagination_same", $bv)->render();
+                return Response::json(array('html' => $html));
+            }
+            //end ajax pagingation cung chuyen muc
+            //bv moi nhat
+            $newthreads = TinTuc::SelectRelate("new", $id, null, 5);
+            //ajax pagingation bv moi nhat
+            $bvm['noidung'] = $newthreads;
+            $bvm['phantrang'] = $newthreads->links();
+            if (Request::ajax() && Input::get("type") == "baivietmoi") {
+                $html = View::make("guest.relations.ajaxpagination_new", $bvm)->render();
+                return Response::json(array('html' => $html));
+            }
+            //end ajax pagingation bv moi nhat
+            //bv xem nhieu
+            $viewsthreads = TinTuc::SelectRelate("views", $id, null, 5);
+            //ajax pagingation bv xem nhieu
+            $xemnhieu['noidung'] = $viewsthreads;
+            $xemnhieu['phantrang'] = $viewsthreads->links();
+            if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                return Response::json(array('html' => $html));
+            }
+            //end ajax pagingation bv xem nhieu
             return View::make('guest.news.view')
                             ->with('contacts', $contacts)
                             ->with('news', $news)
+                            ->with('threads', $threads)
+                            ->with('newthreads', $newthreads)
+                            ->with('viewsthreads', $viewsthreads)
                             ->with("title", $title);
         } else {
             return $this->index();
@@ -397,9 +552,42 @@ class GuestController extends BaseController {
             $contacts = Contact::Select();
             $title = $url->switchName($type);
             $news = TinTuc::getANews($id, $url->getID($type));
+            //bv cung chuyen muc
+            $threads = TinTuc::SelectRelate("same", $id, $url->getID($type), 3);
+            //ajax pagingation cung chuyen muc
+            $bv['noidung'] = $threads;
+            $bv['phantrang'] = $threads->links();
+            if (Request::ajax() && Input::get("type") == "cungchuyenmuc") {
+                $html = View::make("guest.relations.ajaxpagination_same", $bv)->render();
+                return Response::json(array('html' => $html));
+            }
+            //end ajax pagingation cung chuyen muc
+            //bv moi nhat
+            $newthreads = TinTuc::SelectRelate("new", $id, null, 5);
+            //ajax pagingation bv moi nhat
+            $bvm['noidung'] = $newthreads;
+            $bvm['phantrang'] = $newthreads->links();
+            if (Request::ajax() && Input::get("type") == "baivietmoi") {
+                $html = View::make("guest.relations.ajaxpagination_new", $bvm)->render();
+                return Response::json(array('html' => $html));
+            }
+            //end ajax pagingation bv moi nhat
+            //bv xem nhieu
+            $viewsthreads = TinTuc::SelectRelate("views", $id, null, 5);
+            //ajax pagingation bv xem nhieu
+            $xemnhieu['noidung'] = $viewsthreads;
+            $xemnhieu['phantrang'] = $viewsthreads->links();
+            if (Request::ajax() && Input::get("type") == "xemnhieu") {
+                $html = View::make("guest.relations.ajaxpagination_views", $xemnhieu)->render();
+                return Response::json(array('html' => $html));
+            }
+            //end ajax pagingation bv xem nhieu
             return View::make('guest.news.view')
                             ->with('contacts', $contacts)
                             ->with('news', $news)
+                            ->with('threads', $threads)
+                            ->with('newthreads', $newthreads)
+                            ->with('viewsthreads', $viewsthreads)
                             ->with("title", $title);
         } else {
             return $this->index();
@@ -407,7 +595,7 @@ class GuestController extends BaseController {
     }
 
     public function search($key) {
-        $key =  preg_replace('/\s\s+/', ' ', trim($key)); 
+        $key = preg_replace('/\s\s+/', ' ', trim($key));
         $contacts = Contact::Select();
         $resultsearch = TinTuc::search($key, 10);
         //ajax pagingation tìm kiếm

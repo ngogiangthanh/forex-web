@@ -1,9 +1,9 @@
 @extends('layouts.guest')
 @section('main')
 <div class="col-md-12 news" style="margin-top: 15px">
-    <div class="row">
+    <div class="col-md-8">
         <div class="panel panel-success">
-            <div class="panel-heading"><h3>SÀN GIAO DỊCH</h3></div>
+            <div class="panel-heading"><h3><span class="glyphicon glyphicon-flag"></span>&nbsp;SÀN GIAO DỊCH</h3></div>
             <div class="panel-body" id='floortraders_index'>
                 <?php
                 $url = new FunctionController();
@@ -41,6 +41,9 @@
                 </style>
             </div>
         </div>
+    </div>
+    <div class="col-md-4">
+        @include('guest.relations.index_views')
     </div>
 </div>
 @stop

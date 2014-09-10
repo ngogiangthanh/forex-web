@@ -23,7 +23,7 @@
             <!--  -->
             <div class="row">
                 <div class="col-md-12 panel panel-primary">
-                    <h3>{{$chienLuoc->tieude}}</h3>
+                    <h3><span class="glyphicon glyphicon-star-empty"></span>&nbsp;{{$chienLuoc->tieude}}</h3>
                     <p>{{$chienLuoc->noidung}}</p>
                 </div>
             </div>
@@ -33,7 +33,7 @@
             <!--  -->
             <div class="row">
                 <div class="panel panel-success">
-                    <div class="panel-heading"><h3>CHIẾN LƯỢC FOREX</h3></div>
+                    <div class="panel-heading"><h3><span class="glyphicon glyphicon-star"></span>&nbsp;CHIẾN LƯỢC FOREX</h3></div>
                     <div class="panel-body" id="forex_index">
                         @include ('guest.chienluoc.forex.index')
                     </div>
@@ -45,7 +45,7 @@
             <!-- show news -->
             <div class="row">
                 <div class="panel panel-success">
-                    <div class="panel-heading"><h3>CHIẾN LƯỢC VÀNG</h3></div>
+                    <div class="panel-heading"><h3><span class="glyphicon glyphicon-star"></span>&nbsp;CHIẾN LƯỢC VÀNG</h3></div>
                     <div class="panel-body">
                         <div class="col-md-12">
                             <!--  -->
@@ -100,6 +100,9 @@
                 <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fforexmarketcomvn%2F695512290504029&amp;width=200&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:290px;" allowTransparency="true"></iframe>
             </div>
         </div>
+    </div>
+    <div class="col-md-3" style="margin-top:15px;">
+        @include('guest.relations.index_new')
     </div>
 </div>    
 @stop

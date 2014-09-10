@@ -6,16 +6,15 @@
         <?php $i++; ?>
         <div class="col-md-4 contact">
             <?php if ($i > 3): ?>
-            <br/>
+            <hr>
             <?php endif; ?>
             <div class="name-contact" style="color:#0066ff;">
-                <h4><?php echo $ct->address; ?></h4> 
+                <h4><span class="glyphicon glyphicon-phone"></span>&nbsp;<?php echo $ct->address; ?></h4> 
             </div>
-            <br/>
-            <div>Tel: +<?php echo $ct->tel; ?></div>
-            <div>Fax: +<?php echo $ct->fax; ?></div>
-            <div>Facebook: <a href="<?php echo $ct->link; ?>" style="color: #0000FF"><?php echo $ct->facebook; ?></a></div>
-            <div>Email:<a href="mailto:<?php echo $ct->email; ?>" style="color: #FF0000 "> <?php echo $ct->email; ?></a></div>
+            <div><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;+<?php echo $ct->tel; ?></div>
+            <div><span class="glyphicon glyphicon-print"></span>&nbsp;+<?php echo $ct->fax; ?></div>
+            <div><img src="<?php echo asset('img/face-icon.png'); ?>" height="15px" alt="face"/>&nbsp;<a href="<?php echo $ct->link; ?>" style="color: #0000FF"><?php echo $ct->facebook; ?></a></div>
+            <div><span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:<?php echo $ct->email; ?>" style="color: #FF0000 "> <?php echo $ct->email; ?></a></div>
         </div>  
         <?php endif; ?>
         <?php endforeach; ?>

@@ -6,16 +6,15 @@
         <?php $i++; ?>
         <div class="col-md-4 contact">
             @if ($i > 3)
-            <br/>
+            <hr>
             @endif
             <div class="name-contact" style="color:#0066ff;">
-                <h4>{{$ct->address}}</h4> 
+                <h4><span class="glyphicon glyphicon-phone"></span>&nbsp;{{$ct->address}}</h4> 
             </div>
-            <br/>
-            <div>Tel: +{{$ct->tel}}</div>
-            <div>Fax: +{{$ct->fax}}</div>
-            <div>Facebook: <a href="{{$ct->link}}" style="color: #0000FF">{{$ct->facebook}}</a></div>
-            <div>Email:<a href="mailto:{{$ct->email}}" style="color: #FF0000 "> {{$ct->email}}</a></div>
+            <div><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;+{{$ct->tel}}</div>
+            <div><span class="glyphicon glyphicon-print"></span>&nbsp;+{{$ct->fax}}</div>
+            <div><img src="{{asset('img/face-icon.png')}}" height="15px" alt="face"/>&nbsp;<a href="{{$ct->link}}" style="color: #0000FF">{{$ct->facebook}}</a></div>
+            <div><span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:{{$ct->email}}" style="color: #FF0000 "> {{$ct->email}}</a></div>
         </div>  
         @endif
         @endforeach
