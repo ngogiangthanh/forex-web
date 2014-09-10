@@ -4,41 +4,41 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>{{$title}}</title>
-        <link rel="shortcut icon" href="{{ URL::to('favicon_img.ico') }}">
+        <title><?php echo $title; ?></title>
+        <link rel="shortcut icon" href="<?php echo URL::to('favicon_img.ico'); ?>">
         <!-- Bootstrap -->
-        {{ HTML::style('css/bootstrap.min.css') }}
+        <?php echo HTML::style('css/bootstrap.min.css'); ?>
         <!-- Custom styles for this template -->
-        {{ HTML::style('css/admin.css') }}
-        {{ HTML::style('css/toastr.css') }}
+        <?php echo HTML::style('css/admin.css'); ?>
+        <?php echo HTML::style('css/toastr.css'); ?>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="public/js/html5shiv.js"></script>
         <script src="public/js/respond.min.js"></script>
         <![endif]-->
-        {{ HTML::script('js/jquery-1.10.2.min.js') }}
-        {{ HTML::script('js/toastr.js') }}
+        <?php echo HTML::script('js/jquery-1.10.2.min.js'); ?>
+        <?php echo HTML::script('js/toastr.js'); ?>
     </head>
     <body>
-        @include ('admin.menu.navbar')
+        <?php echo $__env->make ('admin.menu.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-xs-12 pull-right">
                     <div class="row">
                         <!-- BEGIN CONTENT -->
-                        @yield('main')
+                        <?php echo $__env->yieldContent('main'); ?>
                         <!-- END CONTENT -->
                     </div>
                 </div><!--/span-->            
             </div><!--/row-->
         </div><!--/.container-->
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        {{ HTML::script('js/bootstrap.min.js') }}
-        {{ HTML::script('js/jquery-ajax-search-admin-1.0.js') }}
-        {{ HTML::script('js/jquery-ajax-checklh-admin-1.0.js') }}
-        {{ HTML::script('js/jquery-ajax-delete-admin-1.0.js') }}
-        {{ HTML::script('js/bootstrap.notify.min.js') }}
-        {{ HTML::script('js/jquery-threads_admin-1.0.js') }}
+        <?php echo HTML::script('js/bootstrap.min.js'); ?>
+        <?php echo HTML::script('js/jquery-ajax-search-admin-1.0.js'); ?>
+        <?php echo HTML::script('js/jquery-ajax-checklh-admin-1.0.js'); ?>
+        <?php echo HTML::script('js/jquery-ajax-delete-admin-1.0.js'); ?>
+        <?php echo HTML::script('js/bootstrap.notify.min.js'); ?>
+        <?php echo HTML::script('js/jquery-threads_admin-1.0.js'); ?>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#sidebar .panel-heading').click(function() {

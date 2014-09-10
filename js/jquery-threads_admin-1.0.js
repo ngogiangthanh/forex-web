@@ -32,23 +32,24 @@ $(document).ready(function()
             $(this).find('textarea[name="noidung"]').focus();
         }
         else {
-            $.ajaxSetup({
-                headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
-            });
-            var myurl = $(this).attr('action');
-            $.ajax({
-                type: "post",
-                url: myurl,
-                data: 'tieude=' + tieude
-                        + '&anhnho=' + anhnho
-                        + '&loai=' + loaibv
-                        + '&noidung=' + noidung,
-                success: function(data) {
-                    toastr.success("Thêm bài viết thành công!");
-                }}, 'html').fail(function(jqXHR, ajaxOptions, thrownError)
-            {
-                alert('No response from server!');
-            });
+            return true;
+//            $.ajaxSetup({
+//                headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
+//            });
+//            var myurl = $(this).attr('action');
+//            $.ajax({
+//                type: "post",
+//                url: myurl,
+//                data: 'tieude=' + tieude
+//                        + '&anhnho=' + anhnho
+//                        + '&loai=' + loaibv
+//                        + '&noidung=' + noidung,
+//                success: function(data) {
+//                    toastr.success("Thêm bài viết thành công!");
+//                }}, 'html').fail(function(jqXHR, ajaxOptions, thrownError)
+//            {
+//                alert('No response from server!');
+//            });
         }
         return false;
     });

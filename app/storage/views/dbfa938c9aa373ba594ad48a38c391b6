@@ -1,0 +1,13 @@
+<?php $__env->startSection('main'); ?>
+<div class="col-md-12 news" style="margin-top: 15px">
+    <div class="row">
+        <div class="panel panel-success">
+            <div class="panel-heading">HÀNG HÓA</div>
+            <div class="panel-body" id="hanghoa_content">
+                <?php echo $__env->make ('guest.chienluoc.chienluocvang.index_hh', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.guest', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

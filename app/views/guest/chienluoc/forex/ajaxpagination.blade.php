@@ -8,15 +8,15 @@ $urlReal = $url->getURL($fr->loai);
 ?>
 <div>  
     <a href="{{url($urlReal."/".$fr->id)}}">
-        @if(file_exists($fr->anhnho))
-        {{ HTML::image($fr->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+        @if(File::exists($fr->anhnho))
+        {{ HTML::image($fr->anhnho, '', array('class' => 'pull-left', 'style' => 'width:96px;margin-right: 10px')) }}
         @else
         {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
         @endif
     </a>
     <p>
         <a href="{{url($urlReal."/".$fr->id)}}">{{ $fr->tieude }}</a></p>
-    <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($fr->thoidiemsua))}}</p>
+    <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($fr->thoidiemdang))}}</p>
     <p>Lượt xem:&nbsp;{{ $fr->luotxem}}</p>
     <p>
         <a href="{{url($urlReal."/".$fr->id)}}">[...Xem thêm]</a></p>

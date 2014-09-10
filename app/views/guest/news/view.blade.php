@@ -6,7 +6,7 @@
             @if($news != null)
             <div class="panel-heading">{{HTML::decode($news->tieude)}}</div>
             <div class="panel-body" id="">
-                <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($news->thoidiemsua))}} || Lượt xem:&nbsp;{{ $news->luotxem}}</p>
+                <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($news->thoidiemdang))}} || Lượt xem:&nbsp;{{ $news->luotxem}}</p>
                 <hr/>
                 {{HTML::decode($news->noidung)}}
                 <hr/>

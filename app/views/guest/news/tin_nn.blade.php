@@ -9,13 +9,13 @@ $urlReal = $url->getURL($nn->loai);
 <div>
     <a href="{{url($urlReal."/".$nn->id)}}">
         @if(file_exists($nn->anhnho))
-        {{ HTML::image($nn->anhnho, '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
+        {{ HTML::image($nn->anhnho, '', array('class' => 'pull-left', 'style' => 'width:96px;margin-right: 10px')) }}
         @else
         {{ HTML::image('img/no_thumb.jpg', '', array('class' => 'pull-left', 'style' => 'margin-right: 10px')) }}
         @endif
     </a>
     <p><a href="{{url($urlReal."/".$nn->id)}}">{{HTML::decode($nn->tieude)}}</a></p>
-    <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($nn->thoidiemsua))}}</p>
+    <p>Thời gian đăng:&nbsp;{{date("h:i A | d/m/Y",strtotime($nn->thoidiemdang))}}</p>
     <p>Lượt xem:&nbsp;{{ $nn->luotxem}}</p>
     <p><a href="{{url($urlReal."/".$nn->id)}}">[...Xem thêm]</a></p>
 </div>
