@@ -48,7 +48,7 @@ return array(
         'mysql' => array(
             'driver' => 'mysql',
             'host' => 'localhost',
-            'database' => 'forextrader_1_0',
+            'database' => 'forextrader_1.0',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',

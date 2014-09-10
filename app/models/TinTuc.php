@@ -90,5 +90,11 @@ Class TinTuc extends Eloquent {
                         ->where("id", $id)
                         ->delete();
     }
+    
+    
+    public static function InsertTT($data)
+    {
+        return DB::table("tintuc")->insert($data);
+    }
 
 }

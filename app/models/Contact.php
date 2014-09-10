@@ -40,4 +40,14 @@ Class Contact extends Eloquent {
         return DB::table("contact")
                   ->where("id",$id)->delete();
     }
+    
+    public static function InsertLL($data)
+    {
+        return DB::table("contact")->insert($data);
+    }
+    
+    public static function UpdateLL($id,$data)
+    {
+        return DB::table("contact")->where("id",$id)->update($data);
+    }
 }

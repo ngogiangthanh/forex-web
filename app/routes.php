@@ -45,13 +45,17 @@ Route::get('admin/qllienhe={id}', 'AdminController@updateQLLH')->where(array('id
 //xoa
 Route::get('admin/delete={type}/{id}', 'AdminController@delete')->where(array('id' => '[0-9]+'));
 //them
-Route::get('admin/add={type}', 'AdminController@create');
+Route::get('admin/add={type}', 'AdminController@create')->where(array('type' => '[A-Za-z0-9]+'));
 //sua
 Route::get('admin/edit={type}/{id}', 'AdminController@edit')->where(array('id' => '[0-9]+'));
 //xem
 Route::get('admin/view=lienhe/{id}', 'AdminController@show')->where(array('id' => '[0-9]+'));
 //gui email
 Route::post('admin/send=email', 'AdminController@send');
+//them lien lac
+Route::post('admin/add={type}', 'AdminController@save')->where(array('type' => '[A-Za-z0-9]+'));
+//
+Route::post('upload/imgs', 'AdminController@upload');
 /**
  * Trang login
  */
