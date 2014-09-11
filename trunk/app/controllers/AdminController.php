@@ -39,7 +39,7 @@ class AdminController extends BaseController {
                                 ->with("title", "Quản lý liên lạc");
             case "doimatkhau":
                 return View::make('admin.profile.index')
-                                ->with("title", "Profile");
+                                ->with("title", "Thông tin cá nhân");
             default:
                 return View::make('admin.index')
                                 ->with("title", "Trang chủ quản lý");
