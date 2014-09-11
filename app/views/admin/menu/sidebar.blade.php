@@ -10,6 +10,5 @@
         <a href="{{ url('admin/ql=baiviet') }}" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;Quản lý bài viết</a>
         <a href="{{ url('admin/ql=lienhe') }}" class="list-group-item"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Quản lý các liên hệ</a>
         <a href="{{ url('admin/ql=lienlac') }}" class="list-group-item"><i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý địa chỉ liên lạc</a>
-        <a href="{{ url('admin/ql=doimatkhau') }}" class="list-group-item"><i class="glyphicon glyphicon-user"></i>&nbsp;Đổi mật khẩu</a>
     </div>
 </div>
