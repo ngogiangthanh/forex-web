@@ -160,7 +160,6 @@ class GuestController extends BaseController {
                                 ->with('kienthuc', $kienthuc)
                                 ->with('viewsthreads', $viewsthreads)
                                 ->with("title", "Chiến lược giao dịch");
-                break;
             case "sangd":
                 $sangd = TinTuc::Select(5, $this->perpage);
                 //ajax pagingation sàn giao dịch
@@ -186,23 +185,39 @@ class GuestController extends BaseController {
                                 ->with('sangd', $sangd)
                                 ->with('viewsthreads', $viewsthreads)
                                 ->with("title", "Sàn giao dịch");
-                break;
             case "contact":
                 $supportContact = Contact::Select(1);
                 return View::make('guest.contacts.index')
                                 ->with('contacts', $contacts)
                                 ->with("supportContact", $supportContact)
                                 ->with("title", "Gửi liên hệ");
-                break;
             case "login":
-                $supportContact = Contact::Select("CUSTOMER SUPPORT");
-                return View::make('guest.login.index')
-                                ->with('contacts', $contacts)
-                                ->with("supportContact", $supportContact)
-                                ->with("title", "Trang login");
+                if (!Auth::check()) {
+                    return View::make('guest.login.index')
+                                    ->with('contacts', $contacts)
+                                    ->with("title", "Trang login");
+                } else {
+                    return $this->index();
+                }
+            case "logout":
+                if (Auth::check()) {
+                    $logout = new HomeController();
+                    return $logout->getLogout();
+                } else {
+                    return $this->index("login"); //neu chua login
+                }
             case "admin":
-                return View::make('admin.index')
-                                ->with("title", "Trang chủ quản lý");
+                if (Auth::check() && Auth::user()->roles == 1) {
+                    return View::make('admin.index')
+                                    ->with("title", "Trang chủ quản lý");
+                } else if(Auth::check() && Auth::user()->roles != 1) {
+                    return Redirect::to('/')
+                            ->with('message_error', 'Vui lòng đăng nhập bằng tài khoản với nhóm quyền phù hợp!');
+                }
+                else{
+                    return Redirect::to('login')
+                            ->with('message_error', 'Vui lòng đăng nhập bằng tài khoản với nhóm quyền phù hợp!');
+                }
             default:
                 $forex = TinTuc::Select(1, $this->perpage);
                 //ajax pagingation forex

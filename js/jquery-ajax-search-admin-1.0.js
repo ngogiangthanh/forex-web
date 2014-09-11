@@ -5,8 +5,8 @@ $(document).ready(function()
             var searchtxt = $("#search").val();
             var url = $("#urlsearch").val();
             var type = $("#type_id option:selected").val();
+            searchtxt = fulltrim(searchtxt);
             url = url + "=" + searchtxt + "/" + type;
-            searchtxt = trim(searchtxt);
             if (searchtxt === null || searchtxt === "")
             {
                 toastr.error("Vui lòng nhập chuỗi cần tìm kiếm!");
@@ -21,8 +21,8 @@ $(document).ready(function()
         var searchtxt = $("#search").val();
         var url = $("#urlsearch").val();
         var type = $("#type_id option:selected").val();
+        searchtxt = fulltrim(searchtxt);
         url = url + "=" + searchtxt + "/" + type;
-        searchtxt = trim(searchtxt);
         if (searchtxt === null || searchtxt === "")
         {
             toastr.error("Vui lòng nhập chuỗi cần tìm kiếm!");
@@ -31,7 +31,6 @@ $(document).ready(function()
         {
             location.href = url;
         }
-        //  search(url);
     });
     $("#type_id").change(function() {
         var url = $("#urlchosen").val();
@@ -43,7 +42,7 @@ $(document).ready(function()
         if (e.which === 13) {
             var searchtxt = $("#searchLH").val();
             var url = $("#urlsearchLH").val();
-            searchtxt = trim(searchtxt);
+            searchtxt = fulltrim(searchtxt);
             if (searchtxt === null || searchtxt === "")
             {
                 toastr.error("Vui lòng nhập chuỗi cần tìm kiếm!");
@@ -57,7 +56,7 @@ $(document).ready(function()
     $('#btnsearchLH').click(function() {
         var searchtxt = $("#searchLH").val();
         var url = $("#urlsearchLH").val();
-        searchtxt = trim(searchtxt);
+        searchtxt = fulltrim(searchtxt);
         if (searchtxt === null || searchtxt === "")
         {
             toastr.error("Vui lòng nhập chuỗi cần tìm kiếm!");
@@ -67,9 +66,4 @@ $(document).ready(function()
             location.href = url + "=" + searchtxt;
         }
     });
-
-    function trim(str)
-    {
-        return  str.replace(/^[\s]+/, '').replace(/[\s]+$/, '').replace(/[\s]{2,}/, ' ');
-    }
 });

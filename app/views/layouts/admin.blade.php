@@ -18,6 +18,7 @@
         <![endif]-->
         {{ HTML::script('js/jquery-1.10.2.min.js') }}
         {{ HTML::script('js/toastr.js') }}
+        {{ HTML::script('js/functions.js')}}
     </head>
     <body>
         @include ('admin.menu.navbar')

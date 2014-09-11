@@ -2,32 +2,37 @@
 
 class HomeController extends BaseController {
 
-    public function getIndex() {
-        $role = Auth::user()->getRole();
-        if (isset($role) && trim($role)!==''){
-            return View::make(Auth::user()->getRole() . '.index');
-        }
-        return View::make('errors.nouser');
-    }
-
     public function getLogout() {
         Auth::logout();
         return Redirect::to('login')
-                        ->with('flash_notice', 'Bạn đã đăng xuất thành công.');
+                        ->with('message_logout', 'Bạn đã đăng xuất thành công!');
     }
 
-    public function missingMethod($parameters = array())
-    {
+    public function missingMethod($parameters = array()) {
         return Redirect::to('/');
     }
-    public static function getDetails() {
-        $tintuc['noidung'] = $data = TinTuc::SelectTinTuc();
-        $tintuc['phantrang'] = $data->links();
-        if(Request::ajax())
-        {
-           $html = View::make("guest.test",$tintuc)->render();
-            return Response::json(array('html'=>$html));
+
+    public function authenticate() {
+        $data = array(
+            "username" => Input::get("username"),
+            "password" => Input::get("password")
+        );
+        //
+        $auth = new User();
+        if ($auth->Authenticate($data)) {
+            if (Auth::attempt($data)) {
+                        return Redirect::to('/')
+                                ->with('message_login_success', 'Đăng nhập thành công!');
+            } else {
+                return Redirect::to('login')
+                                ->withInput()
+                                ->with('message_error', 'Mật khẩu không chính xác!');
+            }
+        } else {
+            return Redirect::to('login')
+                            ->withInput()
+                            ->with('message_error', 'Tài khoản hoặc mật khẩu không chính xác!');
         }
-   //     return View::make("guest.index",$data)->with('title','title');
     }
+
 }

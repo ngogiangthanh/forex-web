@@ -45,7 +45,7 @@
                     <button id="btn_send_contact" type="submit" class="btn btn-success">
                         Gửi
                     </button>
-                    <button id="btn-send-contact" type="reset" class="btn btn-warning">
+                    <button type="reset" id="btn_reset" class="btn btn-warning">
                         Làm lại
                     </button>
                 </div>

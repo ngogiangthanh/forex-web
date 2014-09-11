@@ -18,6 +18,7 @@
         <![endif]-->
         <?php echo HTML::script('js/jquery-1.10.2.min.js'); ?>
         <?php echo HTML::script('js/toastr.js'); ?>
+        <?php echo HTML::script('js/functions.js'); ?>
     </head>
     <body>
         <?php echo $__env->make ('admin.menu.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

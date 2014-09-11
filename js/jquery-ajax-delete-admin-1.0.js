@@ -11,7 +11,6 @@ $(document).ready(function()
                         type: "get",
                         datatype: "html"
                     }).done(function(data) {
-                console.log(data.html);
                 if (data.html === false)
                 {
                     toastr.error("Xóa liên lạc " + id + " không thành công!");
@@ -30,7 +29,7 @@ $(document).ready(function()
             return false;
 
     });
-    
+
     $(".delete_lh").click(function(e) {
         var id = $(this).attr("id");
         var url = $(this).attr("href");
@@ -61,7 +60,7 @@ $(document).ready(function()
             return false;
 
     });
-    
+
     $(".delete_bv").click(function(e) {
         var id = $(this).attr("id");
         var url = $(this).attr("href");
