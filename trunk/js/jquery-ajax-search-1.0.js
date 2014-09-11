@@ -7,26 +7,23 @@ $(document).ready(function()
             search(searchtxt, url);
         }
     });
+
     $('#btnsearch').click(function() {
         var searchtxt = $("#search").val();
         var url = $("#urlsearch").val();
         search(searchtxt, url);
     });
+
     function search(string, url)
     {
-        string = trim(string);
-        if (string === null || $.trim(string) === "")
+        string = fulltrim(string);
+        if (string === null || string === "")
         {
             toastr.error("Vui lòng nhập chuỗi cần tìm kiếm!");
         }
         else
         {
-            location.href = url + "=" + trim(string);
+            location.href = url + "=" + string;
         }
     }
-    function trim(str)
-    {
-        return  str.replace(/^[\s]+/, '').replace(/[\s]+$/, '').replace(/[\s]{2,}/, ' ');
-    }
-
 });

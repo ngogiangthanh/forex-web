@@ -12,12 +12,12 @@
  */
 
 App::before(function($request) {
-    //
+//
 });
 
 
 App::after(function($request, $response) {
-    //
+//
 });
 
 /*
@@ -32,8 +32,15 @@ App::after(function($request, $response) {
  */
 
 Route::filter('auth', function() {
-    if (Auth::guest())
-        return Redirect::guest('');
+    if (Auth::guest()) {
+        return Redirect::to('login')
+                        ->with('message_error', 'Vui lòng đăng nhập bằng tài khoản với nhóm quyền phù hợp!');
+    } else {
+        if (Auth::check() && Auth::user()->roles != 1) {
+            return Redirect::to('/')
+                        ->with('message_error', 'Vui lòng đăng nhập bằng tài khoản với nhóm quyền phù hợp!');
+        }
+    }
 });
 
 
@@ -53,8 +60,9 @@ Route::filter('auth.basic', function() {
  */
 
 Route::filter('guest', function() {
-    if (Auth::check())
+    if (Auth::check()) {
         return Redirect::to('/');
+    }
 });
 
 /*
@@ -69,7 +77,7 @@ Route::filter('guest', function() {
  */
 
 Route::filter('csrf', function() {
-     $token = Request::ajax() ? Request::header('X-CSRF-Token') : Input::get('_token');
+    $token = Request::ajax() ? Request::header('X-CSRF-Token') : Input::get('_token');
     if (Session::token() != Input::get('_token')) {
         throw new Illuminate\Session\TokenMismatchException;
     }

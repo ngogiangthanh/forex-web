@@ -49,11 +49,32 @@
                     <a href="{{ url('contact') }}"><span class="glyphicon glyphicon-phone"></span>&nbsp;Liên hệ </a>
                 </li>
             </ul>
+            @if(Auth::check())
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;Xin chào,&nbsp;{{Auth::user()->username}}<b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        @if(Auth::user()->roles == 1)
+                        <li><a href="{{ url('admin') }}"><span class="glyphicon glyphicon-home"></span>&nbsp;Trang quản lý</a>
+                        </li>  
+                        <li class="divider"></li> 
+                        @endif
+                        <li><a href="{{ url('logout') }}" onclick="if (confirm('Xác nhận đăng xuất?')) {
+                                    return true;
+                                } else {
+                                    return false;
+                                }"><span class="glyphicon glyphicon-off"></span>&nbsp;Thoát</a>
+                        </li>                      
+                    </ul>
+                </li>
+            </ul>
+            @else
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="{{ url('login') }}"><span class="glyphicon glyphicon-log-in"></span>&nbsp; Đăng nhập </a>
                 </li>
             </ul>
+            @endif
         </div>
     </div>
 </div>

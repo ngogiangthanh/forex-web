@@ -9,16 +9,14 @@ $(document).ready(function()
                     type: "get",
                     datatype: "html"
                 }).done(function(data) {
-                    console.log(data.html);
             if (data.html === "")
             {
                 toastr.error("Cập nhật trạng thái không thành công!");
-            //    $(this).remove().attr("checked");
             }
             else {
                 toastr.success("Cập nhật trạng thái thành công!");
                 var d = new Date();
-            $("#time_"+id).hide().fadeIn("slow").html(data.html);
+                $("#time_" + id).hide().fadeIn("slow").html(data.html);
             }
         }).fail(function(jqXHR, ajaxOptions, thrownError)
         {

@@ -7,7 +7,7 @@ $(document).ready(function()
 
     $("#threads_form").submit(function(event)
     {
-        var tieude = trim($(this).find('input[name="tieude"]').val());
+        var tieude = fulltrim($(this).find('input[name="tieude"]').val());
         var anhnho = $(this).find('input[name="anhnho"]').val();
         var loaibv = $(this).find('select[name="loaibaiviet"]').val();
         var noidung = CKEDITOR.instances['noidung'].getData();
@@ -33,23 +33,6 @@ $(document).ready(function()
         }
         else {
             return true;
-//            $.ajaxSetup({
-//                headers: {'X-CSRF-Token': $('meta[name=_token]').attr('content')}
-//            });
-//            var myurl = $(this).attr('action');
-//            $.ajax({
-//                type: "post",
-//                url: myurl,
-//                data: 'tieude=' + tieude
-//                        + '&anhnho=' + anhnho
-//                        + '&loai=' + loaibv
-//                        + '&noidung=' + noidung,
-//                success: function(data) {
-//                    toastr.success("Thêm bài viết thành công!");
-//                }}, 'html').fail(function(jqXHR, ajaxOptions, thrownError)
-//            {
-//                alert('No response from server!');
-//            });
         }
         return false;
     });
@@ -57,7 +40,7 @@ $(document).ready(function()
 
     $("#threads_form_edit").submit(function(event)
     {
-        var tieude = trim($(this).find('input[name="tieude"]').val());
+        var tieude = fulltrim($(this).find('input[name="tieude"]').val());
         var loaibv = $(this).find('select[name="loaibaiviet"]').val();
         var noidung = CKEDITOR.instances['noidung'].getData();
         if (tieude === "" || tieude === null)
@@ -80,10 +63,4 @@ $(document).ready(function()
         }
         return false;
     });
-    
-    
-    function trim(str)
-    {
-        return  str.replace(/^[\s]+/, '').replace(/[\s]+$/, '').replace(/[\s]{2,}/, ' ');
-    }
 });

@@ -25,7 +25,7 @@ return array(
       | is often just the "User" model but you may use whatever you like.
       |
      */
-    'model' => 'User',
+    'model' => 'user',
     /*
       |--------------------------------------------------------------------------
       | Authentication Table
@@ -36,7 +36,7 @@ return array(
       | default value but you may easily change it to any table you like.
       |
      */
-    'table' => 'user',
+    'table' => 'nguoidung',
     /*
       |--------------------------------------------------------------------------
       | Password Reminder Settings

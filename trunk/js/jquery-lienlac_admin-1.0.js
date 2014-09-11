@@ -2,13 +2,13 @@ $(document).ready(function()
 {
     $("#lienhe_form").submit(function(event)
     {
-        var tenbophan = trim($(this).find('input[name="tenbophan"]').val());
-        var sodienthoai = trim($(this).find('input[name="sodienthoai"]').val());
-        var sofax = trim($(this).find('input[name="sofax"]').val());
-        var email = trim($(this).find('input[name="email"]').val());
-        var facebook = trim($(this).find('input[name="facebook"]').val());
-        var vitri = ($(this).find('select[name="vitri"]').val());
-        var urlfacebook = trim($(this).find('input[name="urlfacebook"]').val());
+        var tenbophan = fulltrim($(this).find('input[name="tenbophan"]').val());
+        var sodienthoai = fulltrim($(this).find('input[name="sodienthoai"]').val());
+        var sofax = fulltrim($(this).find('input[name="sofax"]').val());
+        var email = fulltrim($(this).find('input[name="email"]').val());
+        var facebook = fulltrim($(this).find('input[name="facebook"]').val());
+        var vitri = $(this).find('select[name="vitri"]').val();
+        var urlfacebook = fulltrim($(this).find('input[name="urlfacebook"]').val());
         if (tenbophan === "" || tenbophan === null)
         {
             toastr.error("Vui lòng nhập tên bộ phận liên lạc!");
@@ -49,10 +49,4 @@ $(document).ready(function()
         }
         return false;
     });
-
-
-    function trim(str)
-    {
-        return  str.replace(/^[\s]+/, '').replace(/[\s]+$/, '').replace(/[\s]{2,}/, ' ');
-    }
 });
