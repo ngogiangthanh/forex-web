@@ -79,23 +79,4 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 //        }
 //        return $check;
 //    }
-//
-//    public static function updatePwd($currentpwd, $newpwd, $newpwd1) {
-//        $result = false;
-//        $pwd = DB::table('user')->first()->password;
-//        if ($newpwd1 == $newpwd) {
-//            if ($currentpwd == $pwd) {
-//                try {
-//                    DB::table('user')->where($pwd, md5($currentpwd))->update(array('password' => $newpwd));
-//                    $result = true;
-//                    return $result;
-//                } catch (Exception $exc) {
-//                    return $result;
-//                }
-//            } else {
-//                return $result;
-//            }
-//        }
-//        return $result;
-//    }
 }

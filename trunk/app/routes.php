@@ -29,8 +29,6 @@ Route::get('{type}/{alias}/{id}', 'GuestController@show')->where(array('type' =>
 Route::get('{type}/threads={id}', 'GuestController@showOthers')->where(array('type' => '[A-Za-z0-9]+', 'id' => '[0-9]+'));
 //Gửi liên hệ
 Route::post('sendcontact', 'GuestController@store');
-//Đổi mật khẩu
-Route::post('changepwd', 'GuestController@updatepwd');
 //Tìm kiếm
 Route::get('search={key}', 'GuestController@search');
 /**
@@ -65,4 +63,6 @@ Route::group(array('before' => 'auth'), function() {
         Route::post('admin/edit={type}', 'AdminController@store')->where(array('type' => '[A-Za-z0-9]+'));
 //upload hinh anh
         Route::post('upload/imgs', 'AdminController@upload');
+//Đổi mật khẩu
+        Route::post('admin/ql=doimatkhau', 'AdminController@changepassword');
 });

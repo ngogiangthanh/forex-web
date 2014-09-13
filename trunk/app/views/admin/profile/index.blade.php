@@ -7,7 +7,7 @@
             <div class="col-sm-9 col-xs-12 pull-right">
                 <div class="row">
                     <!-- BEGIN CONTENT -->
-                    Thông tin cá nhân đổi mật khẩu
+                   @include ('admin.profile.editpassword')
                     <!-- END CONTENT -->
                 </div>
             </div><!--/span-->            
