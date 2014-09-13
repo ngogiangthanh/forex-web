@@ -297,19 +297,6 @@ class GuestController extends BaseController {
         }
     }
 
-    public function updatepwd() {
-        if (Request::ajax()) {
-            $currentpwd = Input::get("current_pwd");
-            $newpwd = Input::get("new_pwd");
-            $newpwd1 = Input::get("new_pwd_again");
-            $user = new User();
-            $result = $user->updatePwd($currentpwd, $newpwd, $newpwd1);
-            //Lấy nội dung trang thông báo thành công
-            $html = View::make("admin.profile.complete", array("result" => $result))->render();
-            return Response::json(array('html' => $html));
-        }
-    }
-
     public function indexModify($type = null, $alias = null) {
         $contacts = Contact::Select();
         if ($type == "chienluoc") {

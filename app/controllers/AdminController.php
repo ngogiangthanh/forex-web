@@ -66,6 +66,44 @@ class AdminController extends BaseController {
         }
     }
 
+    public function changepassword()
+    {
+            $oldpassword=Input::get('oldpassword');
+            $newpassword=Input::get('newpassword');
+            $repassword=Input::get('password_confirmation');
+            $hash= Auth::user()->password;
+            $value=$oldpassword;
+            if(crypt($value, $hash) === $hash)
+            {
+                if($newpassword === $repassword)
+                {
+                    $passw= Hash::make($newpassword);
+                    $username=Auth::user()->username;
+                    $userid=Auth::user()->id;
+                    DB::table('nguoidung')
+                    ->where('id', $userid)
+                    ->update(array('password'=>$passw));
+                    return View::make('admin.profile.index')
+                            ->with('title', 'Cập nhật mật khẩu')
+                            ->with('update_success', 'Cập nhật mật khẩu mới thành công!');
+                }
+                else
+                {
+                    // Redirect to the change password field
+                    return View::make('admin.profile.index')
+                             ->with('title', 'Cập nhật mật khẩu')
+                             ->withInput(Input::except('password', $repassword))
+                             ->with('update_error', 'Nhập lại mật khẩu không đúng!!');
+                }
+            }
+            else
+            {
+                return View::make('admin.profile.index')
+                        ->with('title', 'Cập nhật mật khẩu')
+                        ->with('update_error', 'Nhập sai mật khẩu');
+            }
+    }
+
     public function searchLienHe($key) {
         $key = preg_replace('/\s\s+/', ' ', trim($key));
         if ($key != null || $key == "") {

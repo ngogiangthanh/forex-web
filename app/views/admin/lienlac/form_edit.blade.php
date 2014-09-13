@@ -13,26 +13,26 @@
             <div class="form-group">
                 <label for="sodienthoai" class="col-sm-3 control-label">Điện thoại:</label>
                 <div class="col-sm-9">
-                    <input name="sodienthoai" type="text" class="form-control" id="sodienthoai" value="{{$contact->tel}}" placeholder="Nhập số điện thoại" required=""/>
+                    <input name="sodienthoai" type="text" class="form-control" id="sodienthoai" value="{{$contact->tel}}" placeholder="Nhập số điện thoại"/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="sofax" class="col-sm-3 control-label">Fax:</label>
                 <div class="col-sm-9">
-                    <input name="sofax" type="text" class="form-control" id="sofax" value="{{$contact->fax}}" placeholder="Nhập số Fax" required=""/>
+                    <input name="sofax" type="text" class="form-control" id="sofax" value="{{$contact->fax}}" placeholder="Nhập số Fax"/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-3 control-label">Email:</label>
                 <div class="col-sm-9">
-                    <input name="email" type="email" class="form-control" id="email" value="{{$contact->email}}" placeholder="Nhập email" required=""/>
+                    <input name="email" type="email" class="form-control" id="email" value="{{$contact->email}}" placeholder="Nhập email"/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="facebook" class="col-sm-3 control-label">Facebook:</label>
                 <div class="col-sm-9">
-                    <input name="facebook" type="text" class="form-control" id="facebook" value="{{$contact->facebook}}" placeholder="Tên Facebook" required=""/><br/>
-                    <input name="urlfacebook" type="url" class="form-control" id="urlfacebook" value="{{$contact->link}}" placeholder="Đường dẫn facebook http://www.facebook.com/yyyyy" required=""/>
+                    <input name="facebook" type="text" class="form-control" id="facebook" value="{{$contact->facebook}}" placeholder="Tên Facebook"/><br/>
+                    <input name="urlfacebook" type="url" class="form-control" id="urlfacebook" value="{{$contact->link}}" placeholder="Đường dẫn facebook http://www.facebook.com/yyyyy"/>
                 </div>
             </div>
             <div class="form-group">
