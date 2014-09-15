@@ -10,5 +10,6 @@
         <a href="<?php echo url('admin/ql=baiviet'); ?>" class="list-group-item"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;Quản lý bài viết</a>
         <a href="<?php echo url('admin/ql=lienhe'); ?>" class="list-group-item"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Quản lý các liên hệ</a>
         <a href="<?php echo url('admin/ql=lienlac'); ?>" class="list-group-item"><i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý địa chỉ liên lạc</a>
+        <a href="<?php echo url('doc/huong_dan.pdf'); ?>" class="list-group-item"><i class="glyphicon glyphicon-book"></i>&nbsp;Hướng dẫn sử dụng</a>
     </div>
 </div>
