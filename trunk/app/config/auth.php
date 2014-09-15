@@ -25,7 +25,7 @@ return array(
       | is often just the "User" model but you may use whatever you like.
       |
      */
-    'model' => 'user',
+    'model' => 'User',
     /*
       |--------------------------------------------------------------------------
       | Authentication Table

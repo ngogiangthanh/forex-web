@@ -13,7 +13,7 @@
             </div>
             <div><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;+<?php echo $ct->tel; ?></div>
             <div><span class="glyphicon glyphicon-print"></span>&nbsp;+<?php echo $ct->fax; ?></div>
-            <div><img src="<?php echo asset('img/face-icon.png'); ?>" height="15px" alt="face"/>&nbsp;<a href="<?php echo $ct->link; ?>" style="color: #0000FF"><?php echo $ct->facebook; ?></a></div>
+            <div><img src="<?php echo asset('img/face-icon.png'); ?>" width="15px"/>&nbsp;<a href="<?php echo $ct->link; ?>" style="color: #0000FF"><?php echo $ct->facebook; ?></a></div>
             <div><span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:<?php echo $ct->email; ?>" style="color: #FF0000 "> <?php echo $ct->email; ?></a></div>
         </div>  
         <?php endif; ?>

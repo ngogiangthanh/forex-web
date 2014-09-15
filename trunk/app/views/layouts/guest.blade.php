@@ -27,6 +27,7 @@
             #bttop{border:1px solid #4adcff;background:#24bde2;text-align:center;padding:5px;position:fixed;bottom:35px;right:10px;cursor:pointer;display:none;color:#fff;font-size:11px;font-weight:900;}
             #bttop:hover{border:1px solid #ffa789;background:#ff6734;}
         </style>
+        
     </head>
     <body>
         @include ('guest.menu.index')
@@ -53,6 +54,7 @@
             <div style="border-top: 1px #fff solid;text-align: center;">&copy; Bản quyền thuộc về Forexker Market 2014, phát triển bởi nhóm <a href="https://www.facebook.com/ngogiangthanhblog" target="_blank"><b>TT</b></a></div>
         </div>
         @include('guest.footer.social')
+        @include('guest.footer.chat')
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -65,7 +67,7 @@
         {{ HTML::script('js/jquery-ajax-pagination-1.0.js') }}
         {{ HTML::script('js/jquery-ajax-contact-1.0.js') }}
         {{ HTML::script('js/jquery-ajax-search-1.0.js') }}
-        <div id='bttop'>BACK TO TOP</div>
+        <div id='bttop'>ĐẦU TRANG</div>
         <script type="text/javascript">
             $('body').show();
             NProgress.start();
@@ -86,5 +88,6 @@
                 });
             });
         </script>
+        
     </body>
 </html>

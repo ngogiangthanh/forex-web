@@ -4,9 +4,8 @@
     <div class="col-md-9">
         <!--Table economic-->
         <div class="col-md-12" style="padding: 5px">
-            <iframe src="http://ec.forexprostools.com?ecoDayBackground=%23ccffff&defaultFont=%232c2640&borderColor=%23660000&ecoDayFontColor=%23000099&columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_employment,_economicActivity,_inflation,_credit,_centralBanks,_confidenceIndex,_balance,_Bonds&importance=1,2,3&features=datepicker,timezone&countries=25,32,6,37,72,22,17,39,14,48,10,35,7,43,60,36,110,11,26,12,4,5&calType=day&timeZone=8&lang=1" 
-                    width="100%" height="400" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0">
-            </iframe>
+            <iframe src="http://ec.forexprostools.com?ecoDayBackground=%236079db&innerBorderColor=%23080808&borderColor=%23050505&ecoDayFontColor=%23ffffff&columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_employment,_economicActivity,_inflation,_credit,_centralBanks,_confidenceIndex,_balance,_Bonds&importance=1,2,3&features=datepicker,timeselector,filters&countries=37,14,48,35,42,36,11,46,178&calType=day&timeZone=27&lang=1" width="100%" height="400px" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
+       
             <!--                        
             <div class="poweredBy">
                                     <span style="font-size: 11px;color: #333333;text-decoration: none;">

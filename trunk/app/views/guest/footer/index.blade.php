@@ -13,7 +13,7 @@
             </div>
             <div><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;+{{$ct->tel}}</div>
             <div><span class="glyphicon glyphicon-print"></span>&nbsp;+{{$ct->fax}}</div>
-            <div><img src="{{asset('img/face-icon.png')}}" height="15px" alt="face"/>&nbsp;<a href="{{$ct->link}}" style="color: #0000FF">{{$ct->facebook}}</a></div>
+            <div><img src="{{asset('img/face-icon.png')}}" width="15px"/>&nbsp;<a href="{{$ct->link}}" style="color: #0000FF">{{$ct->facebook}}</a></div>
             <div><span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:{{$ct->email}}" style="color: #FF0000 "> {{$ct->email}}</a></div>
         </div>  
         @endif

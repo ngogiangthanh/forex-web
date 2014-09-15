@@ -54,7 +54,7 @@ class FunctionController extends BaseController {
         12 => 11,
         13 => -1
     ); //ds quan hệ -1 la ket thuc ko có cha
-    private $upexpect = array(8, 9, 10, 5);
+    private $upexpect = array("8", 9, 10, 5);
 
     //lay duong dan dua vao so loai
 
@@ -93,7 +93,7 @@ class FunctionController extends BaseController {
 
     //
     public function isUnexpected($numtype) {
-        return (array_search($numtype, $this->upexpect) == null || !array_search($numtype, $this->upexpect)) ? false : true;
+        return in_array($numtype, $this->upexpect); //== null || !array_search($numtype, $this->upexpect)) ? false : true;
     }
 
     //
