@@ -15,22 +15,22 @@
 //Trang chủ
 Route::get('', array('as' => '', 'uses' => 'GuestController@index'));
 //Các trang còn lại
-Route::get('{type}', 'GuestController@index')->where(array('type' => '[A-Za-z0-9]+'));
+Route::get('{type}', array('uses'=>'GuestController@index'))->where(array('type' => '[A-Za-z0-9]+'));
 //Chiến lược
 //Chiến lược - forex
 //chiến lược - vàng
 // + kim loại quý
 // + hàng hóa
 // + cổ phiếu
-Route::get('{type}/{alias}', 'GuestController@indexModify')->where(array('type' => '[A-Za-z0-9]+', 'alias' => '[A-Za-z0-9_]+'));
+Route::get('{type}/{alias}', array('uses'=>'GuestController@indexModify'))->where(array('type' => '[A-Za-z0-9]+', 'alias' => '[A-Za-z0-9_]+'));
 //Xem chi tiết
-Route::get('{type}/{alias}/{id}', 'GuestController@show')->where(array('type' => '[A-Za-z0-9]+', 'alias' => '[A-Za-z0-9_]+', 'id' => '[0-9]+'));
+Route::get('{type}/{alias}/{id}', array('uses'=>'GuestController@show'))->where(array('type' => '[A-Za-z0-9]+', 'alias' => '[A-Za-z0-9_]+', 'id' => '[0-9]+'));
 //Xem chi tiết các loại khác
-Route::get('{type}/threads={id}', 'GuestController@showOthers')->where(array('type' => '[A-Za-z0-9]+', 'id' => '[0-9]+'));
+Route::get('{type}/threads={id}', array('uses'=>'GuestController@showOthers'))->where(array('type' => '[A-Za-z0-9]+', 'id' => '[0-9]+'));
 //Gửi liên hệ
-Route::post('sendcontact', 'GuestController@store');
+Route::post('sendcontact', array('uses'=>'GuestController@store'));
 //Tìm kiếm
-Route::get('search={key}', 'GuestController@search');
+Route::get('search={key}', array('uses'=>'GuestController@search'));
 /**
  * Trang login
  */
