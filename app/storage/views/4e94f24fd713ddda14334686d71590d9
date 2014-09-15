@@ -11,7 +11,8 @@ $count = 0;
         $urlReal = $url->getURL($thread->loai);
         $count++;
         ?>
-        <div>   <?php if($url->isUnexpected($thread->loai)): ?>
+        <div>   
+            <?php if($url->isUnexpected($thread->loai)): ?>
             <a href="<?php echo url($urlReal."/threads=".$thread->id); ?>" target="_blank"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<?php echo $thread->tieude; ?></a>
             <?php else: ?>
             <a href="<?php echo url($urlReal."/".$thread->id); ?>" target="_blank"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;<?php echo $thread->tieude; ?></a>

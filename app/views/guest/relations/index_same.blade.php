@@ -11,7 +11,8 @@ $count = 0;
         $urlReal = $url->getURL($thread->loai);
         $count++;
         ?>
-        <div>   @if($url->isUnexpected($thread->loai))
+        <div>   
+            @if($url->isUnexpected($thread->loai))
             <a href="{{url($urlReal."/threads=".$thread->id)}}" target="_blank"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;{{$thread->tieude}}</a>
             @else
             <a href="{{url($urlReal."/".$thread->id)}}" target="_blank"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;{{$thread->tieude}}</a>

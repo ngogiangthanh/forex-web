@@ -210,13 +210,12 @@ class GuestController extends BaseController {
                 if (Auth::check() && Auth::user()->roles == 1) {
                     return View::make('admin.index')
                                     ->with("title", "Trang chủ quản lý");
-                } else if(Auth::check() && Auth::user()->roles != 1) {
+                } else if (Auth::check() && Auth::user()->roles != 1) {
                     return Redirect::to('/')
-                            ->with('message_error', 'Vui lòng đăng nhập bằng tài khoản với nhóm quyền phù hợp!');
-                }
-                else{
+                                    ->with('message_error', 'Vui lòng đăng nhập bằng tài khoản với nhóm quyền phù hợp!');
+                } else {
                     return Redirect::to('login')
-                            ->with('message_error', 'Vui lòng đăng nhập bằng tài khoản với nhóm quyền phù hợp!');
+                                    ->with('message_error', 'Vui lòng đăng nhập bằng tài khoản với nhóm quyền phù hợp!');
                 }
             default:
                 $forex = TinTuc::Select(1, $this->perpage);
@@ -504,8 +503,9 @@ class GuestController extends BaseController {
         $url = new FunctionController();
         if ($url->isURL($type) && $url->isURL($alias)) {
             $contacts = Contact::Select();
-            $title = $url->switchName($alias);
             $news = TinTuc::getANews($id, $url->getID($alias));
+            $title = $url->switchName($alias);
+            $title .= ($news == null) ? " || Lỗi" : " || ".$news->tieude;
             //bv cung chuyen muc
             $threads = TinTuc::SelectRelate("same", $id, $url->getID($alias), 3);
             //ajax pagingation cung chuyen muc
@@ -552,8 +552,9 @@ class GuestController extends BaseController {
         $url = new FunctionController();
         if ($url->isURL($type)) {
             $contacts = Contact::Select();
-            $title = $url->switchName($type);
             $news = TinTuc::getANews($id, $url->getID($type));
+            $title = $url->switchName($type);
+            $title .= ($news == null) ? " || Lỗi" : " || ".$news->tieude;
             //bv cung chuyen muc
             $threads = TinTuc::SelectRelate("same", $id, $url->getID($type), 3);
             //ajax pagingation cung chuyen muc
@@ -612,7 +613,7 @@ class GuestController extends BaseController {
                         ->with('contacts', $contacts)
                         ->with("keysearch", $key)
                         ->with("result", $resultsearch)
-                        ->with("title", "Kết quả tìm kiếm");
+                        ->with("title", "Kết quả tìm kiếm với ".$key);
     }
 
 }

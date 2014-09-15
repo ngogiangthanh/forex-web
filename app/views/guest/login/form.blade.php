@@ -6,7 +6,6 @@
         <div class="panel panel-default" style="background-color: #fff; border-color: #c5c5c5;">
             <div class="panel-body" style="padding: 10px;">
                 <img src="{{ url('img/icon_login.jpg') }}" class="img-responsive round-img" style="margin: 20px auto;" alt="login" />
-                {{Form::token()}}
                 {{ Form::open(array('url'=>'login','method'=>'POST','class'=>'form-signin')) }}
                 <div class='form-group'>
                     {{ Form::text('username','',array('placeholder' => 'Tài khoản','class'=>'form-control','value'=>Input::old('username'),'required'=>'','pattern'=>'[A-Za-z0-9_]{3,}')) }}
