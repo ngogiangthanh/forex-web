@@ -3,7 +3,7 @@
 <div class="col-md-12 news" style="margin-top: 15px">
     <div class="col-md-8">
         <div class="panel panel-success">
-            <div class="panel-heading"><h3><span class="glyphicon glyphicon-glass"></span>&nbsp;KIẾN THỨC GIAO DỊCH</h3></div>
+            <div class="panel-heading"><h3><span class="glyphicon glyphicon-glass"></span>&nbsp;Kiến Thức Giao Dịch</h3></div>
             <div class="panel-body" id="kienthuc_index">
                 <?php
                 $url = new FunctionController();

@@ -19,6 +19,12 @@
         {{ HTML::script('js/jquery-1.10.2.min.js') }}
         {{ HTML::script('js/toastr.js') }}
         {{ HTML::script('js/functions.js')}}
+        <style>
+            body {
+                font-family: "Times New Roman", Times, serif !important;
+                font-size: 15px
+            }
+        </style>
     </head>
     <body>
         @include ('admin.menu.navbar')

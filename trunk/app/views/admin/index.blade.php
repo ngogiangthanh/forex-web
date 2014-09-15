@@ -13,5 +13,8 @@
     <a href="{{ url('admin/ql=lienlac') }}" class="col-6 col-sm-4 col-lg-3">
         <i class="glyphicon glyphicon-phone"></i>&nbsp;Quản lý địa chỉ liên lạc
     </a>
+    <a href="{{ url('doc/huong_dan.pdf') }}" class="col-6 col-sm-4 col-lg-3">
+        <i class="glyphicon glyphicon-book"></i>&nbsp;Hướng dẫn sử dụng
+    </a>
 </div>
 @stop
