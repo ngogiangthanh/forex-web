@@ -28,32 +28,29 @@
             </div>
         </div>
         <!--Chiến lược forex-->
-        <div class="col-md-12" style="margin-top: 15px;">
+        <div class="col-md-6" style="margin-top: 15px;">
             <!--  -->
-            <div class="row">
                 <div class="panel panel-success">
-                    <div class="panel-heading"><h3><span class="glyphicon glyphicon-star"></span>&nbsp;CHIẾN LƯỢC FOREX</h3></div>
+                    <div class="panel-heading"><h3><span class="glyphicon glyphicon-star"></span>&nbsp;Chiến Lược Forex</h3></div>
                     <div class="panel-body" id="forex_index">
                         @include ('guest.chienluoc.forex.index')
                     </div>
                 </div>
-            </div>
         </div>
         <!--Chiến lược vàng-->
-        <div class="col-md-12" style="margin-top: 15px">
+        <div class="col-md-6" style="margin-top: 15px">
             <!-- show news -->
-            <div class="row">
                 <div class="panel panel-success">
-                    <div class="panel-heading"><h3><span class="glyphicon glyphicon-star"></span>&nbsp;CHIẾN LƯỢC VÀNG</h3></div>
+                    <div class="panel-heading"><h3><span class="glyphicon glyphicon-star"></span>&nbsp;Chiến Lược Vàng</h3></div>
                     <div class="panel-body">
                         <div class="col-md-12">
                             <!--  -->
                             <div class="row">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li class="active"><a href="#kimloaiquy" role="tab" data-toggle="tab"><h4>Kim loại quý</h4></a></li>
-                                    <li><a href="#hanghoa" role="tab" data-toggle="tab"><h4>Hàng hóa</h4></a></li>
-                                    <li><a href="#cophieu" role="tab" data-toggle="tab"><h4>Cổ phiếu</h4></a></li>
+                                    <li class="active"><a href="#kimloaiquy" role="tab" data-toggle="tab"><h5>Kim loại quý</h5></a></li>
+                                    <li><a href="#hanghoa" role="tab" data-toggle="tab"><h5>Hàng hóa</h5></a></li>
+                                    <li><a href="#cophieu" role="tab" data-toggle="tab"><h5>Cổ phiếu</h5></a></li>
                                 </ul>
                                 <!-- Tab panes -->
                                 <div class="tab-content" style="padding: 5px">
@@ -76,7 +73,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>

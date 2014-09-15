@@ -1,8 +1,8 @@
 <div class="row">
     <!-- header content -->
     <div class="col-md-12">
-        <div class="col-md-1" style="margin-top: 15px">
-            <a href="{{url('/')}}"><img src="{{ asset('img/face_icon.jpg') }}" alt="left Forex logo" width="70px" title="Sàn giao dịch Forex"></a>
+        <div class="col-md-1" style="margin-top: 20px">
+            <a href="{{url('/')}}"><img src="{{ asset('img/face_icon.jpg') }}" alt="left Forex logo" width="50px" title="Sàn giao dịch Forex"></a>
         </div>
         <div class="col-md-8">
             <a href="{{url('/')}}"><img src="{{ asset('img/banner_page.png') }}" alt="right Forex logo" width="100%" title="Sàn giao dịch Forex"></a>

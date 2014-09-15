@@ -16,7 +16,7 @@
         <style>
             body {
                 margin-top: 50px;
-                font-family: sans-serif !important;
+                font-family: "Times New Roman", Times, serif !important;
                 font-size: 15px
             }
             .navbar {
